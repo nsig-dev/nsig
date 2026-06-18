@@ -1,0 +1,81 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "issuing_cardholder.updated",
+  "data": {
+    "object": {
+      "billing": {
+        "address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        }
+      },
+      "company": {
+        "tax_id_provided": false
+      },
+      "created": 1700000000,
+      "email": "string",
+      "id": "string",
+      "individual": {
+        "card_issuing": {
+          "user_terms_acceptance": null
+        },
+        "dob": {
+          "day": 0,
+          "month": 0,
+          "year": 0
+        },
+        "first_name": "string",
+        "last_name": "string",
+        "verification": {
+          "document": null
+        }
+      },
+      "livemode": false,
+      "metadata": {},
+      "name": "string",
+      "object": "issuing.cardholder",
+      "phone_number": "string",
+      "preferred_locales": [
+        "de"
+      ],
+      "requirements": {
+        "disabled_reason": "listed",
+        "past_due": [
+          "company.tax_id"
+        ]
+      },
+      "spending_controls": {
+        "allowed_card_presences": [
+          "not_present"
+        ],
+        "allowed_categories": [
+          "ac_refrigeration_repair"
+        ],
+        "allowed_merchant_countries": [
+          "string"
+        ],
+        "blocked_card_presences": [
+          "not_present"
+        ],
+        "blocked_categories": [
+          "ac_refrigeration_repair"
+        ],
+        "blocked_merchant_countries": [
+          "string"
+        ],
+        "spending_limits": [
+          {}
+        ],
+        "spending_limits_currency": "string"
+      },
+      "status": "active",
+      "type": "company"
+    }
+  }
+}

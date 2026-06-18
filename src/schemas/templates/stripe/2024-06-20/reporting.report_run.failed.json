@@ -1,0 +1,50 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "reporting.report_run.failed",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "error": "string",
+      "id": "string",
+      "livemode": false,
+      "object": "reporting.report_run",
+      "parameters": {
+        "columns": [
+          "string"
+        ],
+        "connected_account": "string",
+        "currency": "string",
+        "interval_end": 1700000000,
+        "interval_start": 1700000000,
+        "payout": "string",
+        "reporting_category": "string",
+        "timezone": "string"
+      },
+      "report_type": "string",
+      "result": {
+        "created": 1700000000,
+        "expires_at": 1700000000,
+        "filename": "string",
+        "id": "string",
+        "links": {
+          "data": [
+            null
+          ],
+          "has_more": false,
+          "object": "list",
+          "url": "string"
+        },
+        "object": "file",
+        "purpose": "account_requirement",
+        "size": 0,
+        "title": "string",
+        "type": "string",
+        "url": "string"
+      },
+      "status": "string",
+      "succeeded_at": 1700000000
+    }
+  }
+}

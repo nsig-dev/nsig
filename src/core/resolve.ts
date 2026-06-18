@@ -1,4 +1,4 @@
-import { faker as baseFaker, Faker, en } from "@faker-js/faker";
+import { Faker, en } from "@faker-js/faker";
 import { isRef } from "./define.js";
 
 /** Deterministic faker seeded per-run so payloads are reproducible. */
@@ -68,4 +68,27 @@ export function deepMerge<T>(base: T, patch?: Record<string, unknown>): T {
   return out;
 }
 
-export { baseFaker };
+
+/** Small deterministic PRNG for reproducible shuffles. */
+export function mulberry32(seed: number): () => number {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/** Seeded Fisher–Yates order of [0..n) — reproducible out-of-order delivery. */
+export function seededOrder(n: number, seed: number): number[] {
+  const idx = Array.from({ length: n }, (_, i) => i);
+  const rnd = mulberry32(seed);
+  for (let i = n - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    const tmp = idx[i]!;
+    idx[i] = idx[j]!;
+    idx[j] = tmp;
+  }
+  return idx;
+}

@@ -1,0 +1,38 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "issuing_personalization_design.deactivated",
+  "data": {
+    "object": {
+      "card_logo": "string",
+      "carrier_text": {
+        "footer_body": "string",
+        "footer_title": "string",
+        "header_body": "string",
+        "header_title": "string"
+      },
+      "created": 1700000000,
+      "id": "string",
+      "livemode": false,
+      "lookup_key": "string",
+      "metadata": {},
+      "name": "string",
+      "object": "issuing.personalization_design",
+      "physical_bundle": "string",
+      "preferences": {
+        "is_default": false,
+        "is_platform_default": false
+      },
+      "rejection_reasons": {
+        "card_logo": [
+          "geographic_location"
+        ],
+        "carrier_text": [
+          "geographic_location"
+        ]
+      },
+      "status": "active"
+    }
+  }
+}

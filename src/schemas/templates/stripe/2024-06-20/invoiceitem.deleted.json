@@ -1,0 +1,81 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "invoiceitem.deleted",
+  "data": {
+    "object": {
+      "amount": 0,
+      "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "date": 1700000000,
+      "description": "string",
+      "discountable": false,
+      "discounts": [
+        "string"
+      ],
+      "id": "string",
+      "invoice": "string",
+      "livemode": false,
+      "metadata": {},
+      "net_amount": 0,
+      "object": "invoiceitem",
+      "parent": {
+        "subscription_details": {
+          "subscription": "string",
+          "subscription_item": "string"
+        },
+        "type": "subscription_details"
+      },
+      "period": {
+        "end": 1700000000,
+        "start": 1700000000
+      },
+      "pricing": {
+        "price_details": {
+          "price": "string",
+          "product": "string"
+        },
+        "type": "price_details",
+        "unit_amount_decimal": "string"
+      },
+      "proration": false,
+      "proration_details": {
+        "credited_items": {
+          "invoice_item": "string",
+          "invoice_line_item_details": null,
+          "type": "invoice_item"
+        },
+        "discount_amounts": [
+          {}
+        ]
+      },
+      "quantity": 0,
+      "quantity_decimal": "string",
+      "tax_rates": [
+        {
+          "active": false,
+          "country": "string",
+          "created": 1700000000,
+          "description": "string",
+          "display_name": "string",
+          "effective_percentage": 0,
+          "flat_amount": {},
+          "id": "string",
+          "inclusive": false,
+          "jurisdiction": "string",
+          "jurisdiction_level": "city",
+          "livemode": false,
+          "metadata": {},
+          "object": "tax_rate",
+          "percentage": 0,
+          "rate_type": "flat_amount",
+          "state": "string",
+          "tax_type": "amusement_tax"
+        }
+      ],
+      "test_clock": "string"
+    }
+  }
+}

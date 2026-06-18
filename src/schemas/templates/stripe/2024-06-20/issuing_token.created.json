@@ -1,0 +1,56 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "issuing_token.created",
+  "data": {
+    "object": {
+      "card": "string",
+      "created": 1700000000,
+      "device_fingerprint": "string",
+      "id": "string",
+      "last4": "string",
+      "livemode": false,
+      "network": "mastercard",
+      "network_data": {
+        "device": {
+          "device_fingerprint": "string",
+          "ip_address": "string",
+          "location": "string",
+          "name": "string",
+          "phone_number": "string",
+          "type": "other"
+        },
+        "mastercard": {
+          "card_reference_id": "string",
+          "token_reference_id": "string",
+          "token_requestor_id": "string",
+          "token_requestor_name": "string"
+        },
+        "type": "mastercard",
+        "visa": {
+          "card_reference_id": "string",
+          "token_reference_id": "string",
+          "token_requestor_id": "string",
+          "token_risk_score": "string"
+        },
+        "wallet_provider": {
+          "account_id": "string",
+          "account_trust_score": 0,
+          "card_number_source": "app",
+          "cardholder_address": null,
+          "cardholder_name": "string",
+          "device_trust_score": 0,
+          "hashed_account_email_address": "string",
+          "reason_codes": [],
+          "suggested_decision": "approve",
+          "suggested_decision_version": "string"
+        }
+      },
+      "network_updated_at": 1700000000,
+      "object": "issuing.token",
+      "status": "active",
+      "wallet_provider": "apple_pay"
+    }
+  }
+}

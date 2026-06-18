@@ -1,0 +1,128 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "quote.finalized",
+  "data": {
+    "object": {
+      "amount_subtotal": 0,
+      "amount_total": 0,
+      "application": "string",
+      "application_fee_amount": 0,
+      "application_fee_percent": 0,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": {
+          "account": "string",
+          "type": "account"
+        },
+        "provider": "string",
+        "status": "complete"
+      },
+      "collection_method": "charge_automatically",
+      "computed": {
+        "recurring": {
+          "amount_subtotal": 0,
+          "amount_total": 0,
+          "interval": "day",
+          "interval_count": 0,
+          "total_details": null
+        },
+        "upfront": {
+          "amount_subtotal": 0,
+          "amount_total": 0,
+          "line_items": {},
+          "total_details": null
+        }
+      },
+      "created": 1700000000,
+      "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "default_tax_rates": [
+        "string"
+      ],
+      "description": "string",
+      "discounts": [
+        "string"
+      ],
+      "expires_at": 1700000000,
+      "footer": "string",
+      "from_quote": {
+        "is_revision": false,
+        "quote": "string"
+      },
+      "header": "string",
+      "id": "string",
+      "invoice": "string",
+      "invoice_settings": {
+        "days_until_due": 0,
+        "issuer": {
+          "account": "string",
+          "type": "account"
+        }
+      },
+      "line_items": {
+        "data": [
+          {
+            "adjustable_quantity": null,
+            "amount_discount": 0,
+            "amount_subtotal": 0,
+            "amount_tax": 0,
+            "amount_total": 0,
+            "currency": "string",
+            "description": "string",
+            "discounts": [],
+            "id": "string",
+            "metadata": {},
+            "object": "item",
+            "price": null,
+            "quantity": 0,
+            "taxes": []
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "livemode": false,
+      "metadata": {},
+      "number": "string",
+      "object": "quote",
+      "on_behalf_of": "string",
+      "status": "accepted",
+      "status_transitions": {
+        "accepted_at": 1700000000,
+        "canceled_at": 1700000000,
+        "finalized_at": 1700000000
+      },
+      "subscription": "string",
+      "subscription_data": {
+        "billing_mode": {
+          "flexible": null,
+          "type": "classic"
+        },
+        "description": "string",
+        "effective_date": 1700000000,
+        "metadata": {},
+        "trial_period_days": 0
+      },
+      "subscription_schedule": "string",
+      "test_clock": "string",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0,
+        "breakdown": {
+          "discounts": [],
+          "taxes": []
+        }
+      },
+      "transfer_data": {
+        "amount": 0,
+        "amount_percent": 0,
+        "destination": "string"
+      }
+    }
+  }
+}

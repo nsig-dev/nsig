@@ -1,0 +1,82 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "identity.verification_session.processing",
+  "data": {
+    "object": {
+      "client_reference_id": "string",
+      "client_secret": "string",
+      "created": 1700000000,
+      "id": "string",
+      "last_error": {
+        "code": "abandoned",
+        "reason": "string"
+      },
+      "last_verification_report": "string",
+      "livemode": false,
+      "metadata": {},
+      "object": "identity.verification_session",
+      "options": {
+        "document": {
+          "allowed_types": [],
+          "require_id_number": false,
+          "require_live_capture": false,
+          "require_matching_selfie": false
+        },
+        "email": {
+          "require_verification": false
+        },
+        "id_number": {},
+        "matching": {
+          "dob": "none",
+          "name": "none"
+        },
+        "phone": {
+          "require_verification": false
+        }
+      },
+      "provided_details": {
+        "email": "string",
+        "phone": "string"
+      },
+      "redaction": {
+        "status": "processing"
+      },
+      "related_customer": "string",
+      "related_customer_account": "string",
+      "related_person": {
+        "account": "string",
+        "person": "string"
+      },
+      "status": "canceled",
+      "type": "document",
+      "url": "string",
+      "verification_flow": "string",
+      "verified_outputs": {
+        "address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
+        "dob": {
+          "day": 0,
+          "month": 0,
+          "year": 0
+        },
+        "email": "string",
+        "first_name": "string",
+        "id_number": "string",
+        "id_number_type": "br_cpf",
+        "last_name": "string",
+        "phone": "string",
+        "sex": "[redacted]",
+        "unparsed_place_of_birth": "string",
+        "unparsed_sex": "string"
+      }
+    }
+  }
+}

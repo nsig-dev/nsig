@@ -1,0 +1,642 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "payment_intent.canceled",
+  "data": {
+    "object": {
+      "amount": 0,
+      "amount_capturable": 0,
+      "amount_details": {
+        "discount_amount": 0,
+        "error": {
+          "code": "amount_details_amount_mismatch",
+          "message": "string"
+        },
+        "line_items": {
+          "data": [
+            null
+          ],
+          "has_more": false,
+          "object": "list",
+          "url": "string"
+        },
+        "shipping": {
+          "amount": 0,
+          "from_postal_code": "string",
+          "to_postal_code": "string"
+        },
+        "tax": {
+          "total_tax_amount": 0
+        },
+        "tip": {
+          "amount": 0
+        }
+      },
+      "amount_received": 0,
+      "application": "string",
+      "application_fee_amount": 0,
+      "automatic_payment_methods": {
+        "allow_redirects": "always",
+        "enabled": false
+      },
+      "canceled_at": 1700000000,
+      "cancellation_reason": "abandoned",
+      "capture_method": "automatic",
+      "client_secret": "string",
+      "confirmation_method": "automatic",
+      "created": 1700000000,
+      "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "description": "string",
+      "excluded_payment_method_types": [
+        "acss_debit"
+      ],
+      "hooks": {
+        "inputs": {
+          "tax": null
+        }
+      },
+      "id": "string",
+      "last_payment_error": {
+        "advice_code": "string",
+        "charge": "string",
+        "code": "string",
+        "decline_code": "string",
+        "doc_url": "string",
+        "message": "string",
+        "network_advice_code": "string",
+        "network_decline_code": "string",
+        "param": "string",
+        "payment_intent": {
+          "amount": 0,
+          "amount_capturable": 0,
+          "amount_details": null,
+          "amount_received": 0,
+          "application": "string",
+          "application_fee_amount": 0,
+          "automatic_payment_methods": null,
+          "canceled_at": 1700000000,
+          "cancellation_reason": "abandoned",
+          "capture_method": "automatic",
+          "client_secret": "string",
+          "confirmation_method": "automatic",
+          "created": 1700000000,
+          "currency": "string",
+          "customer": "string",
+          "customer_account": "string",
+          "description": "string",
+          "excluded_payment_method_types": [],
+          "hooks": null,
+          "id": "string",
+          "last_payment_error": null,
+          "latest_charge": "string",
+          "livemode": false,
+          "managed_payments": null,
+          "metadata": {},
+          "next_action": null,
+          "object": "payment_intent",
+          "on_behalf_of": "string",
+          "payment_details": null,
+          "payment_method": "string",
+          "payment_method_configuration_details": null,
+          "payment_method_options": null,
+          "payment_method_types": [],
+          "presentment_details": null,
+          "processing": null,
+          "receipt_email": "string",
+          "review": "string",
+          "setup_future_usage": "off_session",
+          "shipping": null,
+          "statement_descriptor": "string",
+          "statement_descriptor_suffix": "string",
+          "status": "canceled",
+          "transfer_data": null,
+          "transfer_group": "string"
+        },
+        "payment_method": {
+          "acss_debit": null,
+          "affirm": null,
+          "afterpay_clearpay": null,
+          "alipay": null,
+          "allow_redisplay": "always",
+          "alma": null,
+          "amazon_pay": null,
+          "au_becs_debit": null,
+          "bacs_debit": null,
+          "bancontact": null,
+          "billie": null,
+          "billing_details": null,
+          "bizum": null,
+          "blik": null,
+          "boleto": null,
+          "card": null,
+          "card_present": null,
+          "cashapp": null,
+          "created": 1700000000,
+          "crypto": null,
+          "custom": null,
+          "customer": "string",
+          "customer_account": "string",
+          "customer_balance": null,
+          "eps": null,
+          "fpx": null,
+          "giropay": null,
+          "grabpay": null,
+          "id": "string",
+          "ideal": null,
+          "interac_present": null,
+          "kakao_pay": null,
+          "klarna": null,
+          "konbini": null,
+          "kr_card": null,
+          "link": null,
+          "livemode": false,
+          "mb_way": null,
+          "metadata": {},
+          "mobilepay": null,
+          "multibanco": null,
+          "naver_pay": null,
+          "nz_bank_account": null,
+          "object": "payment_method",
+          "oxxo": null,
+          "p24": null,
+          "pay_by_bank": null,
+          "payco": null,
+          "paynow": null,
+          "paypal": null,
+          "payto": null,
+          "pix": null,
+          "promptpay": null,
+          "radar_options": null,
+          "revolut_pay": null,
+          "samsung_pay": null,
+          "satispay": null,
+          "scalapay": null,
+          "sepa_debit": null,
+          "sofort": null,
+          "sunbit": null,
+          "swish": null,
+          "twint": null,
+          "type": "acss_debit",
+          "upi": null,
+          "us_bank_account": null,
+          "wechat_pay": null,
+          "zip": null
+        },
+        "payment_method_type": "string",
+        "request_log_url": "string",
+        "setup_intent": {
+          "application": "string",
+          "attach_to_self": false,
+          "automatic_payment_methods": null,
+          "cancellation_reason": "abandoned",
+          "client_secret": "string",
+          "created": 1700000000,
+          "customer": "string",
+          "customer_account": "string",
+          "description": "string",
+          "excluded_payment_method_types": [],
+          "flow_directions": [],
+          "id": "string",
+          "last_setup_error": null,
+          "latest_attempt": "string",
+          "livemode": false,
+          "managed_payments": null,
+          "mandate": "string",
+          "metadata": {},
+          "next_action": null,
+          "object": "setup_intent",
+          "on_behalf_of": "string",
+          "payment_method": "string",
+          "payment_method_configuration_details": null,
+          "payment_method_options": null,
+          "payment_method_types": [],
+          "single_use_mandate": "string",
+          "status": "canceled",
+          "usage": "string"
+        },
+        "source": {
+          "account": "string",
+          "account_holder_name": "string",
+          "account_holder_type": "string",
+          "account_type": "string",
+          "available_payout_methods": [],
+          "bank_name": "string",
+          "country": "string",
+          "currency": "string",
+          "customer": "string",
+          "default_for_currency": false,
+          "fingerprint": "string",
+          "future_requirements": null,
+          "id": "string",
+          "last4": "string",
+          "metadata": {},
+          "object": "bank_account",
+          "requirements": null,
+          "routing_number": "string",
+          "status": "string"
+        },
+        "type": "api_error"
+      },
+      "latest_charge": "string",
+      "livemode": false,
+      "managed_payments": {
+        "enabled": false
+      },
+      "metadata": {},
+      "next_action": {
+        "alipay_handle_redirect": {
+          "native_data": "string",
+          "native_url": "string",
+          "return_url": "string",
+          "url": "string"
+        },
+        "blik_authorize": {},
+        "boleto_display_details": {
+          "expires_at": 1700000000,
+          "hosted_voucher_url": "string",
+          "number": "string",
+          "pdf": "string"
+        },
+        "card_await_notification": {
+          "charge_attempt_at": 1700000000,
+          "customer_approval_required": false
+        },
+        "cashapp_handle_redirect_or_display_qr_code": {
+          "hosted_instructions_url": "string",
+          "mobile_auth_url": "string",
+          "qr_code": null
+        },
+        "display_bank_transfer_instructions": {
+          "amount_remaining": 0,
+          "currency": "string",
+          "financial_addresses": [],
+          "hosted_instructions_url": "string",
+          "reference": "string",
+          "type": "eu_bank_transfer"
+        },
+        "klarna_display_qr_code": {
+          "data": "string",
+          "expires_at": 1700000000,
+          "image_url_png": "string",
+          "image_url_svg": "string"
+        },
+        "konbini_display_details": {
+          "expires_at": 1700000000,
+          "hosted_voucher_url": "string",
+          "stores": null
+        },
+        "multibanco_display_details": {
+          "entity": "string",
+          "expires_at": 1700000000,
+          "hosted_voucher_url": "string",
+          "reference": "string"
+        },
+        "oxxo_display_details": {
+          "expires_after": 1700000000,
+          "hosted_voucher_url": "string",
+          "number": "string"
+        },
+        "paynow_display_qr_code": {
+          "data": "string",
+          "hosted_instructions_url": "string",
+          "image_url_png": "string",
+          "image_url_svg": "string"
+        },
+        "pix_display_qr_code": {
+          "data": "string",
+          "expires_at": 0,
+          "hosted_instructions_url": "string",
+          "image_url_png": "string",
+          "image_url_svg": "string"
+        },
+        "promptpay_display_qr_code": {
+          "data": "string",
+          "hosted_instructions_url": "string",
+          "image_url_png": "string",
+          "image_url_svg": "string"
+        },
+        "redirect_to_url": {
+          "return_url": "string",
+          "url": "string"
+        },
+        "swish_handle_redirect_or_display_qr_code": {
+          "hosted_instructions_url": "string",
+          "qr_code": null
+        },
+        "type": "string",
+        "upi_handle_redirect_or_display_qr_code": {
+          "hosted_instructions_url": "string",
+          "qr_code": null
+        },
+        "use_stripe_sdk": {},
+        "verify_with_microdeposits": {
+          "arrival_date": 1700000000,
+          "hosted_verification_url": "string",
+          "microdeposit_type": "amounts"
+        },
+        "wechat_pay_display_qr_code": {
+          "data": "string",
+          "hosted_instructions_url": "string",
+          "image_data_url": "string",
+          "image_url_png": "string",
+          "image_url_svg": "string"
+        },
+        "wechat_pay_redirect_to_android_app": {
+          "app_id": "string",
+          "nonce_str": "string",
+          "package": "string",
+          "partner_id": "string",
+          "prepay_id": "string",
+          "sign": "string",
+          "timestamp": "string"
+        },
+        "wechat_pay_redirect_to_ios_app": {
+          "native_url": "string"
+        }
+      },
+      "object": "payment_intent",
+      "on_behalf_of": "string",
+      "payment_details": {
+        "customer_reference": "string",
+        "order_reference": "string"
+      },
+      "payment_method": "string",
+      "payment_method_configuration_details": {
+        "id": "string",
+        "parent": "string"
+      },
+      "payment_method_options": {
+        "acss_debit": {
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string",
+          "verification_method": "automatic"
+        },
+        "affirm": {
+          "capture_method": "manual",
+          "preferred_locale": "string",
+          "setup_future_usage": "none"
+        },
+        "afterpay_clearpay": {
+          "capture_method": "manual",
+          "reference": "string",
+          "setup_future_usage": "none"
+        },
+        "alipay": {
+          "setup_future_usage": "none"
+        },
+        "alma": {
+          "capture_method": "manual"
+        },
+        "amazon_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "au_becs_debit": {
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "bacs_debit": {
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "bancontact": {
+          "preferred_language": "de",
+          "setup_future_usage": "none"
+        },
+        "billie": {
+          "capture_method": "manual"
+        },
+        "bizum": {},
+        "blik": {
+          "setup_future_usage": "none"
+        },
+        "boleto": {
+          "expires_after_days": 0,
+          "setup_future_usage": "none"
+        },
+        "card": {
+          "capture_method": "manual",
+          "installments": null,
+          "mandate_options": null,
+          "network": "amex",
+          "request_extended_authorization": "if_available",
+          "request_incremental_authorization": "if_available",
+          "request_multicapture": "if_available",
+          "request_overcapture": "if_available",
+          "request_three_d_secure": "any",
+          "require_cvc_recollection": false,
+          "setup_future_usage": "none",
+          "statement_descriptor_suffix_kana": "string",
+          "statement_descriptor_suffix_kanji": "string"
+        },
+        "card_present": {
+          "capture_method": "manual",
+          "request_extended_authorization": false,
+          "request_incremental_authorization_support": false,
+          "routing": null
+        },
+        "cashapp": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "crypto": {
+          "setup_future_usage": "none"
+        },
+        "customer_balance": {
+          "bank_transfer": null,
+          "funding_type": "bank_transfer",
+          "setup_future_usage": "none"
+        },
+        "eps": {
+          "setup_future_usage": "none"
+        },
+        "fpx": {
+          "setup_future_usage": "none"
+        },
+        "giropay": {
+          "setup_future_usage": "none"
+        },
+        "grabpay": {
+          "setup_future_usage": "none"
+        },
+        "ideal": {
+          "setup_future_usage": "none"
+        },
+        "interac_present": {},
+        "kakao_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "klarna": {
+          "capture_method": "manual",
+          "preferred_locale": "string",
+          "setup_future_usage": "none"
+        },
+        "konbini": {
+          "confirmation_number": "string",
+          "expires_after_days": 0,
+          "expires_at": 1700000000,
+          "product_description": "string",
+          "setup_future_usage": "none"
+        },
+        "kr_card": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "link": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "mb_way": {
+          "setup_future_usage": "none"
+        },
+        "mobilepay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "multibanco": {
+          "setup_future_usage": "none"
+        },
+        "naver_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "nz_bank_account": {
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "oxxo": {
+          "expires_after_days": 0,
+          "setup_future_usage": "none"
+        },
+        "p24": {
+          "setup_future_usage": "none"
+        },
+        "pay_by_bank": {},
+        "payco": {
+          "capture_method": "manual"
+        },
+        "paynow": {
+          "setup_future_usage": "none"
+        },
+        "paypal": {
+          "capture_method": "manual",
+          "preferred_locale": "string",
+          "reference": "string",
+          "setup_future_usage": "none"
+        },
+        "payto": {
+          "mandate_options": null,
+          "setup_future_usage": "none"
+        },
+        "pix": {
+          "amount_includes_iof": "always",
+          "expires_after_seconds": 0,
+          "expires_at": 0,
+          "mandate_options": null,
+          "setup_future_usage": "none"
+        },
+        "promptpay": {
+          "setup_future_usage": "none"
+        },
+        "revolut_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "samsung_pay": {
+          "capture_method": "manual"
+        },
+        "satispay": {
+          "capture_method": "manual"
+        },
+        "scalapay": {
+          "capture_method": "manual"
+        },
+        "sepa_debit": {
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "sofort": {
+          "preferred_language": "de",
+          "setup_future_usage": "none"
+        },
+        "swish": {
+          "reference": "string",
+          "setup_future_usage": "none"
+        },
+        "twint": {
+          "setup_future_usage": "none"
+        },
+        "upi": {
+          "setup_future_usage": "off_session"
+        },
+        "us_bank_account": {
+          "financial_connections": null,
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string",
+          "transaction_purpose": "goods",
+          "verification_method": "automatic"
+        },
+        "wechat_pay": {
+          "app_id": "string",
+          "client": "android",
+          "setup_future_usage": "none"
+        },
+        "zip": {
+          "setup_future_usage": "none"
+        }
+      },
+      "payment_method_types": [
+        "string"
+      ],
+      "presentment_details": {
+        "presentment_amount": 0,
+        "presentment_currency": "string"
+      },
+      "processing": {
+        "card": {
+          "customer_notification": null
+        },
+        "type": "card"
+      },
+      "receipt_email": "string",
+      "review": "string",
+      "setup_future_usage": "off_session",
+      "shipping": {
+        "address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
+        "carrier": "string",
+        "name": "string",
+        "phone": "string",
+        "tracking_number": "string"
+      },
+      "statement_descriptor": "string",
+      "statement_descriptor_suffix": "string",
+      "status": "canceled",
+      "transfer_data": {
+        "amount": 0,
+        "description": "string",
+        "destination": "string",
+        "metadata": {},
+        "payment_data": {
+          "description": "string",
+          "metadata": {}
+        }
+      },
+      "transfer_group": "string"
+    }
+  }
+}

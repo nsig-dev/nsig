@@ -1,0 +1,60 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "capability.updated",
+  "data": {
+    "object": {
+      "account": "string",
+      "future_requirements": {
+        "alternatives": [
+          {}
+        ],
+        "current_deadline": 1700000000,
+        "currently_due": [
+          "string"
+        ],
+        "disabled_reason": "other",
+        "errors": [
+          {}
+        ],
+        "eventually_due": [
+          "string"
+        ],
+        "past_due": [
+          "string"
+        ],
+        "pending_verification": [
+          "string"
+        ]
+      },
+      "id": "string",
+      "object": "capability",
+      "requested": false,
+      "requested_at": 1700000000,
+      "requirements": {
+        "alternatives": [
+          {}
+        ],
+        "current_deadline": 1700000000,
+        "currently_due": [
+          "string"
+        ],
+        "disabled_reason": "other",
+        "errors": [
+          {}
+        ],
+        "eventually_due": [
+          "string"
+        ],
+        "past_due": [
+          "string"
+        ],
+        "pending_verification": [
+          "string"
+        ]
+      },
+      "status": "active"
+    }
+  }
+}

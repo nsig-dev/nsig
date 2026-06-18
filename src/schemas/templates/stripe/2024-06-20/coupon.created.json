@@ -1,0 +1,31 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "coupon.created",
+  "data": {
+    "object": {
+      "amount_off": 0,
+      "applies_to": {
+        "products": [
+          "string"
+        ]
+      },
+      "created": 1700000000,
+      "currency": "string",
+      "currency_options": {},
+      "duration": "forever",
+      "duration_in_months": 0,
+      "id": "string",
+      "livemode": false,
+      "max_redemptions": 0,
+      "metadata": {},
+      "name": "string",
+      "object": "coupon",
+      "percent_off": 0,
+      "redeem_by": 1700000000,
+      "times_redeemed": 0,
+      "valid": false
+    }
+  }
+}

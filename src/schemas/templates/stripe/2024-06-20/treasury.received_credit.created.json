@@ -1,0 +1,60 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "treasury.received_credit.created",
+  "data": {
+    "object": {
+      "amount": 0,
+      "created": 1700000000,
+      "currency": "string",
+      "description": "string",
+      "failure_code": "account_closed",
+      "financial_account": "string",
+      "hosted_regulatory_receipt_url": "string",
+      "id": "string",
+      "initiating_payment_method_details": {
+        "balance": "payments",
+        "billing_details": {
+          "address": null,
+          "email": "string",
+          "name": "string"
+        },
+        "financial_account": {
+          "id": "string",
+          "network": "stripe"
+        },
+        "issuing_card": "string",
+        "type": "balance",
+        "us_bank_account": {
+          "bank_name": "string",
+          "last4": "string",
+          "routing_number": "string"
+        }
+      },
+      "linked_flows": {
+        "credit_reversal": "string",
+        "issuing_authorization": "string",
+        "issuing_transaction": "string",
+        "source_flow": "string",
+        "source_flow_details": {
+          "credit_reversal": null,
+          "outbound_payment": null,
+          "outbound_transfer": null,
+          "payout": null,
+          "type": "credit_reversal"
+        },
+        "source_flow_type": "string"
+      },
+      "livemode": false,
+      "network": "ach",
+      "object": "treasury.received_credit",
+      "reversal_details": {
+        "deadline": 1700000000,
+        "restricted_reason": "already_reversed"
+      },
+      "status": "failed",
+      "transaction": "string"
+    }
+  }
+}

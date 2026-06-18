@@ -1,0 +1,31 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "climate.product.pricing_updated",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "current_prices_per_metric_ton": {},
+      "delivery_year": 0,
+      "id": "string",
+      "livemode": false,
+      "metric_tons_available": "string",
+      "name": "string",
+      "object": "climate.product",
+      "suppliers": [
+        {
+          "id": "string",
+          "info_url": "string",
+          "livemode": false,
+          "locations": [
+            null
+          ],
+          "name": "string",
+          "object": "climate.supplier",
+          "removal_pathway": "biomass_carbon_removal_and_storage"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "promotion_code.updated",
+  "data": {
+    "object": {
+      "active": false,
+      "code": "string",
+      "created": 1700000000,
+      "customer": "string",
+      "customer_account": "string",
+      "expires_at": 1700000000,
+      "id": "string",
+      "livemode": false,
+      "max_redemptions": 0,
+      "metadata": {},
+      "object": "promotion_code",
+      "promotion": {
+        "coupon": "string",
+        "type": "coupon"
+      },
+      "restrictions": {
+        "currency_options": {},
+        "first_time_transaction": false,
+        "minimum_amount": 0,
+        "minimum_amount_currency": "string"
+      },
+      "times_redeemed": 0
+    }
+  }
+}

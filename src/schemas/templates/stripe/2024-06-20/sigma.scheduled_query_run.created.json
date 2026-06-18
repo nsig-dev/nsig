@@ -1,0 +1,42 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "sigma.scheduled_query_run.created",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "data_load_time": 1700000000,
+      "error": {
+        "message": "string"
+      },
+      "file": {
+        "created": 1700000000,
+        "expires_at": 1700000000,
+        "filename": "string",
+        "id": "string",
+        "links": {
+          "data": [
+            null
+          ],
+          "has_more": false,
+          "object": "list",
+          "url": "string"
+        },
+        "object": "file",
+        "purpose": "account_requirement",
+        "size": 0,
+        "title": "string",
+        "type": "string",
+        "url": "string"
+      },
+      "id": "string",
+      "livemode": false,
+      "object": "scheduled_query_run",
+      "result_available_until": 1700000000,
+      "sql": "string",
+      "status": "string",
+      "title": "string"
+    }
+  }
+}

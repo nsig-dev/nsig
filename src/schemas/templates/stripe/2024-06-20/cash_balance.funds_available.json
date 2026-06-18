@@ -1,0 +1,19 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "cash_balance.funds_available",
+  "data": {
+    "object": {
+      "available": {},
+      "customer": "string",
+      "customer_account": "string",
+      "livemode": false,
+      "object": "cash_balance",
+      "settings": {
+        "reconciliation_mode": "automatic",
+        "using_merchant_default": false
+      }
+    }
+  }
+}

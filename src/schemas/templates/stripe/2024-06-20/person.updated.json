@@ -1,0 +1,157 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "person.updated",
+  "data": {
+    "object": {
+      "account": "string",
+      "additional_tos_acceptances": {
+        "account": {
+          "date": 1700000000,
+          "ip": "string",
+          "user_agent": "string"
+        }
+      },
+      "address": {
+        "city": "string",
+        "country": "string",
+        "line1": "string",
+        "line2": "string",
+        "postal_code": "string",
+        "state": "string"
+      },
+      "address_kana": {
+        "city": "string",
+        "country": "string",
+        "line1": "string",
+        "line2": "string",
+        "postal_code": "string",
+        "state": "string",
+        "town": "string"
+      },
+      "address_kanji": {
+        "city": "string",
+        "country": "string",
+        "line1": "string",
+        "line2": "string",
+        "postal_code": "string",
+        "state": "string",
+        "town": "string"
+      },
+      "created": 1700000000,
+      "dob": {
+        "day": 0,
+        "month": 0,
+        "year": 0
+      },
+      "email": "string",
+      "first_name": "string",
+      "first_name_kana": "string",
+      "first_name_kanji": "string",
+      "full_name_aliases": [
+        "string"
+      ],
+      "future_requirements": {
+        "alternatives": [
+          {}
+        ],
+        "currently_due": [
+          "string"
+        ],
+        "errors": [
+          {}
+        ],
+        "eventually_due": [
+          "string"
+        ],
+        "past_due": [
+          "string"
+        ],
+        "pending_verification": [
+          "string"
+        ]
+      },
+      "gender": "string",
+      "id": "string",
+      "id_number_provided": false,
+      "id_number_secondary_provided": false,
+      "last_name": "string",
+      "last_name_kana": "string",
+      "last_name_kanji": "string",
+      "maiden_name": "string",
+      "metadata": {},
+      "nationality": "string",
+      "object": "person",
+      "phone": "string",
+      "political_exposure": "existing",
+      "registered_address": {
+        "city": "string",
+        "country": "string",
+        "line1": "string",
+        "line2": "string",
+        "postal_code": "string",
+        "state": "string"
+      },
+      "relationship": {
+        "authorizer": false,
+        "director": false,
+        "executive": false,
+        "legal_guardian": false,
+        "owner": false,
+        "percent_ownership": 0,
+        "representative": false,
+        "title": "string"
+      },
+      "requirements": {
+        "alternatives": [
+          {}
+        ],
+        "currently_due": [
+          "string"
+        ],
+        "errors": [
+          {}
+        ],
+        "eventually_due": [
+          "string"
+        ],
+        "past_due": [
+          "string"
+        ],
+        "pending_verification": [
+          "string"
+        ]
+      },
+      "ssn_last_4_provided": false,
+      "us_cfpb_data": {
+        "ethnicity_details": {
+          "ethnicity": [],
+          "ethnicity_other": "string"
+        },
+        "race_details": {
+          "race": [],
+          "race_other": "string"
+        },
+        "self_identified_gender": "string"
+      },
+      "verification": {
+        "additional_document": {
+          "back": "string",
+          "details": "string",
+          "details_code": "string",
+          "front": "string"
+        },
+        "details": "string",
+        "details_code": "string",
+        "document": {
+          "back": "string",
+          "details": "string",
+          "details_code": "string",
+          "front": "string"
+        },
+        "status": "string"
+      }
+    }
+  }
+}

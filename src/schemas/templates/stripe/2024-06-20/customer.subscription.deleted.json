@@ -5,10 +5,201 @@
   "type": "customer.subscription.deleted",
   "data": {
     "object": {
-      "id": "sub_{{seed}}",
+      "application": "string",
+      "application_fee_percent": 0,
+      "automatic_tax": {
+        "disabled_reason": "requires_location_inputs",
+        "enabled": false,
+        "liability": {
+          "account": "string",
+          "type": "account"
+        }
+      },
+      "billing_cycle_anchor": 1700000000,
+      "billing_cycle_anchor_config": {
+        "day_of_month": 0,
+        "hour": 0,
+        "minute": 0,
+        "month": 0,
+        "second": 0
+      },
+      "billing_mode": {
+        "flexible": {
+          "proration_discounts": "included"
+        },
+        "type": "classic",
+        "updated_at": 1700000000
+      },
+      "billing_schedules": [
+        {
+          "applies_to": [
+            null
+          ],
+          "bill_until": {},
+          "key": "string"
+        }
+      ],
+      "billing_thresholds": {
+        "amount_gte": 0,
+        "reset_billing_cycle_anchor": false
+      },
+      "cancel_at": 1700000000,
+      "cancel_at_period_end": false,
+      "canceled_at": 1700000000,
+      "cancellation_details": {
+        "comment": "string",
+        "feedback": "customer_service",
+        "reason": "canceled_by_retention_policy"
+      },
+      "collection_method": "charge_automatically",
+      "created": 1700000000,
+      "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "days_until_due": 0,
+      "default_payment_method": "string",
+      "default_source": "string",
+      "default_tax_rates": [
+        {
+          "active": false,
+          "country": "string",
+          "created": 1700000000,
+          "description": "string",
+          "display_name": "string",
+          "effective_percentage": 0,
+          "flat_amount": {},
+          "id": "string",
+          "inclusive": false,
+          "jurisdiction": "string",
+          "jurisdiction_level": "city",
+          "livemode": false,
+          "metadata": {},
+          "object": "tax_rate",
+          "percentage": 0,
+          "rate_type": "flat_amount",
+          "state": "string",
+          "tax_type": "amusement_tax"
+        }
+      ],
+      "description": "string",
+      "discounts": [
+        "string"
+      ],
+      "ended_at": 1700000000,
+      "id": "string",
+      "invoice_settings": {
+        "account_tax_ids": [
+          "string"
+        ],
+        "issuer": {
+          "account": "string",
+          "type": "account"
+        }
+      },
+      "items": {
+        "data": [
+          {
+            "billed_until": 1700000000,
+            "billing_thresholds": null,
+            "created": 0,
+            "current_period_end": 1700000000,
+            "current_period_start": 1700000000,
+            "discounts": [],
+            "id": "string",
+            "metadata": {},
+            "object": "subscription_item",
+            "price": null,
+            "quantity": 0,
+            "subscription": "string",
+            "tax_rates": []
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "latest_invoice": "string",
+      "livemode": false,
+      "managed_payments": {
+        "enabled": false
+      },
+      "metadata": {},
+      "next_pending_invoice_item_invoice": 1700000000,
       "object": "subscription",
-      "customer": "cus_{{seed}}",
-      "status": "canceled"
+      "on_behalf_of": "string",
+      "pause_collection": {
+        "behavior": "keep_as_draft",
+        "resumes_at": 1700000000
+      },
+      "payment_settings": {
+        "payment_method_options": {
+          "acss_debit": null,
+          "bancontact": null,
+          "card": null,
+          "customer_balance": null,
+          "konbini": null,
+          "payto": null,
+          "pix": null,
+          "sepa_debit": null,
+          "upi": null,
+          "us_bank_account": null
+        },
+        "payment_method_types": [
+          "ach_credit_transfer"
+        ],
+        "save_default_payment_method": "off"
+      },
+      "pending_invoice_item_interval": {
+        "interval": "day",
+        "interval_count": 0
+      },
+      "pending_setup_intent": "string",
+      "pending_update": {
+        "billing_cycle_anchor": 1700000000,
+        "discount": {
+          "checkout_session": "string",
+          "customer": "string",
+          "customer_account": "string",
+          "end": 1700000000,
+          "id": "string",
+          "invoice": "string",
+          "invoice_item": "string",
+          "object": "discount",
+          "promotion_code": "string",
+          "source": null,
+          "start": 1700000000,
+          "subscription": "string",
+          "subscription_item": "string"
+        },
+        "discounts": [
+          "string"
+        ],
+        "expires_at": 1700000000,
+        "metadata": {},
+        "subscription_items": [
+          {}
+        ],
+        "trial_end": 1700000000,
+        "trial_from_plan": false
+      },
+      "presentment_details": {
+        "presentment_currency": "string"
+      },
+      "schedule": "string",
+      "start_date": 1700000000,
+      "status": "active",
+      "test_clock": "string",
+      "transfer_data": {
+        "amount_percent": 0,
+        "destination": "string"
+      },
+      "trial_end": 1700000000,
+      "trial_settings": {
+        "end_behavior": {
+          "missing_payment_method": "cancel"
+        }
+      },
+      "trial_start": 1700000000
     }
   }
 }

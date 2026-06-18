@@ -1,0 +1,29 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "treasury.debit_reversal.initial_credit_granted",
+  "data": {
+    "object": {
+      "amount": 0,
+      "created": 1700000000,
+      "currency": "string",
+      "financial_account": "string",
+      "hosted_regulatory_receipt_url": "string",
+      "id": "string",
+      "linked_flows": {
+        "issuing_dispute": "string"
+      },
+      "livemode": false,
+      "metadata": {},
+      "network": "ach",
+      "object": "treasury.debit_reversal",
+      "received_debit": "string",
+      "status": "failed",
+      "status_transitions": {
+        "completed_at": 1700000000
+      },
+      "transaction": "string"
+    }
+  }
+}

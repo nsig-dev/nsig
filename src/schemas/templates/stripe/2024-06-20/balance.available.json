@@ -1,0 +1,56 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "balance.available",
+  "data": {
+    "object": {
+      "available": [
+        {
+          "amount": 0,
+          "currency": "string",
+          "source_types": {}
+        }
+      ],
+      "connect_reserved": [
+        {
+          "amount": 0,
+          "currency": "string",
+          "source_types": {}
+        }
+      ],
+      "instant_available": [
+        {
+          "amount": 0,
+          "currency": "string",
+          "net_available": [
+            null
+          ],
+          "source_types": {}
+        }
+      ],
+      "issuing": {
+        "available": [
+          {}
+        ]
+      },
+      "livemode": false,
+      "object": "balance",
+      "pending": [
+        {
+          "amount": 0,
+          "currency": "string",
+          "source_types": {}
+        }
+      ],
+      "refund_and_dispute_prefunding": {
+        "available": [
+          {}
+        ],
+        "pending": [
+          {}
+        ]
+      }
+    }
+  }
+}

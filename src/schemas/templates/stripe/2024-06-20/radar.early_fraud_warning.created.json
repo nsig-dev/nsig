@@ -1,0 +1,18 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "radar.early_fraud_warning.created",
+  "data": {
+    "object": {
+      "actionable": false,
+      "charge": "string",
+      "created": 1700000000,
+      "fraud_type": "string",
+      "id": "string",
+      "livemode": false,
+      "object": "radar.early_fraud_warning",
+      "payment_intent": "string"
+    }
+  }
+}

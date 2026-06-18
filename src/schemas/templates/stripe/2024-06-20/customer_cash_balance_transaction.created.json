@@ -1,0 +1,46 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "customer_cash_balance_transaction.created",
+  "data": {
+    "object": {
+      "adjusted_for_overdraft": {
+        "balance_transaction": "string",
+        "linked_transaction": "string"
+      },
+      "applied_to_payment": {
+        "payment_intent": "string"
+      },
+      "created": 1700000000,
+      "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "ending_balance": 0,
+      "funded": {
+        "bank_transfer": {
+          "eu_bank_transfer": null,
+          "gb_bank_transfer": null,
+          "jp_bank_transfer": null,
+          "reference": "string",
+          "type": "eu_bank_transfer",
+          "us_bank_transfer": null
+        }
+      },
+      "id": "string",
+      "livemode": false,
+      "net_amount": 0,
+      "object": "customer_cash_balance_transaction",
+      "refunded_from_payment": {
+        "refund": "string"
+      },
+      "transferred_to_balance": {
+        "balance_transaction": "string"
+      },
+      "type": "adjusted_for_overdraft",
+      "unapplied_from_payment": {
+        "payment_intent": "string"
+      }
+    }
+  }
+}

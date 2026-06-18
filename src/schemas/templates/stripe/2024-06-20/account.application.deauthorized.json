@@ -1,0 +1,13 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "account.application.deauthorized",
+  "data": {
+    "object": {
+      "id": "string",
+      "name": "string",
+      "object": "application"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "test_helpers.test_clock.internal_failure",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "deletes_after": 1700000000,
+      "frozen_time": 1700000000,
+      "id": "string",
+      "livemode": false,
+      "name": "string",
+      "object": "test_helpers.test_clock",
+      "status": "advancing",
+      "status_details": {
+        "advancing": {
+          "target_frozen_time": 1700000000
+        }
+      }
+    }
+  }
+}

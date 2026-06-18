@@ -1,0 +1,41 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "billing_portal.session.created",
+  "data": {
+    "object": {
+      "configuration": "string",
+      "created": 1700000000,
+      "customer": "string",
+      "customer_account": "string",
+      "flow": {
+        "after_completion": {
+          "hosted_confirmation": null,
+          "redirect": null,
+          "type": "hosted_confirmation"
+        },
+        "subscription_cancel": {
+          "retention": null,
+          "subscription": "string"
+        },
+        "subscription_update": {
+          "subscription": "string"
+        },
+        "subscription_update_confirm": {
+          "discounts": [],
+          "items": [],
+          "subscription": "string"
+        },
+        "type": "payment_method_update"
+      },
+      "id": "string",
+      "livemode": false,
+      "locale": "auto",
+      "object": "billing_portal.session",
+      "on_behalf_of": "string",
+      "return_url": "string",
+      "url": "string"
+    }
+  }
+}

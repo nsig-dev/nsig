@@ -1,0 +1,26 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "treasury.credit_reversal.posted",
+  "data": {
+    "object": {
+      "amount": 0,
+      "created": 1700000000,
+      "currency": "string",
+      "financial_account": "string",
+      "hosted_regulatory_receipt_url": "string",
+      "id": "string",
+      "livemode": false,
+      "metadata": {},
+      "network": "ach",
+      "object": "treasury.credit_reversal",
+      "received_credit": "string",
+      "status": "canceled",
+      "status_transitions": {
+        "posted_at": 1700000000
+      },
+      "transaction": "string"
+    }
+  }
+}

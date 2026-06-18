@@ -1,0 +1,30 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "invoice_payment.paid",
+  "data": {
+    "object": {
+      "amount_paid": 0,
+      "amount_requested": 0,
+      "created": 1700000000,
+      "currency": "string",
+      "id": "string",
+      "invoice": "string",
+      "is_default": false,
+      "livemode": false,
+      "object": "invoice_payment",
+      "payment": {
+        "charge": "string",
+        "payment_intent": "string",
+        "payment_record": "string",
+        "type": "charge"
+      },
+      "status": "string",
+      "status_transitions": {
+        "canceled_at": 1700000000,
+        "paid_at": 1700000000
+      }
+    }
+  }
+}

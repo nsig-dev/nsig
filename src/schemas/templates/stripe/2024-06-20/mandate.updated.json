@@ -1,0 +1,99 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "mandate.updated",
+  "data": {
+    "object": {
+      "customer_acceptance": {
+        "accepted_at": 1700000000,
+        "offline": {},
+        "online": {
+          "ip_address": "string",
+          "user_agent": "string"
+        },
+        "type": "offline"
+      },
+      "id": "string",
+      "livemode": false,
+      "multi_use": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "object": "mandate",
+      "on_behalf_of": "string",
+      "payment_method": "string",
+      "payment_method_details": {
+        "acss_debit": {
+          "default_for": [],
+          "interval_description": "string",
+          "payment_schedule": "combined",
+          "transaction_type": "business"
+        },
+        "amazon_pay": {},
+        "au_becs_debit": {
+          "url": "string"
+        },
+        "bacs_debit": {
+          "display_name": "string",
+          "network_status": "accepted",
+          "reference": "string",
+          "revocation_reason": "account_closed",
+          "service_user_number": "string",
+          "url": "string"
+        },
+        "card": {},
+        "cashapp": {},
+        "kakao_pay": {},
+        "klarna": {},
+        "kr_card": {},
+        "link": {},
+        "naver_pay": {},
+        "nz_bank_account": {},
+        "paypal": {
+          "billing_agreement_id": "string",
+          "payer_id": "string"
+        },
+        "payto": {
+          "amount": 0,
+          "amount_type": "fixed",
+          "end_date": "string",
+          "payment_schedule": "adhoc",
+          "payments_per_period": 0,
+          "purpose": "dependant_support",
+          "start_date": "string"
+        },
+        "pix": {
+          "amount_includes_iof": "always",
+          "amount_type": "fixed",
+          "end_date": "string",
+          "payment_schedule": "halfyearly",
+          "reference": "string",
+          "start_date": "string"
+        },
+        "revolut_pay": {},
+        "sepa_debit": {
+          "reference": "string",
+          "url": "string"
+        },
+        "twint": {},
+        "type": "string",
+        "upi": {
+          "amount": 0,
+          "amount_type": "fixed",
+          "description": "string",
+          "end_date": 1700000000
+        },
+        "us_bank_account": {
+          "collection_method": "paper"
+        }
+      },
+      "single_use": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "status": "active",
+      "type": "multi_use"
+    }
+  }
+}

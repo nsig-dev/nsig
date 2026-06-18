@@ -1,0 +1,109 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "charge.dispute.funds_withdrawn",
+  "data": {
+    "object": {
+      "amount": 0,
+      "balance_transactions": [
+        {
+          "amount": 0,
+          "available_on": 1700000000,
+          "balance_type": "issuing",
+          "created": 1700000000,
+          "currency": "string",
+          "description": "string",
+          "exchange_rate": 0,
+          "fee": 0,
+          "fee_details": [
+            null
+          ],
+          "id": "string",
+          "net": 0,
+          "object": "balance_transaction",
+          "reporting_category": "string",
+          "source": "string",
+          "status": "string",
+          "type": "adjustment"
+        }
+      ],
+      "charge": "string",
+      "created": 1700000000,
+      "currency": "string",
+      "enhanced_eligibility_types": [
+        "visa_compelling_evidence_3"
+      ],
+      "evidence": {
+        "access_activity_log": "string",
+        "billing_address": "string",
+        "cancellation_policy": "string",
+        "cancellation_policy_disclosure": "string",
+        "cancellation_rebuttal": "string",
+        "customer_communication": "string",
+        "customer_email_address": "string",
+        "customer_name": "string",
+        "customer_purchase_ip": "string",
+        "customer_signature": "string",
+        "duplicate_charge_documentation": "string",
+        "duplicate_charge_explanation": "string",
+        "duplicate_charge_id": "string",
+        "enhanced_evidence": {
+          "visa_compelling_evidence_3": null,
+          "visa_compliance": null
+        },
+        "product_description": "string",
+        "receipt": "string",
+        "refund_policy": "string",
+        "refund_policy_disclosure": "string",
+        "refund_refusal_explanation": "string",
+        "service_date": "string",
+        "service_documentation": "string",
+        "shipping_address": "string",
+        "shipping_carrier": "string",
+        "shipping_date": "string",
+        "shipping_documentation": "string",
+        "shipping_tracking_number": "string",
+        "uncategorized_file": "string",
+        "uncategorized_text": "string"
+      },
+      "evidence_details": {
+        "due_by": 1700000000,
+        "enhanced_eligibility": {
+          "visa_compelling_evidence_3": null,
+          "visa_compliance": null
+        },
+        "has_evidence": false,
+        "past_due": false,
+        "submission_count": 0
+      },
+      "id": "string",
+      "is_charge_refundable": false,
+      "livemode": false,
+      "metadata": {},
+      "object": "dispute",
+      "payment_intent": "string",
+      "payment_method_details": {
+        "amazon_pay": {
+          "dispute_type": "chargeback"
+        },
+        "card": {
+          "brand": "string",
+          "case_type": "block",
+          "network_reason_code": "string"
+        },
+        "klarna": {
+          "chargeback_loss_reason_code": "string",
+          "reason_code": "string"
+        },
+        "paypal": {
+          "case_id": "string",
+          "reason_code": "string"
+        },
+        "type": "amazon_pay"
+      },
+      "reason": "string",
+      "status": "lost"
+    }
+  }
+}

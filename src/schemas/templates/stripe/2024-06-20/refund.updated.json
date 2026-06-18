@@ -1,0 +1,126 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "refund.updated",
+  "data": {
+    "object": {
+      "amount": 0,
+      "balance_transaction": "string",
+      "charge": "string",
+      "created": 1700000000,
+      "currency": "string",
+      "description": "string",
+      "destination_details": {
+        "affirm": {},
+        "afterpay_clearpay": {},
+        "alipay": {},
+        "alma": {},
+        "amazon_pay": {},
+        "au_bank_transfer": {},
+        "blik": {
+          "network_decline_code": "string",
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "br_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "card": {
+          "reference": "string",
+          "reference_status": "string",
+          "reference_type": "string",
+          "type": "pending"
+        },
+        "cashapp": {},
+        "crypto": {
+          "reference": "string"
+        },
+        "customer_cash_balance": {},
+        "eps": {},
+        "eu_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "gb_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "giropay": {},
+        "grabpay": {},
+        "jp_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "klarna": {},
+        "mb_way": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "multibanco": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "mx_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "nz_bank_transfer": {},
+        "p24": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "paynow": {},
+        "paypal": {
+          "network_decline_code": "string"
+        },
+        "pix": {},
+        "revolut": {},
+        "scalapay": {},
+        "sofort": {},
+        "swish": {
+          "network_decline_code": "string",
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "th_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "twint": {},
+        "type": "string",
+        "us_bank_transfer": {
+          "reference": "string",
+          "reference_status": "string"
+        },
+        "wechat_pay": {},
+        "zip": {}
+      },
+      "failure_balance_transaction": "string",
+      "failure_reason": "string",
+      "id": "string",
+      "instructions_email": "string",
+      "metadata": {},
+      "next_action": {
+        "display_details": {
+          "email_sent": null,
+          "expires_at": 1700000000
+        },
+        "type": "string"
+      },
+      "object": "refund",
+      "payment_intent": "string",
+      "pending_reason": "charge_pending",
+      "presentment_details": {
+        "presentment_amount": 0,
+        "presentment_currency": "string"
+      },
+      "reason": "duplicate",
+      "receipt_number": "string",
+      "source_transfer_reversal": "string",
+      "status": "string",
+      "transfer_reversal": "string"
+    }
+  }
+}

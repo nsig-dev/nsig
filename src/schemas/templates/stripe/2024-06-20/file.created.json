@@ -1,0 +1,38 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "file.created",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "expires_at": 1700000000,
+      "filename": "string",
+      "id": "string",
+      "links": {
+        "data": [
+          {
+            "created": 1700000000,
+            "expired": false,
+            "expires_at": 1700000000,
+            "file": "string",
+            "id": "string",
+            "livemode": false,
+            "metadata": {},
+            "object": "file_link",
+            "url": "string"
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "object": "file",
+      "purpose": "account_requirement",
+      "size": 0,
+      "title": "string",
+      "type": "string",
+      "url": "string"
+    }
+  }
+}

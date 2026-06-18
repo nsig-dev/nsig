@@ -1,0 +1,270 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "payment_method.updated",
+  "data": {
+    "object": {
+      "acss_debit": {
+        "bank_name": "string",
+        "fingerprint": "string",
+        "institution_number": "string",
+        "last4": "string",
+        "transit_number": "string"
+      },
+      "affirm": {},
+      "afterpay_clearpay": {},
+      "alipay": {},
+      "allow_redisplay": "always",
+      "alma": {},
+      "amazon_pay": {},
+      "au_becs_debit": {
+        "bsb_number": "string",
+        "fingerprint": "string",
+        "last4": "string"
+      },
+      "bacs_debit": {
+        "fingerprint": "string",
+        "last4": "string",
+        "sort_code": "string"
+      },
+      "bancontact": {},
+      "billie": {},
+      "billing_details": {
+        "address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
+        "email": "string",
+        "name": "string",
+        "phone": "string",
+        "tax_id": "string"
+      },
+      "bizum": {},
+      "blik": {},
+      "boleto": {
+        "tax_id": "string"
+      },
+      "card": {
+        "brand": "string",
+        "checks": {
+          "address_line1_check": "string",
+          "address_postal_code_check": "string",
+          "cvc_check": "string"
+        },
+        "country": "string",
+        "display_brand": "string",
+        "exp_month": 0,
+        "exp_year": 0,
+        "fingerprint": "string",
+        "funding": "string",
+        "generated_from": {
+          "charge": "string",
+          "payment_method_details": null,
+          "setup_attempt": "string"
+        },
+        "last4": "string",
+        "networks": {
+          "available": [],
+          "preferred": "string"
+        },
+        "regulated_status": "regulated",
+        "three_d_secure_usage": {
+          "supported": false
+        },
+        "wallet": {
+          "amex_express_checkout": null,
+          "apple_pay": null,
+          "dynamic_last4": "string",
+          "google_pay": null,
+          "link": null,
+          "masterpass": null,
+          "samsung_pay": null,
+          "type": "amex_express_checkout",
+          "visa_checkout": null
+        }
+      },
+      "card_present": {
+        "brand": "string",
+        "brand_product": "string",
+        "cardholder_name": "string",
+        "country": "string",
+        "description": "string",
+        "exp_month": 0,
+        "exp_year": 0,
+        "fingerprint": "string",
+        "funding": "string",
+        "issuer": "string",
+        "last4": "string",
+        "networks": {
+          "available": [],
+          "preferred": "string"
+        },
+        "offline": {
+          "stored_at": 1700000000,
+          "type": "deferred"
+        },
+        "preferred_locales": [
+          "string"
+        ],
+        "read_method": "contact_emv",
+        "wallet": {
+          "type": "apple_pay"
+        }
+      },
+      "cashapp": {
+        "buyer_id": "string",
+        "cashtag": "string"
+      },
+      "created": 1700000000,
+      "crypto": {},
+      "custom": {
+        "display_name": "string",
+        "logo": {
+          "content_type": "string",
+          "url": "string"
+        },
+        "type": "string"
+      },
+      "customer": "string",
+      "customer_account": "string",
+      "customer_balance": {},
+      "eps": {
+        "bank": "arzte_und_apotheker_bank"
+      },
+      "fpx": {
+        "bank": "affin_bank"
+      },
+      "giropay": {},
+      "grabpay": {},
+      "id": "string",
+      "ideal": {
+        "bank": "abn_amro",
+        "bic": "ABNANL2A"
+      },
+      "interac_present": {
+        "brand": "string",
+        "cardholder_name": "string",
+        "country": "string",
+        "description": "string",
+        "exp_month": 0,
+        "exp_year": 0,
+        "fingerprint": "string",
+        "funding": "string",
+        "issuer": "string",
+        "last4": "string",
+        "networks": {
+          "available": [],
+          "preferred": "string"
+        },
+        "preferred_locales": [
+          "string"
+        ],
+        "read_method": "contact_emv"
+      },
+      "kakao_pay": {},
+      "klarna": {
+        "dob": {
+          "day": 0,
+          "month": 0,
+          "year": 0
+        }
+      },
+      "konbini": {},
+      "kr_card": {
+        "brand": "bc",
+        "last4": "string"
+      },
+      "link": {
+        "email": "string"
+      },
+      "livemode": false,
+      "mb_way": {},
+      "metadata": {},
+      "mobilepay": {},
+      "multibanco": {},
+      "naver_pay": {
+        "buyer_id": "string",
+        "funding": "card"
+      },
+      "nz_bank_account": {
+        "account_holder_name": "string",
+        "bank_code": "string",
+        "bank_name": "string",
+        "branch_code": "string",
+        "last4": "string",
+        "suffix": "string"
+      },
+      "object": "payment_method",
+      "oxxo": {},
+      "p24": {
+        "bank": "alior_bank"
+      },
+      "pay_by_bank": {},
+      "payco": {},
+      "paynow": {},
+      "paypal": {
+        "country": "string",
+        "payer_email": "string",
+        "payer_id": "string"
+      },
+      "payto": {
+        "bsb_number": "string",
+        "last4": "string",
+        "pay_id": "string"
+      },
+      "pix": {},
+      "promptpay": {},
+      "radar_options": {
+        "session": "string"
+      },
+      "revolut_pay": {},
+      "samsung_pay": {},
+      "satispay": {},
+      "scalapay": {},
+      "sepa_debit": {
+        "bank_code": "string",
+        "branch_code": "string",
+        "country": "string",
+        "fingerprint": "string",
+        "generated_from": {
+          "charge": "string",
+          "setup_attempt": "string"
+        },
+        "last4": "string"
+      },
+      "sofort": {
+        "country": "string"
+      },
+      "sunbit": {},
+      "swish": {},
+      "twint": {},
+      "type": "acss_debit",
+      "upi": {
+        "vpa": "string"
+      },
+      "us_bank_account": {
+        "account_holder_type": "company",
+        "account_type": "checking",
+        "bank_name": "string",
+        "financial_connections_account": "string",
+        "fingerprint": "string",
+        "last4": "string",
+        "networks": {
+          "preferred": "string",
+          "supported": []
+        },
+        "routing_number": "string",
+        "status_details": {
+          "blocked": null
+        }
+      },
+      "wechat_pay": {},
+      "zip": {}
+    }
+  }
+}

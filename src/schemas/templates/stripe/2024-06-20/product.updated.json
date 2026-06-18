@@ -1,0 +1,39 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "product.updated",
+  "data": {
+    "object": {
+      "active": false,
+      "created": 1700000000,
+      "default_price": "string",
+      "description": "string",
+      "id": "string",
+      "images": [
+        "string"
+      ],
+      "livemode": false,
+      "marketing_features": [
+        {
+          "name": "string"
+        }
+      ],
+      "metadata": {},
+      "name": "string",
+      "object": "product",
+      "package_dimensions": {
+        "height": 0,
+        "length": 0,
+        "weight": 0,
+        "width": 0
+      },
+      "shippable": false,
+      "statement_descriptor": "string",
+      "tax_code": "string",
+      "unit_label": "string",
+      "updated": 1700000000,
+      "url": "string"
+    }
+  }
+}

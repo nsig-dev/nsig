@@ -1,0 +1,104 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "credit_note.voided",
+  "data": {
+    "object": {
+      "amount": 0,
+      "amount_shipping": 0,
+      "created": 1700000000,
+      "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "customer_balance_transaction": "string",
+      "discount_amount": 0,
+      "discount_amounts": [
+        {
+          "amount": 0,
+          "discount": "string"
+        }
+      ],
+      "effective_at": 1700000000,
+      "id": "string",
+      "invoice": "string",
+      "lines": {
+        "data": [
+          {
+            "amount": 0,
+            "description": "string",
+            "discount_amount": 0,
+            "discount_amounts": [],
+            "id": "string",
+            "invoice_line_item": "string",
+            "livemode": false,
+            "metadata": {},
+            "object": "credit_note_line_item",
+            "pretax_credit_amounts": [],
+            "quantity": 0,
+            "tax_rates": [],
+            "taxes": [],
+            "type": "custom_line_item",
+            "unit_amount": 0,
+            "unit_amount_decimal": "string"
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "livemode": false,
+      "memo": "string",
+      "metadata": {},
+      "number": "string",
+      "object": "credit_note",
+      "out_of_band_amount": 0,
+      "pdf": "string",
+      "post_payment_amount": 0,
+      "pre_payment_amount": 0,
+      "pretax_credit_amounts": [
+        {
+          "amount": 0,
+          "credit_balance_transaction": "string",
+          "discount": "string",
+          "type": "credit_balance_transaction"
+        }
+      ],
+      "reason": "duplicate",
+      "refunds": [
+        {
+          "amount_refunded": 0,
+          "payment_record_refund": {},
+          "refund": "string",
+          "type": "payment_record_refund"
+        }
+      ],
+      "shipping_cost": {
+        "amount_subtotal": 0,
+        "amount_tax": 0,
+        "amount_total": 0,
+        "shipping_rate": "string",
+        "taxes": [
+          {}
+        ]
+      },
+      "status": "issued",
+      "subtotal": 0,
+      "subtotal_excluding_tax": 0,
+      "total": 0,
+      "total_excluding_tax": 0,
+      "total_taxes": [
+        {
+          "amount": 0,
+          "tax_behavior": "exclusive",
+          "tax_rate_details": {},
+          "taxability_reason": "customer_exempt",
+          "taxable_amount": 0,
+          "type": "tax_rate_details"
+        }
+      ],
+      "type": "mixed",
+      "voided_at": 1700000000
+    }
+  }
+}

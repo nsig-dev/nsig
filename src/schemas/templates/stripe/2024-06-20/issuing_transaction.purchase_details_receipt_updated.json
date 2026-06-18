@@ -1,0 +1,83 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "issuing_transaction.purchase_details_receipt_updated",
+  "data": {
+    "object": {
+      "amount": 0,
+      "amount_details": {
+        "atm_fee": 0,
+        "cashback_amount": 0
+      },
+      "authorization": "string",
+      "balance_transaction": "string",
+      "card": "string",
+      "cardholder": "string",
+      "created": 1700000000,
+      "currency": "string",
+      "dispute": "string",
+      "id": "string",
+      "livemode": false,
+      "merchant_amount": 0,
+      "merchant_currency": "string",
+      "merchant_data": {
+        "category": "string",
+        "category_code": "string",
+        "city": "string",
+        "country": "string",
+        "name": "string",
+        "network_id": "string",
+        "postal_code": "string",
+        "state": "string",
+        "tax_id": "string",
+        "terminal_id": "string",
+        "url": "string"
+      },
+      "metadata": {},
+      "network_data": {
+        "authorization_code": "string",
+        "processing_date": "string",
+        "transaction_id": "string"
+      },
+      "object": "issuing.transaction",
+      "purchase_details": {
+        "fleet": {
+          "cardholder_prompt_data": null,
+          "purchase_type": "string",
+          "reported_breakdown": null,
+          "service_type": "string"
+        },
+        "flight": {
+          "departure_at": 0,
+          "passenger_name": "string",
+          "refundable": false,
+          "segments": [],
+          "travel_agency": "string"
+        },
+        "fuel": {
+          "industry_product_code": "string",
+          "quantity_decimal": "string",
+          "type": "string",
+          "unit": "string",
+          "unit_cost_decimal": "string"
+        },
+        "lodging": {
+          "check_in_at": 0,
+          "nights": 0
+        },
+        "receipt": [
+          {}
+        ],
+        "reference": "string"
+      },
+      "token": "string",
+      "treasury": {
+        "received_credit": "string",
+        "received_debit": "string"
+      },
+      "type": "capture",
+      "wallet": "apple_pay"
+    }
+  }
+}

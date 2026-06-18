@@ -1,0 +1,257 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "issuing_authorization.updated",
+  "data": {
+    "object": {
+      "amount": 0,
+      "amount_details": {
+        "atm_fee": 0,
+        "cashback_amount": 0
+      },
+      "approved": false,
+      "authorization_method": "chip",
+      "balance_transactions": [
+        {
+          "amount": 0,
+          "available_on": 1700000000,
+          "balance_type": "issuing",
+          "created": 1700000000,
+          "currency": "string",
+          "description": "string",
+          "exchange_rate": 0,
+          "fee": 0,
+          "fee_details": [
+            null
+          ],
+          "id": "string",
+          "net": 0,
+          "object": "balance_transaction",
+          "reporting_category": "string",
+          "source": "string",
+          "status": "string",
+          "type": "adjustment"
+        }
+      ],
+      "card": {
+        "brand": "string",
+        "cancellation_reason": "design_rejected",
+        "cardholder": {
+          "billing": null,
+          "company": null,
+          "created": 1700000000,
+          "email": "string",
+          "id": "string",
+          "individual": null,
+          "livemode": false,
+          "metadata": {},
+          "name": "string",
+          "object": "issuing.cardholder",
+          "phone_number": "string",
+          "preferred_locales": [],
+          "requirements": null,
+          "spending_controls": null,
+          "status": "active",
+          "type": "company"
+        },
+        "created": 1700000000,
+        "currency": "string",
+        "cvc": "string",
+        "exp_month": 0,
+        "exp_year": 0,
+        "financial_account": "string",
+        "id": "string",
+        "last4": "string",
+        "latest_fraud_warning": {
+          "started_at": 1700000000,
+          "type": "card_testing_exposure"
+        },
+        "lifecycle_controls": {
+          "cancel_after": null
+        },
+        "livemode": false,
+        "metadata": {},
+        "number": "string",
+        "object": "issuing.card",
+        "personalization_design": "string",
+        "replaced_by": "string",
+        "replacement_for": "string",
+        "replacement_reason": "damaged",
+        "second_line": "string",
+        "shipping": {
+          "address": null,
+          "address_validation": null,
+          "carrier": "dhl",
+          "customs": null,
+          "eta": 1700000000,
+          "name": "string",
+          "phone_number": "string",
+          "require_signature": false,
+          "service": "express",
+          "status": "canceled",
+          "tracking_number": "string",
+          "tracking_url": "string",
+          "type": "bulk"
+        },
+        "spending_controls": {
+          "allowed_card_presences": [],
+          "allowed_categories": [],
+          "allowed_merchant_countries": [],
+          "blocked_card_presences": [],
+          "blocked_categories": [],
+          "blocked_merchant_countries": [],
+          "spending_limits": [],
+          "spending_limits_currency": "string"
+        },
+        "status": "active",
+        "type": "physical",
+        "wallets": {
+          "apple_pay": null,
+          "google_pay": null,
+          "primary_account_identifier": "string"
+        }
+      },
+      "card_presence": "not_present",
+      "cardholder": "string",
+      "created": 1700000000,
+      "currency": "string",
+      "fleet": {
+        "cardholder_prompt_data": {
+          "alphanumeric_id": "string",
+          "driver_id": "string",
+          "odometer": 0,
+          "unspecified_id": "string",
+          "user_id": "string",
+          "vehicle_number": "string"
+        },
+        "purchase_type": "fuel_and_non_fuel_purchase",
+        "reported_breakdown": {
+          "fuel": null,
+          "non_fuel": null,
+          "tax": null
+        },
+        "service_type": "full_service"
+      },
+      "fraud_challenges": [
+        {
+          "channel": "sms",
+          "status": "expired",
+          "undeliverable_reason": "no_phone_number"
+        }
+      ],
+      "fuel": {
+        "industry_product_code": "string",
+        "quantity_decimal": "string",
+        "type": "diesel",
+        "unit": "charging_minute",
+        "unit_cost_decimal": "string"
+      },
+      "id": "string",
+      "livemode": false,
+      "merchant_amount": 0,
+      "merchant_currency": "string",
+      "merchant_data": {
+        "category": "string",
+        "category_code": "string",
+        "city": "string",
+        "country": "string",
+        "name": "string",
+        "network_id": "string",
+        "postal_code": "string",
+        "state": "string",
+        "tax_id": "string",
+        "terminal_id": "string",
+        "url": "string"
+      },
+      "metadata": {},
+      "network_data": {
+        "acquiring_institution_id": "string",
+        "system_trace_audit_number": "string",
+        "transaction_id": "string"
+      },
+      "object": "issuing.authorization",
+      "pending_request": {
+        "amount": 0,
+        "amount_details": {
+          "atm_fee": 0,
+          "cashback_amount": 0
+        },
+        "currency": "string",
+        "is_amount_controllable": false,
+        "merchant_amount": 0,
+        "merchant_currency": "string",
+        "network_risk_score": 0
+      },
+      "request_history": [
+        {
+          "amount": 0,
+          "amount_details": {},
+          "approved": false,
+          "authorization_code": "string",
+          "created": 1700000000,
+          "currency": "string",
+          "merchant_amount": 0,
+          "merchant_currency": "string",
+          "network_risk_score": 0,
+          "reason": "account_disabled",
+          "reason_message": "string",
+          "requested_at": 1700000000
+        }
+      ],
+      "status": "closed",
+      "token": "string",
+      "transactions": [
+        {
+          "amount": 0,
+          "amount_details": {},
+          "authorization": "string",
+          "balance_transaction": "string",
+          "card": "string",
+          "cardholder": "string",
+          "created": 1700000000,
+          "currency": "string",
+          "dispute": "string",
+          "id": "string",
+          "livemode": false,
+          "merchant_amount": 0,
+          "merchant_currency": "string",
+          "merchant_data": {},
+          "metadata": {},
+          "network_data": {},
+          "object": "issuing.transaction",
+          "purchase_details": {},
+          "token": "string",
+          "treasury": {},
+          "type": "capture",
+          "wallet": "apple_pay"
+        }
+      ],
+      "treasury": {
+        "received_credits": [
+          "string"
+        ],
+        "received_debits": [
+          "string"
+        ],
+        "transaction": "string"
+      },
+      "verification_data": {
+        "address_line1_check": "match",
+        "address_postal_code_check": "match",
+        "authentication_exemption": {
+          "claimed_by": "acquirer",
+          "type": "low_value_transaction"
+        },
+        "cvc_check": "match",
+        "expiry_check": "match",
+        "postal_code": "string",
+        "three_d_secure": {
+          "result": "attempt_acknowledged"
+        }
+      },
+      "verified_by_fraud_challenge": false,
+      "wallet": "string"
+    }
+  }
+}

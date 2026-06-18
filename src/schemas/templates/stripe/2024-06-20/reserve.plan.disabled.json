@@ -1,0 +1,41 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "reserve.plan.disabled",
+  "data": {
+    "object": {
+      "active": false,
+      "amount": 0,
+      "amount_decimal": "string",
+      "billing_scheme": "per_unit",
+      "created": 1700000000,
+      "currency": "string",
+      "id": "string",
+      "interval": "day",
+      "interval_count": 0,
+      "livemode": false,
+      "metadata": {},
+      "meter": "string",
+      "nickname": "string",
+      "object": "plan",
+      "product": "string",
+      "tiers": [
+        {
+          "flat_amount": 0,
+          "flat_amount_decimal": "string",
+          "unit_amount": 0,
+          "unit_amount_decimal": "string",
+          "up_to": 0
+        }
+      ],
+      "tiers_mode": "graduated",
+      "transform_usage": {
+        "divide_by": 0,
+        "round": "down"
+      },
+      "trial_period_days": 0,
+      "usage_type": "licensed"
+    }
+  }
+}

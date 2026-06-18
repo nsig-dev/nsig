@@ -2,8 +2,19 @@ import { z } from "zod";
 
 export const Step = z.object({
   event: z.string(),
+  /** Pin the event id — for redelivery / idempotency testing. */
+  id: z.string().optional(),
   patch: z.record(z.any()).optional(),
   delayMs: z.number().int().nonnegative().default(0),
+  /** Send this step N times with the SAME id+body (idempotency / duplicate delivery). */
+  repeat: z.number().int().min(1).default(1),
+  /** Resend on failure, mimicking provider redelivery. */
+  retry: z
+    .object({
+      times: z.number().int().min(1),
+      onlyIf: z.enum(["non-2xx", "always"]).default("non-2xx"),
+    })
+    .optional(),
   expect: z
     .object({
       status: z.number().optional(),

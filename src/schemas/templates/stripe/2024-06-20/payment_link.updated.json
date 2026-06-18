@@ -1,0 +1,186 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "payment_link.updated",
+  "data": {
+    "object": {
+      "active": false,
+      "after_completion": {
+        "hosted_confirmation": {
+          "custom_message": "string"
+        },
+        "redirect": {
+          "url": "string"
+        },
+        "type": "hosted_confirmation"
+      },
+      "allow_promotion_codes": false,
+      "application": "string",
+      "application_fee_amount": 0,
+      "application_fee_percent": 0,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": {
+          "account": "string",
+          "type": "account"
+        }
+      },
+      "billing_address_collection": "auto",
+      "consent_collection": {
+        "payment_method_reuse_agreement": {
+          "position": "auto"
+        },
+        "promotions": "auto",
+        "terms_of_service": "none"
+      },
+      "currency": "string",
+      "custom_fields": [
+        {
+          "dropdown": {},
+          "key": "string",
+          "label": {},
+          "numeric": {},
+          "optional": false,
+          "text": {},
+          "type": "dropdown"
+        }
+      ],
+      "custom_text": {
+        "after_submit": {
+          "message": "string"
+        },
+        "shipping_address": {
+          "message": "string"
+        },
+        "submit": {
+          "message": "string"
+        },
+        "terms_of_service_acceptance": {
+          "message": "string"
+        }
+      },
+      "customer_creation": "always",
+      "id": "string",
+      "inactive_message": "string",
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": [],
+          "custom_fields": [],
+          "description": "string",
+          "footer": "string",
+          "issuer": null,
+          "metadata": {},
+          "rendering_options": null
+        }
+      },
+      "line_items": {
+        "data": [
+          {
+            "adjustable_quantity": null,
+            "amount_discount": 0,
+            "amount_subtotal": 0,
+            "amount_tax": 0,
+            "amount_total": 0,
+            "currency": "string",
+            "description": "string",
+            "discounts": [],
+            "id": "string",
+            "metadata": {},
+            "object": "item",
+            "price": null,
+            "quantity": 0,
+            "taxes": []
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "livemode": false,
+      "managed_payments": {
+        "enabled": false
+      },
+      "metadata": {},
+      "name_collection": {
+        "business": {
+          "enabled": false,
+          "optional": false
+        },
+        "individual": {
+          "enabled": false,
+          "optional": false
+        }
+      },
+      "object": "payment_link",
+      "on_behalf_of": "string",
+      "optional_items": [
+        {
+          "adjustable_quantity": {},
+          "price": "string",
+          "quantity": 0
+        }
+      ],
+      "payment_intent_data": {
+        "capture_method": "automatic",
+        "description": "string",
+        "metadata": {},
+        "setup_future_usage": "off_session",
+        "statement_descriptor": "string",
+        "statement_descriptor_suffix": "string",
+        "transfer_group": "string"
+      },
+      "payment_method_collection": "always",
+      "payment_method_options": {
+        "card": {
+          "restrictions": null
+        }
+      },
+      "payment_method_types": [
+        "affirm"
+      ],
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "restrictions": {
+        "completed_sessions": {
+          "count": 0,
+          "limit": 0
+        }
+      },
+      "shipping_address_collection": {
+        "allowed_countries": [
+          "AC"
+        ]
+      },
+      "shipping_options": [
+        {
+          "shipping_amount": 0,
+          "shipping_rate": "string"
+        }
+      ],
+      "submit_type": "auto",
+      "subscription_data": {
+        "description": "string",
+        "invoice_settings": {
+          "issuer": null
+        },
+        "metadata": {},
+        "trial_period_days": 0,
+        "trial_settings": {
+          "end_behavior": null
+        }
+      },
+      "tax_id_collection": {
+        "enabled": false,
+        "required": "if_supported"
+      },
+      "transfer_data": {
+        "amount": 0,
+        "destination": "string"
+      },
+      "url": "string"
+    }
+  }
+}

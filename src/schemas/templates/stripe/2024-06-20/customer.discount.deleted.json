@@ -1,0 +1,26 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "customer.discount.deleted",
+  "data": {
+    "object": {
+      "checkout_session": "string",
+      "customer": "string",
+      "customer_account": "string",
+      "end": 1700000000,
+      "id": "string",
+      "invoice": "string",
+      "invoice_item": "string",
+      "object": "discount",
+      "promotion_code": "string",
+      "source": {
+        "coupon": "string",
+        "type": "coupon"
+      },
+      "start": 1700000000,
+      "subscription": "string",
+      "subscription_item": "string"
+    }
+  }
+}

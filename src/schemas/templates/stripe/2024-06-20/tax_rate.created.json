@@ -1,0 +1,31 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "tax_rate.created",
+  "data": {
+    "object": {
+      "active": false,
+      "country": "string",
+      "created": 1700000000,
+      "description": "string",
+      "display_name": "string",
+      "effective_percentage": 0,
+      "flat_amount": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "id": "string",
+      "inclusive": false,
+      "jurisdiction": "string",
+      "jurisdiction_level": "city",
+      "livemode": false,
+      "metadata": {},
+      "object": "tax_rate",
+      "percentage": 0,
+      "rate_type": "flat_amount",
+      "state": "string",
+      "tax_type": "amusement_tax"
+    }
+  }
+}

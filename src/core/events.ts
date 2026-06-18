@@ -5,6 +5,8 @@ export interface StepResult {
   latencyMs: number;
   passed: boolean;
   error?: string;
+  /** Set for duplicates/retries, e.g. "dup 2/2" or "after 1 retry". */
+  attempt?: string;
 }
 
 export interface ScenarioRun {

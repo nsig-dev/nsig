@@ -1,0 +1,95 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "subscription_schedule.aborted",
+  "data": {
+    "object": {
+      "application": "string",
+      "billing_mode": {
+        "flexible": {
+          "proration_discounts": "included"
+        },
+        "type": "classic",
+        "updated_at": 1700000000
+      },
+      "canceled_at": 1700000000,
+      "completed_at": 1700000000,
+      "created": 1700000000,
+      "current_phase": {
+        "end_date": 1700000000,
+        "start_date": 1700000000
+      },
+      "customer": "string",
+      "customer_account": "string",
+      "default_settings": {
+        "application_fee_percent": 0,
+        "automatic_tax": {
+          "disabled_reason": "requires_location_inputs",
+          "enabled": false,
+          "liability": null
+        },
+        "billing_cycle_anchor": "automatic",
+        "billing_thresholds": {
+          "amount_gte": 0,
+          "reset_billing_cycle_anchor": false
+        },
+        "collection_method": "charge_automatically",
+        "default_payment_method": "string",
+        "description": "string",
+        "invoice_settings": {
+          "account_tax_ids": [],
+          "days_until_due": 0,
+          "issuer": null
+        },
+        "on_behalf_of": "string",
+        "transfer_data": {
+          "amount_percent": 0,
+          "destination": "string"
+        }
+      },
+      "end_behavior": "cancel",
+      "id": "string",
+      "livemode": false,
+      "metadata": {},
+      "object": "subscription_schedule",
+      "phases": [
+        {
+          "add_invoice_items": [
+            null
+          ],
+          "application_fee_percent": 0,
+          "automatic_tax": {},
+          "billing_cycle_anchor": "automatic",
+          "billing_thresholds": {},
+          "collection_method": "charge_automatically",
+          "currency": "string",
+          "default_payment_method": "string",
+          "default_tax_rates": [
+            null
+          ],
+          "description": "string",
+          "discounts": [
+            null
+          ],
+          "end_date": 1700000000,
+          "invoice_settings": {},
+          "items": [
+            null
+          ],
+          "metadata": {},
+          "on_behalf_of": "string",
+          "proration_behavior": "always_invoice",
+          "start_date": 1700000000,
+          "transfer_data": {},
+          "trial_end": 1700000000
+        }
+      ],
+      "released_at": 1700000000,
+      "released_subscription": "string",
+      "status": "active",
+      "subscription": "string",
+      "test_clock": "string"
+    }
+  }
+}

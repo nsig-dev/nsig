@@ -1,0 +1,50 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "source.transaction.updated",
+  "data": {
+    "object": {
+      "ach_credit_transfer": {
+        "customer_data": "string",
+        "fingerprint": "string",
+        "last4": "string",
+        "routing_number": "string"
+      },
+      "amount": 0,
+      "chf_credit_transfer": {
+        "reference": "string",
+        "sender_address_country": "string",
+        "sender_address_line1": "string",
+        "sender_iban": "string",
+        "sender_name": "string"
+      },
+      "created": 1700000000,
+      "currency": "string",
+      "gbp_credit_transfer": {
+        "fingerprint": "string",
+        "funding_method": "string",
+        "last4": "string",
+        "reference": "string",
+        "sender_account_number": "string",
+        "sender_name": "string",
+        "sender_sort_code": "string"
+      },
+      "id": "string",
+      "livemode": false,
+      "object": "source_transaction",
+      "paper_check": {
+        "available_at": "string",
+        "invoices": "string"
+      },
+      "sepa_credit_transfer": {
+        "reference": "string",
+        "sender_iban": "string",
+        "sender_name": "string"
+      },
+      "source": "string",
+      "status": "string",
+      "type": "ach_credit_transfer"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "balance_settings.updated",
+  "data": {
+    "object": {
+      "object": "balance_settings",
+      "payments": {
+        "debit_negative_balances": false,
+        "payouts": {
+          "automatic_transfer_rules_by_currency": {},
+          "minimum_balance_by_currency": {},
+          "schedule": null,
+          "statement_descriptor": "string",
+          "status": "disabled"
+        },
+        "settlement_timing": {
+          "delay_days": 0,
+          "delay_days_override": 0,
+          "start_of_day": null
+        }
+      }
+    }
+  }
+}

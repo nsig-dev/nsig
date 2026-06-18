@@ -1,0 +1,86 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "treasury.financial_account.created",
+  "data": {
+    "object": {
+      "active_features": [
+        "card_issuing"
+      ],
+      "balance": {
+        "cash": {},
+        "inbound_pending": {},
+        "outbound_pending": {}
+      },
+      "country": "string",
+      "created": 1700000000,
+      "features": {
+        "card_issuing": {
+          "requested": false,
+          "status": "active",
+          "status_details": []
+        },
+        "deposit_insurance": {
+          "requested": false,
+          "status": "active",
+          "status_details": []
+        },
+        "financial_addresses": {
+          "aba": null
+        },
+        "inbound_transfers": {
+          "ach": null
+        },
+        "intra_stripe_flows": {
+          "requested": false,
+          "status": "active",
+          "status_details": []
+        },
+        "object": "treasury.financial_account_features",
+        "outbound_payments": {
+          "ach": null,
+          "us_domestic_wire": null
+        },
+        "outbound_transfers": {
+          "ach": null,
+          "us_domestic_wire": null
+        }
+      },
+      "financial_addresses": [
+        {
+          "aba": {},
+          "supported_networks": [
+            "ach"
+          ],
+          "type": "aba"
+        }
+      ],
+      "id": "string",
+      "is_default": false,
+      "livemode": false,
+      "metadata": {},
+      "nickname": "string",
+      "object": "treasury.financial_account",
+      "pending_features": [
+        "card_issuing"
+      ],
+      "platform_restrictions": {
+        "inbound_flows": "restricted",
+        "outbound_flows": "restricted"
+      },
+      "restricted_features": [
+        "card_issuing"
+      ],
+      "status": "closed",
+      "status_details": {
+        "closed": {
+          "reasons": []
+        }
+      },
+      "supported_currencies": [
+        "string"
+      ]
+    }
+  }
+}

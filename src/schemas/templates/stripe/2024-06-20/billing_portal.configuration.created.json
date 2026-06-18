@@ -1,0 +1,58 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "billing_portal.configuration.created",
+  "data": {
+    "object": {
+      "active": false,
+      "application": "string",
+      "business_profile": {
+        "headline": "string",
+        "privacy_policy_url": "string",
+        "terms_of_service_url": "string"
+      },
+      "created": 1700000000,
+      "default_return_url": "string",
+      "features": {
+        "customer_update": {
+          "allowed_updates": [],
+          "enabled": false
+        },
+        "invoice_history": {
+          "enabled": false
+        },
+        "payment_method_update": {
+          "enabled": false,
+          "payment_method_configuration": "string"
+        },
+        "subscription_cancel": {
+          "cancellation_reason": null,
+          "enabled": false,
+          "mode": "at_period_end",
+          "proration_behavior": "always_invoice"
+        },
+        "subscription_update": {
+          "billing_cycle_anchor": "now",
+          "default_allowed_updates": [],
+          "enabled": false,
+          "products": [],
+          "proration_behavior": "always_invoice",
+          "schedule_at_period_end": null,
+          "trial_update_behavior": "continue_trial"
+        }
+      },
+      "id": "string",
+      "is_default": false,
+      "livemode": false,
+      "login_page": {
+        "enabled": false,
+        "url": "string"
+      },
+      "metadata": {},
+      "name": "string",
+      "object": "billing_portal.configuration",
+      "updated": 1700000000
+    }
+  }
+}

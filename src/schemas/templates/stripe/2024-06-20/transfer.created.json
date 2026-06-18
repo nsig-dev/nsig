@@ -1,0 +1,45 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "transfer.created",
+  "data": {
+    "object": {
+      "amount": 0,
+      "amount_reversed": 0,
+      "balance_transaction": "string",
+      "created": 1700000000,
+      "currency": "string",
+      "description": "string",
+      "destination": "string",
+      "destination_payment": "string",
+      "id": "string",
+      "livemode": false,
+      "metadata": {},
+      "object": "transfer",
+      "reversals": {
+        "data": [
+          {
+            "amount": 0,
+            "balance_transaction": "string",
+            "created": 1700000000,
+            "currency": "string",
+            "destination_payment_refund": "string",
+            "id": "string",
+            "metadata": {},
+            "object": "transfer_reversal",
+            "source_refund": "string",
+            "transfer": "string"
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "reversed": false,
+      "source_transaction": "string",
+      "source_type": "string",
+      "transfer_group": "string"
+    }
+  }
+}

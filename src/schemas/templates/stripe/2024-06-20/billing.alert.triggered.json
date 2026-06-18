@@ -1,0 +1,24 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "billing.alert.triggered",
+  "data": {
+    "object": {
+      "alert_type": "usage_threshold",
+      "id": "string",
+      "livemode": false,
+      "object": "billing.alert",
+      "status": "active",
+      "title": "string",
+      "usage_threshold": {
+        "filters": [
+          {}
+        ],
+        "gte": 0,
+        "meter": "string",
+        "recurrence": "one_time"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "customer.tax_id.created",
+  "data": {
+    "object": {
+      "country": "string",
+      "created": 1700000000,
+      "customer": "string",
+      "customer_account": "string",
+      "id": "string",
+      "livemode": false,
+      "object": "tax_id",
+      "owner": {
+        "account": "string",
+        "application": "string",
+        "customer": "string",
+        "customer_account": "string",
+        "type": "account"
+      },
+      "type": "ad_nrt",
+      "value": "string",
+      "verification": {
+        "status": "pending",
+        "verified_address": "string",
+        "verified_name": "string"
+      }
+    }
+  }
+}

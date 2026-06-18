@@ -1,0 +1,459 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "checkout.session.async_payment_succeeded",
+  "data": {
+    "object": {
+      "adaptive_pricing": {
+        "enabled": false
+      },
+      "after_expiration": {
+        "recovery": {
+          "allow_promotion_codes": false,
+          "enabled": false,
+          "expires_at": 1700000000,
+          "url": "string"
+        }
+      },
+      "allow_promotion_codes": false,
+      "amount_subtotal": 0,
+      "amount_total": 0,
+      "automatic_tax": {
+        "enabled": false,
+        "liability": {
+          "account": "string",
+          "type": "account"
+        },
+        "provider": "string",
+        "status": "complete"
+      },
+      "billing_address_collection": "auto",
+      "branding_settings": {
+        "background_color": "string",
+        "border_style": "pill",
+        "button_color": "string",
+        "display_name": "string",
+        "font_family": "string",
+        "icon": {
+          "file": "string",
+          "type": "file",
+          "url": "string"
+        },
+        "logo": {
+          "file": "string",
+          "type": "file",
+          "url": "string"
+        }
+      },
+      "cancel_url": "string",
+      "client_reference_id": "string",
+      "client_secret": "string",
+      "collected_information": {
+        "business_name": "string",
+        "individual_name": "string",
+        "shipping_details": {
+          "address": null,
+          "name": "string"
+        }
+      },
+      "consent": {
+        "promotions": "opt_in",
+        "terms_of_service": "accepted"
+      },
+      "consent_collection": {
+        "payment_method_reuse_agreement": {
+          "position": "auto"
+        },
+        "promotions": "auto",
+        "terms_of_service": "none"
+      },
+      "created": 1700000000,
+      "currency": "string",
+      "currency_conversion": {
+        "amount_subtotal": 0,
+        "amount_total": 0,
+        "fx_rate": "string",
+        "source_currency": "string"
+      },
+      "custom_fields": [
+        {
+          "dropdown": {},
+          "key": "string",
+          "label": {},
+          "numeric": {},
+          "optional": false,
+          "text": {},
+          "type": "dropdown"
+        }
+      ],
+      "custom_text": {
+        "after_submit": {
+          "message": "string"
+        },
+        "shipping_address": {
+          "message": "string"
+        },
+        "submit": {
+          "message": "string"
+        },
+        "terms_of_service_acceptance": {
+          "message": "string"
+        }
+      },
+      "customer": "string",
+      "customer_account": "string",
+      "customer_creation": "always",
+      "customer_details": {
+        "address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
+        "business_name": "string",
+        "email": "string",
+        "individual_name": "string",
+        "name": "string",
+        "phone": "string",
+        "tax_exempt": "exempt",
+        "tax_ids": [
+          {}
+        ]
+      },
+      "customer_email": "string",
+      "discounts": [
+        {
+          "coupon": "string",
+          "promotion_code": "string"
+        }
+      ],
+      "excluded_payment_method_types": [
+        "string"
+      ],
+      "expires_at": 1700000000,
+      "id": "string",
+      "integration_identifier": "string",
+      "invoice": "string",
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": [],
+          "custom_fields": [],
+          "description": "string",
+          "footer": "string",
+          "issuer": null,
+          "metadata": {},
+          "rendering_options": null
+        }
+      },
+      "line_items": {
+        "data": [
+          {
+            "adjustable_quantity": null,
+            "amount_discount": 0,
+            "amount_subtotal": 0,
+            "amount_tax": 0,
+            "amount_total": 0,
+            "currency": "string",
+            "description": "string",
+            "discounts": [],
+            "id": "string",
+            "metadata": {},
+            "object": "item",
+            "price": null,
+            "quantity": 0,
+            "taxes": []
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "livemode": false,
+      "locale": "auto",
+      "managed_payments": {
+        "enabled": false
+      },
+      "metadata": {},
+      "mode": "payment",
+      "name_collection": {
+        "business": {
+          "enabled": false,
+          "optional": false
+        },
+        "individual": {
+          "enabled": false,
+          "optional": false
+        }
+      },
+      "object": "checkout.session",
+      "optional_items": [
+        {
+          "adjustable_quantity": {},
+          "price": "string",
+          "quantity": 0
+        }
+      ],
+      "origin_context": "mobile_app",
+      "payment_intent": "string",
+      "payment_link": "string",
+      "payment_method_collection": "always",
+      "payment_method_configuration_details": {
+        "id": "string",
+        "parent": "string"
+      },
+      "payment_method_options": {
+        "acss_debit": {
+          "currency": "cad",
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string",
+          "verification_method": "automatic"
+        },
+        "affirm": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "afterpay_clearpay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "alipay": {
+          "setup_future_usage": "none"
+        },
+        "alma": {
+          "capture_method": "manual"
+        },
+        "amazon_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "au_becs_debit": {
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "bacs_debit": {
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "bancontact": {
+          "setup_future_usage": "none"
+        },
+        "billie": {
+          "capture_method": "manual"
+        },
+        "boleto": {
+          "expires_after_days": 0,
+          "setup_future_usage": "none"
+        },
+        "card": {
+          "capture_method": "manual",
+          "installments": null,
+          "request_extended_authorization": "if_available",
+          "request_incremental_authorization": "if_available",
+          "request_multicapture": "if_available",
+          "request_overcapture": "if_available",
+          "request_three_d_secure": "any",
+          "restrictions": null,
+          "setup_future_usage": "none",
+          "statement_descriptor_suffix_kana": "string",
+          "statement_descriptor_suffix_kanji": "string"
+        },
+        "cashapp": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "customer_balance": {
+          "bank_transfer": null,
+          "funding_type": "bank_transfer",
+          "setup_future_usage": "none"
+        },
+        "eps": {
+          "setup_future_usage": "none"
+        },
+        "fpx": {
+          "setup_future_usage": "none"
+        },
+        "giropay": {
+          "setup_future_usage": "none"
+        },
+        "grabpay": {
+          "setup_future_usage": "none"
+        },
+        "ideal": {
+          "setup_future_usage": "none"
+        },
+        "kakao_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "klarna": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "konbini": {
+          "expires_after_days": 0,
+          "setup_future_usage": "none"
+        },
+        "kr_card": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "link": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "mobilepay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "multibanco": {
+          "setup_future_usage": "none"
+        },
+        "naver_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "oxxo": {
+          "expires_after_days": 0,
+          "setup_future_usage": "none"
+        },
+        "p24": {
+          "setup_future_usage": "none"
+        },
+        "payco": {
+          "capture_method": "manual"
+        },
+        "paynow": {
+          "setup_future_usage": "none"
+        },
+        "paypal": {
+          "capture_method": "manual",
+          "preferred_locale": "string",
+          "reference": "string",
+          "setup_future_usage": "none"
+        },
+        "payto": {
+          "mandate_options": null,
+          "setup_future_usage": "none"
+        },
+        "pix": {
+          "amount_includes_iof": "always",
+          "expires_after_seconds": 0,
+          "mandate_options": null,
+          "setup_future_usage": "none"
+        },
+        "revolut_pay": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
+        "samsung_pay": {
+          "capture_method": "manual"
+        },
+        "satispay": {
+          "capture_method": "manual"
+        },
+        "scalapay": {
+          "capture_method": "manual"
+        },
+        "sepa_debit": {
+          "mandate_options": null,
+          "setup_future_usage": "none",
+          "target_date": "string"
+        },
+        "sofort": {
+          "setup_future_usage": "none"
+        },
+        "swish": {
+          "reference": "string"
+        },
+        "twint": {
+          "setup_future_usage": "none"
+        },
+        "upi": {
+          "mandate_options": null,
+          "setup_future_usage": "none"
+        },
+        "us_bank_account": {
+          "financial_connections": null,
+          "setup_future_usage": "none",
+          "target_date": "string",
+          "verification_method": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "string"
+      ],
+      "payment_status": "no_payment_required",
+      "permissions": {
+        "update_shipping_details": "client_only"
+      },
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "presentment_details": {
+        "presentment_amount": 0,
+        "presentment_currency": "string"
+      },
+      "recovered_from": "string",
+      "redirect_on_completion": "always",
+      "return_url": "string",
+      "saved_payment_method_options": {
+        "allow_redisplay_filters": [
+          "always"
+        ],
+        "payment_method_remove": "disabled",
+        "payment_method_save": "disabled"
+      },
+      "setup_intent": "string",
+      "shipping_address_collection": {
+        "allowed_countries": [
+          "AC"
+        ]
+      },
+      "shipping_cost": {
+        "amount_subtotal": 0,
+        "amount_tax": 0,
+        "amount_total": 0,
+        "shipping_rate": "string",
+        "taxes": [
+          {}
+        ]
+      },
+      "shipping_options": [
+        {
+          "shipping_amount": 0,
+          "shipping_rate": "string"
+        }
+      ],
+      "status": "complete",
+      "submit_type": "auto",
+      "subscription": "string",
+      "success_url": "string",
+      "tax_id_collection": {
+        "enabled": false,
+        "required": "if_supported"
+      },
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0,
+        "breakdown": {
+          "discounts": [],
+          "taxes": []
+        }
+      },
+      "ui_mode": "elements",
+      "url": "string",
+      "wallet_options": {
+        "link": {
+          "display": "auto"
+        }
+      }
+    }
+  }
+}

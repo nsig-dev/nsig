@@ -1,0 +1,211 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "customer.updated",
+  "data": {
+    "object": {
+      "address": {
+        "city": "string",
+        "country": "string",
+        "line1": "string",
+        "line2": "string",
+        "postal_code": "string",
+        "state": "string"
+      },
+      "balance": 0,
+      "business_name": "string",
+      "cash_balance": {
+        "available": {},
+        "customer": "string",
+        "customer_account": "string",
+        "livemode": false,
+        "object": "cash_balance",
+        "settings": {
+          "reconciliation_mode": "automatic",
+          "using_merchant_default": false
+        }
+      },
+      "created": 1700000000,
+      "currency": "string",
+      "customer_account": "string",
+      "default_source": "string",
+      "delinquent": false,
+      "description": "string",
+      "discount": {
+        "checkout_session": "string",
+        "customer": "string",
+        "customer_account": "string",
+        "end": 1700000000,
+        "id": "string",
+        "invoice": "string",
+        "invoice_item": "string",
+        "object": "discount",
+        "promotion_code": "string",
+        "source": {
+          "coupon": "string",
+          "type": "coupon"
+        },
+        "start": 1700000000,
+        "subscription": "string",
+        "subscription_item": "string"
+      },
+      "email": "string",
+      "id": "string",
+      "individual_name": "string",
+      "invoice_credit_balance": {},
+      "invoice_prefix": "string",
+      "invoice_settings": {
+        "custom_fields": [
+          {}
+        ],
+        "default_payment_method": "string",
+        "footer": "string",
+        "rendering_options": {
+          "amount_tax_display": "string",
+          "template": "string"
+        }
+      },
+      "livemode": false,
+      "metadata": {},
+      "name": "string",
+      "next_invoice_sequence": 0,
+      "object": "customer",
+      "phone": "string",
+      "preferred_locales": [
+        "string"
+      ],
+      "shipping": {
+        "address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
+        "carrier": "string",
+        "name": "string",
+        "phone": "string",
+        "tracking_number": "string"
+      },
+      "sources": {
+        "data": [
+          {
+            "account": "string",
+            "account_holder_name": "string",
+            "account_holder_type": "string",
+            "account_type": "string",
+            "available_payout_methods": [],
+            "bank_name": "string",
+            "country": "string",
+            "currency": "string",
+            "customer": "string",
+            "default_for_currency": false,
+            "fingerprint": "string",
+            "future_requirements": null,
+            "id": "string",
+            "last4": "string",
+            "metadata": {},
+            "object": "bank_account",
+            "requirements": null,
+            "routing_number": "string",
+            "status": "string"
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "subscriptions": {
+        "data": [
+          {
+            "application": "string",
+            "application_fee_percent": 0,
+            "automatic_tax": null,
+            "billing_cycle_anchor": 1700000000,
+            "billing_cycle_anchor_config": null,
+            "billing_mode": null,
+            "billing_schedules": [],
+            "billing_thresholds": null,
+            "cancel_at": 1700000000,
+            "cancel_at_period_end": false,
+            "canceled_at": 1700000000,
+            "cancellation_details": null,
+            "collection_method": "charge_automatically",
+            "created": 1700000000,
+            "currency": "string",
+            "customer": "string",
+            "customer_account": "string",
+            "days_until_due": 0,
+            "default_payment_method": "string",
+            "default_source": "string",
+            "default_tax_rates": [],
+            "description": "string",
+            "discounts": [],
+            "ended_at": 1700000000,
+            "id": "string",
+            "invoice_settings": null,
+            "items": {},
+            "latest_invoice": "string",
+            "livemode": false,
+            "managed_payments": null,
+            "metadata": {},
+            "next_pending_invoice_item_invoice": 1700000000,
+            "object": "subscription",
+            "on_behalf_of": "string",
+            "pause_collection": null,
+            "payment_settings": null,
+            "pending_invoice_item_interval": null,
+            "pending_setup_intent": "string",
+            "pending_update": null,
+            "presentment_details": null,
+            "schedule": "string",
+            "start_date": 1700000000,
+            "status": "active",
+            "test_clock": "string",
+            "transfer_data": null,
+            "trial_end": 1700000000,
+            "trial_settings": null,
+            "trial_start": 1700000000
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "tax": {
+        "automatic_tax": "failed",
+        "ip_address": "string",
+        "location": {
+          "country": "string",
+          "source": "billing_address",
+          "state": "string"
+        },
+        "provider": "anrok"
+      },
+      "tax_exempt": "exempt",
+      "tax_ids": {
+        "data": [
+          {
+            "country": "string",
+            "created": 1700000000,
+            "customer": "string",
+            "customer_account": "string",
+            "id": "string",
+            "livemode": false,
+            "object": "tax_id",
+            "owner": null,
+            "type": "ad_nrt",
+            "value": "string",
+            "verification": null
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "url": "string"
+      },
+      "test_clock": "string"
+    }
+  }
+}

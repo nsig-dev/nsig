@@ -1,11 +1,12 @@
 /**
  * Versioned payload templates, keyed `provider/apiVersion/event`.
  *
- * Templates are GENERATED from providers' machine-readable specs
- * (see ../../scripts/generate.ts) and committed as artifacts — never hand-written.
- * A few curated samples are checked in so the engine is runnable before the full
- * generation pipeline lands (Phase 1.5).
+ * The full catalog is GENERATED from providers' specs (`yarn generate`, see
+ * ../../scripts/generate.ts) and committed. A few curated samples are checked in
+ * so the engine runs before generation, and they take precedence over generated
+ * ones (they carry {{seed}} id templating for referential consistency).
  */
+import { generated } from "./generated.js";
 import stripeSubCreated from "./templates/stripe/2024-06-20/customer.subscription.created.json";
 import stripeInvoiceFailed from "./templates/stripe/2024-06-20/invoice.payment_failed.json";
 import stripeSubDeleted from "./templates/stripe/2024-06-20/customer.subscription.deleted.json";
@@ -13,9 +14,7 @@ import githubPullRequest from "./templates/github/latest/pull_request.json";
 import githubPush from "./templates/github/latest/push.json";
 import githubIssues from "./templates/github/latest/issues.json";
 
-type TemplateKey = `${string}/${string}/${string}`;
-
-const REGISTRY: Record<TemplateKey, object> = {
+const CURATED: Record<string, object> = {
   "stripe/2024-06-20/customer.subscription.created": stripeSubCreated,
   "stripe/2024-06-20/invoice.payment_failed": stripeInvoiceFailed,
   "stripe/2024-06-20/customer.subscription.deleted": stripeSubDeleted,
@@ -24,16 +23,21 @@ const REGISTRY: Record<TemplateKey, object> = {
   "github/latest/issues": githubIssues,
 };
 
-export function getTemplate(
-  provider: string,
-  event: string,
-  apiVersion = "latest",
-): object | undefined {
-  const key = `${provider}/${apiVersion}/${event}` as TemplateKey;
-  const tpl = REGISTRY[key];
+const REGISTRY: Record<string, object> = { ...generated, ...CURATED };
+
+export function getTemplate(provider: string, event: string, apiVersion = "latest"): object | undefined {
+  const tpl = REGISTRY[`${provider}/${apiVersion}/${event}`];
   return tpl ? structuredClone(tpl) : undefined;
 }
 
 export function hasTemplate(provider: string, event: string, apiVersion = "latest"): boolean {
   return `${provider}/${apiVersion}/${event}` in REGISTRY;
+}
+
+/** All event types available for a provider+apiVersion (for `nsig list`, etc.). */
+export function listEvents(provider: string, apiVersion = "latest"): string[] {
+  const prefix = `${provider}/${apiVersion}/`;
+  return Object.keys(REGISTRY)
+    .filter((k) => k.startsWith(prefix))
+    .map((k) => k.slice(prefix.length));
 }

@@ -1,0 +1,42 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "climate.order.product_substituted",
+  "data": {
+    "object": {
+      "amount_fees": 0,
+      "amount_subtotal": 0,
+      "amount_total": 0,
+      "beneficiary": {
+        "public_name": "string"
+      },
+      "canceled_at": 1700000000,
+      "cancellation_reason": "expired",
+      "certificate": "string",
+      "confirmed_at": 1700000000,
+      "created": 1700000000,
+      "currency": "string",
+      "delayed_at": 1700000000,
+      "delivered_at": 1700000000,
+      "delivery_details": [
+        {
+          "delivered_at": 1700000000,
+          "location": {},
+          "metric_tons": "string",
+          "registry_url": "string",
+          "supplier": {}
+        }
+      ],
+      "expected_delivery_year": 0,
+      "id": "string",
+      "livemode": false,
+      "metadata": {},
+      "metric_tons": "string",
+      "object": "climate.order",
+      "product": "string",
+      "product_substituted_at": 1700000000,
+      "status": "awaiting_funds"
+    }
+  }
+}

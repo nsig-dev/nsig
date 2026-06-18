@@ -1,0 +1,57 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "account.external_account.created",
+  "data": {
+    "object": {
+      "account": "string",
+      "account_holder_name": "string",
+      "account_holder_type": "string",
+      "account_type": "string",
+      "available_payout_methods": [
+        "instant"
+      ],
+      "bank_name": "string",
+      "country": "string",
+      "currency": "string",
+      "customer": "string",
+      "default_for_currency": false,
+      "fingerprint": "string",
+      "future_requirements": {
+        "currently_due": [
+          "string"
+        ],
+        "errors": [
+          null
+        ],
+        "past_due": [
+          "string"
+        ],
+        "pending_verification": [
+          "string"
+        ]
+      },
+      "id": "string",
+      "last4": "string",
+      "metadata": {},
+      "object": "bank_account",
+      "requirements": {
+        "currently_due": [
+          "string"
+        ],
+        "errors": [
+          null
+        ],
+        "past_due": [
+          "string"
+        ],
+        "pending_verification": [
+          "string"
+        ]
+      },
+      "routing_number": "string",
+      "status": "string"
+    }
+  }
+}

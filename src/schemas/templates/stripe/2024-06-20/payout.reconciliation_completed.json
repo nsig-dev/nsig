@@ -1,0 +1,40 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "payout.reconciliation_completed",
+  "data": {
+    "object": {
+      "amount": 0,
+      "application_fee": "string",
+      "application_fee_amount": 0,
+      "arrival_date": 1700000000,
+      "automatic": false,
+      "balance_transaction": "string",
+      "created": 1700000000,
+      "currency": "string",
+      "description": "string",
+      "destination": "string",
+      "failure_balance_transaction": "string",
+      "failure_code": "string",
+      "failure_message": "string",
+      "id": "string",
+      "livemode": false,
+      "metadata": {},
+      "method": "string",
+      "object": "payout",
+      "original_payout": "string",
+      "payout_method": "string",
+      "reconciliation_status": "completed",
+      "reversed_by": "string",
+      "source_type": "string",
+      "statement_descriptor": "string",
+      "status": "string",
+      "trace_id": {
+        "status": "string",
+        "value": "string"
+      },
+      "type": "bank_account"
+    }
+  }
+}

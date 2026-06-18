@@ -123,3 +123,25 @@ The engine (`core`/`providers`/`signing`) imports nothing beyond `crypto`/`fetch
 stays portable; tsup bundles everything into `dist/` for publishing.
 
 See `CLAUDE.md` for development rules.
+
+## Edge cases (what `stripe trigger` can't do)
+
+Real webhooks arrive duplicated, out of order, and get redelivered on failure.
+nsig makes those first-class:
+
+```ts
+steps: [
+  // duplicate delivery — same id twice; your handler must be idempotent
+  { event: "invoice.payment_failed", id: "evt_1", repeat: 2 },
+
+  // provider redelivery — resend on failure until 2xx (or give up)
+  { event: "customer.subscription.deleted", retry: { times: 3 } },
+]
+```
+
+- `id` pins the event id so a later step can redeliver the exact same event.
+- `repeat: N` sends N byte-identical copies (idempotency testing).
+- `retry: { times, onlyIf }` resends on failure (`onlyIf` defaults to `non-2xx`),
+  collapsing to a single result that passes if the handler eventually accepts it.
+- `nsig run <scenario> --shuffle` delivers steps in a **seeded, reproducible**
+  out-of-order permutation — does your handler survive a `deleted` before a `created`?

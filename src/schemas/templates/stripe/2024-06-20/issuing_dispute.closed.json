@@ -1,0 +1,105 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "issuing_dispute.closed",
+  "data": {
+    "object": {
+      "amount": 0,
+      "balance_transactions": [
+        {
+          "amount": 0,
+          "available_on": 1700000000,
+          "balance_type": "issuing",
+          "created": 1700000000,
+          "currency": "string",
+          "description": "string",
+          "exchange_rate": 0,
+          "fee": 0,
+          "fee_details": [
+            null
+          ],
+          "id": "string",
+          "net": 0,
+          "object": "balance_transaction",
+          "reporting_category": "string",
+          "source": "string",
+          "status": "string",
+          "type": "adjustment"
+        }
+      ],
+      "created": 1700000000,
+      "currency": "string",
+      "evidence": {
+        "canceled": {
+          "additional_documentation": "string",
+          "canceled_at": 1700000000,
+          "cancellation_policy_provided": false,
+          "cancellation_reason": "string",
+          "expected_at": 1700000000,
+          "explanation": "string",
+          "product_description": "string",
+          "product_type": "merchandise",
+          "return_status": "merchant_rejected",
+          "returned_at": 1700000000
+        },
+        "duplicate": {
+          "additional_documentation": "string",
+          "card_statement": "string",
+          "cash_receipt": "string",
+          "check_image": "string",
+          "explanation": "string",
+          "original_transaction": "string"
+        },
+        "fraudulent": {
+          "additional_documentation": "string",
+          "explanation": "string"
+        },
+        "merchandise_not_as_described": {
+          "additional_documentation": "string",
+          "explanation": "string",
+          "received_at": 1700000000,
+          "return_description": "string",
+          "return_status": "merchant_rejected",
+          "returned_at": 1700000000
+        },
+        "no_valid_authorization": {
+          "additional_documentation": "string",
+          "explanation": "string"
+        },
+        "not_received": {
+          "additional_documentation": "string",
+          "expected_at": 1700000000,
+          "explanation": "string",
+          "product_description": "string",
+          "product_type": "merchandise"
+        },
+        "other": {
+          "additional_documentation": "string",
+          "explanation": "string",
+          "product_description": "string",
+          "product_type": "merchandise"
+        },
+        "reason": "canceled",
+        "service_not_as_described": {
+          "additional_documentation": "string",
+          "canceled_at": 1700000000,
+          "cancellation_reason": "string",
+          "explanation": "string",
+          "received_at": 1700000000
+        }
+      },
+      "id": "string",
+      "livemode": false,
+      "loss_reason": "cardholder_authentication_issuer_liability",
+      "metadata": {},
+      "object": "issuing.dispute",
+      "status": "expired",
+      "transaction": "string",
+      "treasury": {
+        "debit_reversal": "string",
+        "received_debit": "string"
+      }
+    }
+  }
+}
