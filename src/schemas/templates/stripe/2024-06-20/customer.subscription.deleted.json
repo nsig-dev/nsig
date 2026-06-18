@@ -1,0 +1,14 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "customer.subscription.deleted",
+  "data": {
+    "object": {
+      "id": "sub_{{seed}}",
+      "object": "subscription",
+      "customer": "cus_{{seed}}",
+      "status": "canceled"
+    }
+  }
+}

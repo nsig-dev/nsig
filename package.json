@@ -1,0 +1,60 @@
+{
+  "name": "nsig",
+  "version": "0.0.0",
+  "description": "Fire realistic, correctly-signed sequences of third-party webhook events at your local endpoint.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "nsig": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "webhook",
+    "webhooks",
+    "stripe",
+    "github",
+    "testing",
+    "cli",
+    "hmac",
+    "signature"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "generate": "tsx scripts/generate.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "@faker-js/faker": "^9.0.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "ora": "^8.1.0",
+    "picocolors": "^1.1.0",
+    "tsx": "^4.19.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "json-schema-faker": "^0.5.6",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

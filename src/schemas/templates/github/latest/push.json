@@ -1,0 +1,11 @@
+{
+  "ref": "refs/heads/main",
+  "before": "{{seed}}",
+  "after": "{{seed}}",
+  "repository": { "id": 2001, "name": "hello-world", "full_name": "octocat/hello-world" },
+  "pusher": { "name": "octocat", "email": "{{faker.internet.email}}" },
+  "commits": [
+    { "id": "{{seed}}", "message": "Initial commit", "author": { "name": "octocat" } }
+  ],
+  "sender": { "login": "octocat", "id": 1 }
+}

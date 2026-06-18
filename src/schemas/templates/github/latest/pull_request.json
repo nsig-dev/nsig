@@ -1,0 +1,16 @@
+{
+  "action": "opened",
+  "number": 1,
+  "pull_request": {
+    "id": 1001,
+    "number": 1,
+    "state": "open",
+    "title": "Update README",
+    "user": { "login": "octocat", "id": 1 },
+    "head": { "ref": "feature", "sha": "{{seed}}" },
+    "base": { "ref": "main", "sha": "{{seed}}" },
+    "merged": false
+  },
+  "repository": { "id": 2001, "name": "hello-world", "full_name": "octocat/hello-world" },
+  "sender": { "login": "octocat", "id": 1 }
+}

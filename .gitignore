@@ -1,0 +1,20 @@
+# deps
+node_modules/
+
+# build output
+dist/
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# misc
+*.tsbuildinfo
+coverage/
+.DS_Store
+
+# yarn (using node-modules linker; remove the ignores below if you adopt PnP)
+.yarn/*
+!.yarn/patches
+.pnp.*

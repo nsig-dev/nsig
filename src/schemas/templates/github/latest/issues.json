@@ -1,0 +1,13 @@
+{
+  "action": "opened",
+  "issue": {
+    "id": 3001,
+    "number": 42,
+    "title": "Something is broken",
+    "state": "open",
+    "user": { "login": "octocat", "id": 1 },
+    "labels": []
+  },
+  "repository": { "id": 2001, "name": "hello-world", "full_name": "octocat/hello-world" },
+  "sender": { "login": "octocat", "id": 1 }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "invoice.payment_failed",
+  "data": {
+    "object": {
+      "id": "in_{{seed}}",
+      "object": "invoice",
+      "customer": "cus_{{seed}}",
+      "subscription": "sub_{{seed}}",
+      "attempt_count": 1,
+      "status": "open"
+    }
+  }
+}

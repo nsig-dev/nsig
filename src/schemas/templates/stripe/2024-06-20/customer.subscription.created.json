@@ -1,0 +1,15 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "customer.subscription.created",
+  "data": {
+    "object": {
+      "id": "sub_{{seed}}",
+      "object": "subscription",
+      "customer": "cus_{{seed}}",
+      "status": "active",
+      "items": { "object": "list", "data": [] }
+    }
+  }
+}
