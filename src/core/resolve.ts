@@ -18,28 +18,52 @@ export function hashSeed(input: string): number {
   return Math.abs(h);
 }
 
+const UNIT_SECONDS: Record<string, number> = { s: 1, m: 60, h: 3600, d: 86400, w: 604800 };
+
 /**
- * Resolve `{{...}}` interpolations in strings:
- *   {{seed}}        -> the run seed
- *   {{faker.email}} -> seeded faker value (faker.<namespace>.<method> dotted path)
+ * Resolve a single `{{...}}` token to its value.
+ *   {{seed}}        -> the run seed (number)
+ *   {{now}}         -> current unix time in seconds (number)
+ *   {{now+14d}}     -> now ± offset, units s|m|h|d|w (number) — for trial_end, period_end, …
+ *   {{faker.x.y}}   -> seeded faker value (string)
+ * Returns `undefined` for unknown tokens so they're left untouched.
  */
+function resolveToken(expr: string, seed: number, faker: Faker): string | number | undefined {
+  if (expr === "seed") return seed;
+  if (expr === "now") return Math.floor(Date.now() / 1000);
+  const t = expr.match(/^now([+-]\d+)([smhdw])$/);
+  if (t) {
+    return Math.floor(Date.now() / 1000) + parseInt(t[1]!, 10) * UNIT_SECONDS[t[2]!]!;
+  }
+  if (expr.startsWith("faker.")) {
+    const path = expr.slice("faker.".length).split(".");
+    let node: any = faker;
+    for (const key of path) node = node?.[key];
+    return typeof node === "function" ? String(node.call(faker)) : node == null ? "" : String(node);
+  }
+  return undefined;
+}
+
+/** Interpolate every `{{...}}` token inside a string (always yields a string). */
 export function interpolate(value: string, seed: number, faker: Faker): string {
   return value.replace(/\{\{\s*([^}]+?)\s*\}\}/g, (_m, expr: string) => {
-    if (expr === "seed") return String(seed);
-    if (expr.startsWith("faker.")) {
-      const path = expr.slice("faker.".length).split(".");
-      // walk faker by dotted path, e.g. internet.email
-      let node: any = faker;
-      for (const key of path) node = node?.[key];
-      return typeof node === "function" ? String(node.call(faker)) : String(node ?? "");
-    }
-    return _m;
+    const v = resolveToken(expr, seed, faker);
+    return v === undefined ? _m : String(v);
   });
 }
 
 /** Recursively resolve refs + interpolations over an arbitrary structure. */
 export function resolveTree(node: any, ctx: any, seed: number, faker: Faker): any {
-  if (typeof node === "string") return interpolate(node, seed, faker);
+  if (typeof node === "string") {
+    // A value that is exactly one token keeps its native type (number for
+    // seed/now/time), so timestamps land as numbers, not strings.
+    const single = node.match(/^\{\{\s*([^}]+?)\s*\}\}$/);
+    if (single) {
+      const v = resolveToken(single[1]!, seed, faker);
+      if (v !== undefined) return v;
+    }
+    return interpolate(node, seed, faker);
+  }
   if (isRef(node)) return getPath(ctx, node.__ref);
   if (Array.isArray(node)) return node.map((n) => resolveTree(n, ctx, seed, faker));
   if (node && typeof node === "object") {

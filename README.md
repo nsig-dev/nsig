@@ -1,10 +1,35 @@
 # nsig
 
-Fire realistic, correctly-signed **sequences** of third-party webhook events at a local
-or deployed endpoint — so you can test webhook handlers against real-world event ordering
-and edge cases, without producing the events for real.
+**Test your webhook handlers against what production actually sends** — duplicate
+deliveries, retries after failure, and out-of-order events — not just the one happy-path
+event `stripe trigger` hands you. Correctly signed, fully local, in CI on every PR.
 
 A single MIT-licensed CLI, published on npm as `nsig`.
+
+## Why nsig, not `stripe trigger`?
+
+`stripe trigger` fires one happy-path event through Stripe's servers. The events that
+actually break handlers in production are the ones it *can't* send on demand — and
+producing those is the whole point of nsig:
+
+```ts
+steps: [
+  { event: "customer.subscription.created", id: "evt_created" },
+  // the SAME event twice — does your handler double-charge / double-email?
+  { event: "invoice.payment_failed", id: "evt_fail", repeat: 2 },
+  // redelivered after your endpoint flaked — does it recover, or drop it?
+  { event: "customer.subscription.deleted", retry: { times: 3 } },
+]
+```
+```bash
+nsig run scenarios/dunning.ts --shuffle    # also deliver out of order (reproducible)
+```
+
+Duplicate, retried, and out-of-order delivery are first-class primitives — the failure
+modes `stripe trigger` structurally can't reproduce because it isn't the sender. On top of
+that: real signatures, the full ~250-event Stripe catalog, multi-step sequences with
+referential consistency, every provider in one tool, and a green/red exit code for CI.
+**[Jump to the edge-case primitives ↓](#edge-cases--the-stripe-mvp)**
 
 ## Quickstart
 
@@ -94,15 +119,56 @@ export default defineScenario({
 `{{seed}}` and `ref()` keep entities consistent across steps (the customer created in
 step 1 is the one cancelled in step 3); a seeded faker makes runs reproducible.
 
+**Time without a clock.** Timestamp fields accept relative tokens — `{{now}}`,
+`{{now+14d}}`, `{{now-1h}}` (units `s`/`m`/`h`/`d`/`w`) — so you can set `trial_end`,
+`period_end`, or `next_payment_attempt` to realistic moments without Stripe's test-clock
+dance. A single-token value resolves to a real number, so timestamps stay numeric. See
+`scenarios/trial-dunning.ts` for a full trial → active → dunning → canceled flow.
+
 Every step expects a **2xx** response by default — a handler that 4xx/5xx's on a valid
 signed event fails the run. To assert a specific status (e.g. testing that bad input is
 rejected), set it explicitly: `expect: { status: 400 }`.
 
-## CI
+## CI — regression-test webhooks on every PR
+
+`nsig run --ci` prints the run as JSON and exits non-zero on any failure, so it drops
+straight into a pipeline:
 
 ```bash
-nsig run scenarios/stripe-starter.ts --ci   # JSON to stdout, non-zero exit on failure
+nsig run scenarios/stripe-starter.ts --ci
 ```
+
+This repo also ships a composite **GitHub Action** (`action.yml`) that runs a set of
+scenarios against a target and fails the check on regression. Point it at your app booted
+in CI (or a deploy preview URL):
+
+```yaml
+name: Webhook tests
+on: [pull_request]
+
+jobs:
+  webhooks:
+    runs-on: ubuntu-latest
+    env:
+      # the signing secret your handler verifies with (any value; must match both sides)
+      STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci                      # installs nsig (a devDependency)
+      - run: npm run start &             # boot the app under test…
+      - run: npx wait-on http://localhost:3000/health   # …and wait for it
+      - uses: nsig-dev/nsig@v1           # ← this repo, used as an action
+        with:
+          scenarios: "scenarios/*.ts"
+          target: "http://localhost:3000/api/v1/webhooks/stripe"
+          # shuffle: "true"              # also test out-of-order delivery
+```
+
+The action assumes nsig is a devDependency (so scenario `import "nsig"` resolves and the
+`nsig` bin is on the local path) — run your install step first. Each scenario runs under
+`::group::` log folding; any failure fails the job.
 
 ## Layout (single package)
 ```
@@ -124,24 +190,84 @@ stays portable; tsup bundles everything into `dist/` for publishing.
 
 See `CLAUDE.md` for development rules.
 
-## Edge cases (what `stripe trigger` can't do)
+## Edge cases — the Stripe MVP
 
-Real webhooks arrive duplicated, out of order, and get redelivered on failure.
-nsig makes those first-class:
+`stripe trigger` fires one happy-path event through Stripe's infrastructure. But the
+events that actually break webhook handlers in production are the ones Stripe **won't
+send you on demand**: the same event delivered twice, an event redelivered after your
+endpoint blipped, or events arriving out of order. Producing those requires being the
+*sender* — which is exactly what nsig is. These primitives are the core of what nsig does
+for Stripe that nothing else does.
+
+### Duplicate delivery — idempotency (`repeat` + `id`)
+
+Stripe delivers **at-least-once**: the same event can arrive multiple times (network
+retries, redelivery, your own 5xx-then-200). If your handler isn't idempotent, a single
+`invoice.payment_failed` sends the dunning email twice, or a `checkout.session.completed`
+provisions the account — and grants credits — twice.
 
 ```ts
-steps: [
-  // duplicate delivery — same id twice; your handler must be idempotent
-  { event: "invoice.payment_failed", id: "evt_1", repeat: 2 },
-
-  // provider redelivery — resend on failure until 2xx (or give up)
-  { event: "customer.subscription.deleted", retry: { times: 3 } },
-]
+{ event: "invoice.payment_failed", id: "evt_1", repeat: 2 }
 ```
 
-- `id` pins the event id so a later step can redeliver the exact same event.
-- `repeat: N` sends N byte-identical copies (idempotency testing).
-- `retry: { times, onlyIf }` resends on failure (`onlyIf` defaults to `non-2xx`),
-  collapsing to a single result that passes if the handler eventually accepts it.
-- `nsig run <scenario> --shuffle` delivers steps in a **seeded, reproducible**
-  out-of-order permutation — does your handler survive a `deleted` before a `created`?
+`repeat: N` sends N **byte-identical** copies; pinning `id` fixes the dedup key
+(`event.id`) your handler should be keying on. A correct handler acts on the first and
+no-ops the rest while still returning 2xx every time — so all deliveries pass. If the
+second delivery triggers a duplicate side effect, that's the bug this catches.
+
+### Redelivery on failure (`retry`)
+
+When your endpoint returns non-2xx — a deploy, a timeout, a transient bug — Stripe retries
+with exponential backoff for up to ~3 days. Your handler has to tolerate being hit again
+later and still converge to the right state.
+
+```ts
+{ event: "customer.subscription.deleted", retry: { times: 3 } }
+```
+
+`retry` resends on failure (`onlyIf: "non-2xx"` by default, or `"always"`) and collapses
+to a single result that passes **if the handler eventually accepts it**. That lets you
+assert "my endpoint recovers and the event isn't dropped," not just whether the first
+attempt happened to land. Pair it with a flaky test handler to prove your retry tolerance.
+
+### Out-of-order delivery (`--shuffle`)
+
+Stripe makes **no ordering guarantees**. A `customer.subscription.updated` can land before
+the `customer.subscription.created`; a `charge.refunded` before the `charge.succeeded`.
+Handlers that assume arrival order silently corrupt state — and it's nearly impossible to
+reproduce by hand.
+
+```bash
+nsig run scenarios/dunning.ts --shuffle           # seeded, reproducible permutation
+nsig run scenarios/dunning.ts --shuffle --seed 7  # pin the exact order
+```
+
+Same seed → same order, so a failure you find locally reproduces byte-for-byte in CI.
+Does your handler survive a `deleted` before a `created`?
+
+### Putting it together
+
+```ts
+import { defineScenario, ref } from "nsig";
+
+export default defineScenario({
+  name: "dunning-resilience",
+  provider: "stripe",
+  apiVersion: "2024-06-20",
+  target: "http://localhost:3000/api/v1/webhooks/stripe",
+  secret: { env: "STRIPE_WEBHOOK_SECRET" },
+  context: { subscription: { id: "sub_{{seed}}", customer: "cus_{{seed}}" } },
+  steps: [
+    { event: "customer.subscription.created", id: "evt_created" },
+    // duplicate dunning event — handler must not double-charge/double-email
+    { event: "invoice.payment_failed", id: "evt_fail_1", repeat: 2 },
+    // redelivery — endpoint may flake, must still converge
+    { event: "customer.subscription.deleted", id: "evt_deleted", retry: { times: 3 } },
+  ],
+});
+```
+
+Run it normally to test the happy path, then with `--shuffle` to test ordering — same
+file, two failure modes. That combination — real signatures, real catalog, duplicate +
+redelivery + reordering — is the Stripe testing story `stripe trigger` structurally can't
+tell, and it's nsig's reason to exist.

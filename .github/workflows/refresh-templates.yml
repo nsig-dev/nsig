@@ -1,0 +1,42 @@
+name: Refresh Stripe templates
+
+# Keeps the generated event catalog current with Stripe's spec. Re-derives every
+# template from the latest OpenAPI, and opens a PR if anything changed — so the diff
+# (new events, changed payload shapes, newly-unmapped events in the log) gets reviewed.
+on:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: yarn }
+      - run: yarn install --frozen-lockfile
+
+      # Re-derive the catalog from Stripe's latest spec.
+      - run: yarn generate
+
+      # Contract check: regenerated templates must still bundle + pass the suite.
+      - run: yarn build && yarn test
+
+      - name: Open PR if the catalog changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/refresh-stripe-templates
+          title: "chore: refresh Stripe event templates"
+          commit-message: "chore: regenerate Stripe templates from latest spec"
+          body: |
+            Automated regeneration from Stripe's OpenAPI spec.
+
+            Review the diff for **new events**, **changed payload shapes**, and check the
+            workflow log for any **newly-skipped events** that need a mapping rule in
+            `scripts/lib/stripe-events.ts`.
+          labels: dependencies, automated

@@ -1,0 +1,62 @@
+name: "nsig"
+description: "Fire nsig webhook scenarios at an endpoint and fail the check on regressions."
+author: "nsig"
+branding:
+  icon: "zap"
+  color: "purple"
+
+inputs:
+  scenarios:
+    description: "Scenario files to run (space/newline-separated; globs allowed)."
+    required: false
+    default: "scenarios/*.ts"
+  target:
+    description: "Override the target endpoint URL for every scenario."
+    required: false
+    default: ""
+  secret-env:
+    description: "Env var name holding the signing secret (overrides scenario secret.env)."
+    required: false
+    default: ""
+  shuffle:
+    description: "Deliver steps out of order (seeded)."
+    required: false
+    default: "false"
+  working-directory:
+    description: "Directory where nsig is installed and scenarios live."
+    required: false
+    default: "."
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        set -euo pipefail
+        shopt -s globstar nullglob
+        # shellcheck disable=SC2206
+        files=( ${{ inputs.scenarios }} )
+        if [ "${#files[@]}" -eq 0 ]; then
+          echo "::error::no scenario files matched '${{ inputs.scenarios }}'"
+          exit 1
+        fi
+        # Uses the locally-installed nsig (a devDependency). Run `npm ci` first.
+        if ! npx --no-install nsig --version >/dev/null 2>&1; then
+          echo "::error::nsig is not installed. Add it as a devDependency and run your install step before this action."
+          exit 1
+        fi
+        fail=0
+        for f in "${files[@]}"; do
+          echo "::group::nsig run $f"
+          args=( run "$f" --ci )
+          [ -n "${{ inputs.target }}" ]     && args+=( --target "${{ inputs.target }}" )
+          [ -n "${{ inputs.secret-env }}" ] && args+=( --secret-env "${{ inputs.secret-env }}" )
+          [ "${{ inputs.shuffle }}" = "true" ] && args+=( --shuffle )
+          if ! npx --no-install nsig "${args[@]}"; then fail=1; fi
+          echo "::endgroup::"
+        done
+        if [ "$fail" -ne 0 ]; then
+          echo "::error::one or more nsig scenarios failed"
+          exit 1
+        fi
