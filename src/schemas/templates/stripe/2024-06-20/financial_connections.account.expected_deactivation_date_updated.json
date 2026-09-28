@@ -1,0 +1,80 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "financial_connections.account.expected_deactivation_date_updated",
+  "data": {
+    "object": {
+      "account_holder": {
+        "account": "string",
+        "customer": "string",
+        "customer_account": "string",
+        "type": "account"
+      },
+      "account_numbers": [
+        {
+          "expected_expiry_date": 1700000000,
+          "identifier_type": "account_number",
+          "status": "deactivated",
+          "supported_networks": [
+            "ach"
+          ]
+        }
+      ],
+      "balance": {
+        "as_of": 1700000000,
+        "cash": {
+          "available": {}
+        },
+        "credit": {
+          "used": {}
+        },
+        "current": {},
+        "type": "cash"
+      },
+      "balance_refresh": {
+        "last_attempted_at": 1700000000,
+        "next_refresh_available_at": 1700000000,
+        "status": "failed"
+      },
+      "category": "cash",
+      "created": 1700000000,
+      "display_name": "string",
+      "id": "string",
+      "institution_name": "string",
+      "last4": "string",
+      "livemode": false,
+      "object": "financial_connections.account",
+      "ownership": "string",
+      "ownership_refresh": {
+        "last_attempted_at": 1700000000,
+        "next_refresh_available_at": 1700000000,
+        "status": "failed"
+      },
+      "permissions": [
+        "balances"
+      ],
+      "status": "active",
+      "status_details": {
+        "active": {
+          "action": "none",
+          "cause": "access_expired",
+          "expected_deactivation_date": 1700000000
+        }
+      },
+      "subcategory": "checking",
+      "subscriptions": [
+        "transactions"
+      ],
+      "supported_payment_method_types": [
+        "link"
+      ],
+      "transaction_refresh": {
+        "id": "string",
+        "last_attempted_at": 1700000000,
+        "next_refresh_available_at": 1700000000,
+        "status": "failed"
+      }
+    }
+  }
+}

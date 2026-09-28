@@ -31,6 +31,10 @@
       "shippable": false,
       "statement_descriptor": "string",
       "tax_code": "string",
+      "tax_details": {
+        "performance_location": "string",
+        "tax_code": "string"
+      },
       "unit_label": "string",
       "updated": 1700000000,
       "url": "string"

@@ -22,6 +22,7 @@
         },
         "name": "string",
         "product_description": "string",
+        "specified_commercial_transactions_act_url": "string",
         "support_address": {
           "city": "string",
           "country": "string",
@@ -50,6 +51,7 @@
         "billie_payments": "active",
         "bizum_payments": "active",
         "blik_payments": "active",
+        "blik_recurring_payments": "active",
         "boleto_payments": "active",
         "card_issuing": "active",
         "card_payments": "active",
@@ -82,6 +84,7 @@
         "pay_by_bank_payments": "active",
         "payco_payments": "active",
         "paynow_payments": "active",
+        "paypay_payments": "active",
         "payto_payments": "active",
         "pix_payments": "active",
         "promptpay_payments": "active",
@@ -91,6 +94,7 @@
         "scalapay_payments": "active",
         "sepa_bank_transfer_payments": "active",
         "sepa_debit_payments": "active",
+        "sequra_payments": "active",
         "sofort_payments": "active",
         "sunbit_payments": "active",
         "swish_payments": "active",
@@ -132,6 +136,14 @@
           "state": "string",
           "town": "string"
         },
+        "administrative_address": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
         "directors_provided": false,
         "directorship_declaration": {
           "date": 1700000000,
@@ -152,6 +164,14 @@
         },
         "ownership_exemption_reason": "qualified_entity_exceeds_ownership_threshold",
         "phone": "string",
+        "principal_place_of_business": {
+          "city": "string",
+          "country": "string",
+          "line1": "string",
+          "line2": "string",
+          "postal_code": "string",
+          "state": "string"
+        },
         "registration_date": {
           "day": 0,
           "month": 0,
@@ -410,6 +430,11 @@
           "debit_negative_balances": false,
           "schedule": null,
           "statement_descriptor": "string"
+        },
+        "paypay_payments": {
+          "additional_files": [],
+          "goods_type": "digital_content",
+          "site": null
         },
         "sepa_debit_payments": {
           "creditor_id": "string"

@@ -1,0 +1,49 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "apps.install.created",
+  "data": {
+    "object": {
+      "account": "string",
+      "app": "string",
+      "approval_required": false,
+      "auth_code": "string",
+      "channel": "private_live",
+      "content_security_policy_granted": {
+        "connect_src": [
+          "string"
+        ],
+        "image_src": [
+          "string"
+        ]
+      },
+      "content_security_policy_pending": {
+        "connect_src": [
+          "string"
+        ],
+        "image_src": [
+          "string"
+        ]
+      },
+      "created": 1700000000,
+      "created_by": "string",
+      "endpoints_granted": [
+        "string"
+      ],
+      "endpoints_pending": [
+        "string"
+      ],
+      "id": "string",
+      "livemode": false,
+      "object": "apps.install",
+      "permissions_granted": [
+        "string"
+      ],
+      "permissions_pending": [
+        "string"
+      ],
+      "status": "install_failed"
+    }
+  }
+}

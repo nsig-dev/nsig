@@ -163,6 +163,7 @@
             "schedule": "string",
             "start_date": 1700000000,
             "status": "active",
+            "status_details": null,
             "test_clock": "string",
             "transfer_data": null,
             "trial_end": 1700000000,

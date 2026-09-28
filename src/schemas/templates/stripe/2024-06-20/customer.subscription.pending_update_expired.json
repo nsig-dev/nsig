@@ -49,6 +49,7 @@
       "cancellation_details": {
         "comment": "string",
         "feedback": "customer_service",
+        "feedback_option": "string",
         "reason": "canceled_by_retention_policy"
       },
       "collection_method": "charge_automatically",
@@ -91,6 +92,11 @@
         "account_tax_ids": [
           "string"
         ],
+        "custom_fields": [
+          {}
+        ],
+        "description": "string",
+        "footer": "string",
         "issuer": {
           "account": "string",
           "type": "account"
@@ -104,6 +110,7 @@
             "created": 0,
             "current_period_end": 1700000000,
             "current_period_start": 1700000000,
+            "current_trial": null,
             "discounts": [],
             "id": "string",
             "metadata": {},
@@ -135,6 +142,8 @@
         "payment_method_options": {
           "acss_debit": null,
           "bancontact": null,
+          "billie": null,
+          "blik": null,
           "card": null,
           "customer_balance": null,
           "konbini": null,
@@ -156,6 +165,7 @@
       "pending_setup_intent": "string",
       "pending_update": {
         "billing_cycle_anchor": 1700000000,
+        "cancel_at_period_end": false,
         "discount": {
           "checkout_session": "string",
           "customer": "string",
@@ -188,6 +198,13 @@
       "schedule": "string",
       "start_date": 1700000000,
       "status": "active",
+      "status_details": {
+        "paused": {
+          "subscription": null,
+          "transitioned_at": 1700000000,
+          "type": "subscription"
+        }
+      },
       "test_clock": "string",
       "transfer_data": {
         "amount_percent": 0,
@@ -196,6 +213,7 @@
       "trial_end": 1700000000,
       "trial_settings": {
         "end_behavior": {
+          "billing_cycle_anchor": "now",
           "missing_payment_method": "cancel"
         }
       },

@@ -15,8 +15,16 @@
       "discounts": [
         "string"
       ],
+      "frozen_fields": [
+        "discounts"
+      ],
       "id": "string",
       "invoice": "string",
+      "invoicing_rules": [
+        {
+          "type": "defer_until_credited_items_resolved"
+        }
+      ],
       "livemode": false,
       "metadata": {},
       "net_amount": 0,

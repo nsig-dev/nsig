@@ -56,7 +56,12 @@
       "id": "string",
       "invoice": "string",
       "invoice_settings": {
+        "custom_fields": [
+          {}
+        ],
         "days_until_due": 0,
+        "description": "string",
+        "footer": "string",
         "issuer": {
           "account": "string",
           "type": "account"

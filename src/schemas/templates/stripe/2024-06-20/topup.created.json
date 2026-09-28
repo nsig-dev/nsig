@@ -14,9 +14,16 @@
       "failure_code": "string",
       "failure_message": "string",
       "id": "string",
+      "initiated_by": "stripe",
       "livemode": false,
       "metadata": {},
       "object": "topup",
+      "payment_method": "string",
+      "payment_method_options": {
+        "us_bank_account": {
+          "network": "ach"
+        }
+      },
       "source": {
         "ach_credit_transfer": {
           "account_number": "string",

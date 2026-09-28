@@ -1,0 +1,38 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "billing.credit_grant.updated",
+  "data": {
+    "object": {
+      "amount": {
+        "monetary": {
+          "currency": "string",
+          "value": 0
+        },
+        "type": "monetary"
+      },
+      "applicability_config": {
+        "scope": {
+          "price_type": "metered",
+          "prices": []
+        }
+      },
+      "category": "paid",
+      "created": 1700000000,
+      "customer": "string",
+      "customer_account": "string",
+      "effective_at": 1700000000,
+      "expires_at": 1700000000,
+      "id": "string",
+      "livemode": false,
+      "metadata": {},
+      "name": "string",
+      "object": "billing.credit_grant",
+      "priority": 0,
+      "test_clock": "string",
+      "updated": 1700000000,
+      "voided_at": 1700000000
+    }
+  }
+}

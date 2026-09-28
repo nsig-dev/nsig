@@ -55,6 +55,13 @@
         "balances"
       ],
       "status": "active",
+      "status_details": {
+        "active": {
+          "action": "none",
+          "cause": "access_expired",
+          "expected_deactivation_date": 1700000000
+        }
+      },
       "subcategory": "checking",
       "subscriptions": [
         "transactions"

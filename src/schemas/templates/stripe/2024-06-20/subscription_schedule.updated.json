@@ -39,7 +39,10 @@
         "description": "string",
         "invoice_settings": {
           "account_tax_ids": [],
+          "custom_fields": [],
           "days_until_due": 0,
+          "description": "string",
+          "footer": "string",
           "issuer": null
         },
         "on_behalf_of": "string",
@@ -53,6 +56,13 @@
       "livemode": false,
       "metadata": {},
       "object": "subscription_schedule",
+      "pause_schedules": [
+        {
+          "key": "string",
+          "pause": {},
+          "resume": {}
+        }
+      ],
       "phases": [
         {
           "add_invoice_items": [
@@ -82,6 +92,7 @@
           "proration_behavior": "always_invoice",
           "start_date": 1700000000,
           "transfer_data": {},
+          "trial": false,
           "trial_end": 1700000000
         }
       ],

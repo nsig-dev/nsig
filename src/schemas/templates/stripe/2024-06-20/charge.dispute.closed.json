@@ -32,7 +32,7 @@
       "created": 1700000000,
       "currency": "string",
       "enhanced_eligibility_types": [
-        "visa_compelling_evidence_3"
+        "mastercard_compliance"
       ],
       "evidence": {
         "access_activity_log": "string",
@@ -49,6 +49,7 @@
         "duplicate_charge_explanation": "string",
         "duplicate_charge_id": "string",
         "enhanced_evidence": {
+          "mastercard_compliance": null,
           "visa_compelling_evidence_3": null,
           "visa_compliance": null
         },
@@ -70,6 +71,7 @@
       "evidence_details": {
         "due_by": 1700000000,
         "enhanced_eligibility": {
+          "mastercard_compliance": null,
           "visa_compelling_evidence_3": null,
           "visa_compliance": null
         },
@@ -90,6 +92,7 @@
         "card": {
           "brand": "string",
           "case_type": "block",
+          "network": "string",
           "network_reason_code": "string"
         },
         "klarna": {

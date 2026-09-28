@@ -82,7 +82,8 @@
         "shipping": {
           "address": null,
           "address_validation": null,
-          "carrier": "dhl",
+          "business_name": "string",
+          "carrier": "correos",
           "customs": null,
           "eta": 1700000000,
           "name": "string",

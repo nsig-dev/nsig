@@ -17,6 +17,9 @@
         }
       },
       "allow_promotion_codes": false,
+      "allowed_payment_method_types": [
+        "string"
+      ],
       "amount_subtotal": 0,
       "amount_total": 0,
       "automatic_tax": {
@@ -326,7 +329,8 @@
           "setup_future_usage": "none"
         },
         "payco": {
-          "capture_method": "manual"
+          "capture_method": "manual",
+          "setup_future_usage": "none"
         },
         "paynow": {
           "setup_future_usage": "none"
@@ -352,7 +356,8 @@
           "setup_future_usage": "none"
         },
         "samsung_pay": {
-          "capture_method": "manual"
+          "capture_method": "manual",
+          "setup_future_usage": "none"
         },
         "satispay": {
           "capture_method": "manual"
@@ -365,7 +370,14 @@
           "setup_future_usage": "none",
           "target_date": "string"
         },
+        "sequra": {
+          "capture_method": "manual"
+        },
         "sofort": {
+          "setup_future_usage": "none"
+        },
+        "sunbit": {
+          "capture_method": "manual",
           "setup_future_usage": "none"
         },
         "swish": {
@@ -383,6 +395,11 @@
           "setup_future_usage": "none",
           "target_date": "string",
           "verification_method": "automatic"
+        },
+        "wechat_pay": {
+          "app_id": "string",
+          "client": "android",
+          "setup_future_usage": "none"
         }
       },
       "payment_method_types": [

@@ -89,7 +89,8 @@
           "normalized_address": null,
           "result": "indeterminate"
         },
-        "carrier": "dhl",
+        "business_name": "string",
+        "carrier": "correos",
         "customs": {
           "eori_number": "string"
         },

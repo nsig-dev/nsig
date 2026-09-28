@@ -5,6 +5,9 @@
   "type": "payment_intent.canceled",
   "data": {
     "object": {
+      "allowed_payment_method_types": [
+        "acss_debit"
+      ],
       "amount": 0,
       "amount_capturable": 0,
       "amount_details": {
@@ -70,6 +73,7 @@
         "network_decline_code": "string",
         "param": "string",
         "payment_intent": {
+          "allowed_payment_method_types": [],
           "amount": 0,
           "amount_capturable": 0,
           "amount_details": null,
@@ -103,6 +107,7 @@
           "payment_method_configuration_details": null,
           "payment_method_options": null,
           "payment_method_types": [],
+          "payment_record": "string",
           "presentment_details": null,
           "processing": null,
           "receipt_email": "string",
@@ -166,6 +171,7 @@
           "payco": null,
           "paynow": null,
           "paypal": null,
+          "paypay": null,
           "payto": null,
           "pix": null,
           "promptpay": null,
@@ -175,6 +181,7 @@
           "satispay": null,
           "scalapay": null,
           "sepa_debit": null,
+          "sequra": null,
           "sofort": null,
           "sunbit": null,
           "swish": null,
@@ -188,6 +195,7 @@
         "payment_method_type": "string",
         "request_log_url": "string",
         "setup_intent": {
+          "allowed_payment_method_types": [],
           "application": "string",
           "attach_to_self": false,
           "automatic_payment_methods": null,
@@ -409,10 +417,13 @@
           "setup_future_usage": "none"
         },
         "billie": {
-          "capture_method": "manual"
+          "capture_method": "manual",
+          "company_details": null,
+          "reference": "string"
         },
         "bizum": {},
         "blik": {
+          "mandate_options": null,
           "setup_future_usage": "none"
         },
         "boleto": {
@@ -519,7 +530,8 @@
         },
         "pay_by_bank": {},
         "payco": {
-          "capture_method": "manual"
+          "capture_method": "manual",
+          "setup_future_usage": "none"
         },
         "paynow": {
           "setup_future_usage": "none"
@@ -530,6 +542,7 @@
           "reference": "string",
           "setup_future_usage": "none"
         },
+        "paypay": {},
         "payto": {
           "mandate_options": null,
           "setup_future_usage": "none"
@@ -549,10 +562,12 @@
           "setup_future_usage": "none"
         },
         "samsung_pay": {
-          "capture_method": "manual"
+          "capture_method": "manual",
+          "setup_future_usage": "none"
         },
         "satispay": {
-          "capture_method": "manual"
+          "capture_method": "manual",
+          "setup_future_usage": "none"
         },
         "scalapay": {
           "capture_method": "manual"
@@ -562,8 +577,16 @@
           "setup_future_usage": "none",
           "target_date": "string"
         },
+        "sequra": {
+          "capture_method": "manual",
+          "setup_future_usage": "none"
+        },
         "sofort": {
           "preferred_language": "de",
+          "setup_future_usage": "none"
+        },
+        "sunbit": {
+          "capture_method": "manual",
           "setup_future_usage": "none"
         },
         "swish": {
@@ -596,6 +619,7 @@
       "payment_method_types": [
         "string"
       ],
+      "payment_record": "string",
       "presentment_details": {
         "presentment_amount": 0,
         "presentment_currency": "string"

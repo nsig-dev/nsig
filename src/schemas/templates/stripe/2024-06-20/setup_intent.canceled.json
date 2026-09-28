@@ -5,6 +5,9 @@
   "type": "setup_intent.canceled",
   "data": {
     "object": {
+      "allowed_payment_method_types": [
+        "acss_debit"
+      ],
       "application": "string",
       "attach_to_self": false,
       "automatic_payment_methods": {
@@ -35,6 +38,7 @@
         "network_decline_code": "string",
         "param": "string",
         "payment_intent": {
+          "allowed_payment_method_types": [],
           "amount": 0,
           "amount_capturable": 0,
           "amount_details": null,
@@ -68,6 +72,7 @@
           "payment_method_configuration_details": null,
           "payment_method_options": null,
           "payment_method_types": [],
+          "payment_record": "string",
           "presentment_details": null,
           "processing": null,
           "receipt_email": "string",
@@ -131,6 +136,7 @@
           "payco": null,
           "paynow": null,
           "paypal": null,
+          "paypay": null,
           "payto": null,
           "pix": null,
           "promptpay": null,
@@ -140,6 +146,7 @@
           "satispay": null,
           "scalapay": null,
           "sepa_debit": null,
+          "sequra": null,
           "sofort": null,
           "sunbit": null,
           "swish": null,
@@ -153,6 +160,7 @@
         "payment_method_type": "string",
         "request_log_url": "string",
         "setup_intent": {
+          "allowed_payment_method_types": [],
           "application": "string",
           "attach_to_self": false,
           "automatic_payment_methods": null,
@@ -260,6 +268,9 @@
           "mandate_options": null
         },
         "bizum": {},
+        "blik": {
+          "mandate_options": null
+        },
         "card": {
           "mandate_options": null,
           "network": "amex",

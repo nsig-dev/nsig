@@ -8,247 +8,259 @@ import t5 from "./templates/stripe/2024-06-20/account.updated.json";
 import t6 from "./templates/stripe/2024-06-20/application_fee.created.json";
 import t7 from "./templates/stripe/2024-06-20/application_fee.refund.updated.json";
 import t8 from "./templates/stripe/2024-06-20/application_fee.refunded.json";
-import t9 from "./templates/stripe/2024-06-20/balance.available.json";
-import t10 from "./templates/stripe/2024-06-20/balance_settings.updated.json";
-import t11 from "./templates/stripe/2024-06-20/billing.alert.triggered.json";
-import t12 from "./templates/stripe/2024-06-20/billing.credit_grant.created.json";
-import t13 from "./templates/stripe/2024-06-20/billing_portal.configuration.created.json";
-import t14 from "./templates/stripe/2024-06-20/billing_portal.configuration.updated.json";
-import t15 from "./templates/stripe/2024-06-20/billing_portal.session.created.json";
-import t16 from "./templates/stripe/2024-06-20/capability.updated.json";
-import t17 from "./templates/stripe/2024-06-20/cash_balance.funds_available.json";
-import t18 from "./templates/stripe/2024-06-20/charge.captured.json";
-import t19 from "./templates/stripe/2024-06-20/charge.dispute.closed.json";
-import t20 from "./templates/stripe/2024-06-20/charge.dispute.created.json";
-import t21 from "./templates/stripe/2024-06-20/charge.dispute.funds_reinstated.json";
-import t22 from "./templates/stripe/2024-06-20/charge.dispute.funds_withdrawn.json";
-import t23 from "./templates/stripe/2024-06-20/charge.dispute.updated.json";
-import t24 from "./templates/stripe/2024-06-20/charge.expired.json";
-import t25 from "./templates/stripe/2024-06-20/charge.failed.json";
-import t26 from "./templates/stripe/2024-06-20/charge.pending.json";
-import t27 from "./templates/stripe/2024-06-20/charge.refund.updated.json";
-import t28 from "./templates/stripe/2024-06-20/charge.refunded.json";
-import t29 from "./templates/stripe/2024-06-20/charge.succeeded.json";
-import t30 from "./templates/stripe/2024-06-20/charge.updated.json";
-import t31 from "./templates/stripe/2024-06-20/checkout.session.async_payment_failed.json";
-import t32 from "./templates/stripe/2024-06-20/checkout.session.async_payment_succeeded.json";
-import t33 from "./templates/stripe/2024-06-20/checkout.session.completed.json";
-import t34 from "./templates/stripe/2024-06-20/checkout.session.expired.json";
-import t35 from "./templates/stripe/2024-06-20/climate.order.canceled.json";
-import t36 from "./templates/stripe/2024-06-20/climate.order.created.json";
-import t37 from "./templates/stripe/2024-06-20/climate.order.delayed.json";
-import t38 from "./templates/stripe/2024-06-20/climate.order.delivered.json";
-import t39 from "./templates/stripe/2024-06-20/climate.order.product_substituted.json";
-import t40 from "./templates/stripe/2024-06-20/climate.product.created.json";
-import t41 from "./templates/stripe/2024-06-20/climate.product.pricing_updated.json";
-import t42 from "./templates/stripe/2024-06-20/coupon.created.json";
-import t43 from "./templates/stripe/2024-06-20/coupon.deleted.json";
-import t44 from "./templates/stripe/2024-06-20/coupon.updated.json";
-import t45 from "./templates/stripe/2024-06-20/credit_note.created.json";
-import t46 from "./templates/stripe/2024-06-20/credit_note.updated.json";
-import t47 from "./templates/stripe/2024-06-20/credit_note.voided.json";
-import t48 from "./templates/stripe/2024-06-20/customer.created.json";
-import t49 from "./templates/stripe/2024-06-20/customer.deleted.json";
-import t50 from "./templates/stripe/2024-06-20/customer.discount.created.json";
-import t51 from "./templates/stripe/2024-06-20/customer.discount.deleted.json";
-import t52 from "./templates/stripe/2024-06-20/customer.discount.updated.json";
-import t53 from "./templates/stripe/2024-06-20/customer.source.created.json";
-import t54 from "./templates/stripe/2024-06-20/customer.source.deleted.json";
-import t55 from "./templates/stripe/2024-06-20/customer.source.expiring.json";
-import t56 from "./templates/stripe/2024-06-20/customer.source.updated.json";
-import t57 from "./templates/stripe/2024-06-20/customer.subscription.created.json";
-import t58 from "./templates/stripe/2024-06-20/customer.subscription.deleted.json";
-import t59 from "./templates/stripe/2024-06-20/customer.subscription.paused.json";
-import t60 from "./templates/stripe/2024-06-20/customer.subscription.pending_update_applied.json";
-import t61 from "./templates/stripe/2024-06-20/customer.subscription.pending_update_expired.json";
-import t62 from "./templates/stripe/2024-06-20/customer.subscription.resumed.json";
-import t63 from "./templates/stripe/2024-06-20/customer.subscription.trial_will_end.json";
-import t64 from "./templates/stripe/2024-06-20/customer.subscription.updated.json";
-import t65 from "./templates/stripe/2024-06-20/customer.tax_id.created.json";
-import t66 from "./templates/stripe/2024-06-20/customer.tax_id.deleted.json";
-import t67 from "./templates/stripe/2024-06-20/customer.tax_id.updated.json";
-import t68 from "./templates/stripe/2024-06-20/customer.updated.json";
-import t69 from "./templates/stripe/2024-06-20/customer_cash_balance_transaction.created.json";
-import t70 from "./templates/stripe/2024-06-20/file.created.json";
-import t71 from "./templates/stripe/2024-06-20/financial_connections.account.account_numbers_updated.json";
-import t72 from "./templates/stripe/2024-06-20/financial_connections.account.created.json";
-import t73 from "./templates/stripe/2024-06-20/financial_connections.account.deactivated.json";
-import t74 from "./templates/stripe/2024-06-20/financial_connections.account.disconnected.json";
-import t75 from "./templates/stripe/2024-06-20/financial_connections.account.reactivated.json";
-import t76 from "./templates/stripe/2024-06-20/financial_connections.account.refreshed_balance.json";
-import t77 from "./templates/stripe/2024-06-20/financial_connections.account.refreshed_ownership.json";
-import t78 from "./templates/stripe/2024-06-20/financial_connections.account.refreshed_transactions.json";
-import t79 from "./templates/stripe/2024-06-20/financial_connections.account.upcoming_account_number_expiry.json";
-import t80 from "./templates/stripe/2024-06-20/identity.verification_session.canceled.json";
-import t81 from "./templates/stripe/2024-06-20/identity.verification_session.created.json";
-import t82 from "./templates/stripe/2024-06-20/identity.verification_session.processing.json";
-import t83 from "./templates/stripe/2024-06-20/identity.verification_session.redacted.json";
-import t84 from "./templates/stripe/2024-06-20/identity.verification_session.requires_input.json";
-import t85 from "./templates/stripe/2024-06-20/identity.verification_session.verified.json";
-import t86 from "./templates/stripe/2024-06-20/invoice.created.json";
-import t87 from "./templates/stripe/2024-06-20/invoice.deleted.json";
-import t88 from "./templates/stripe/2024-06-20/invoice.finalization_failed.json";
-import t89 from "./templates/stripe/2024-06-20/invoice.finalized.json";
-import t90 from "./templates/stripe/2024-06-20/invoice.marked_uncollectible.json";
-import t91 from "./templates/stripe/2024-06-20/invoice.overdue.json";
-import t92 from "./templates/stripe/2024-06-20/invoice.overpaid.json";
-import t93 from "./templates/stripe/2024-06-20/invoice.paid.json";
-import t94 from "./templates/stripe/2024-06-20/invoice.payment_action_required.json";
-import t95 from "./templates/stripe/2024-06-20/invoice.payment_attempt_required.json";
-import t96 from "./templates/stripe/2024-06-20/invoice.payment_failed.json";
-import t97 from "./templates/stripe/2024-06-20/invoice.payment_succeeded.json";
-import t98 from "./templates/stripe/2024-06-20/invoice.sent.json";
-import t99 from "./templates/stripe/2024-06-20/invoice.upcoming.json";
-import t100 from "./templates/stripe/2024-06-20/invoice.updated.json";
-import t101 from "./templates/stripe/2024-06-20/invoice.voided.json";
-import t102 from "./templates/stripe/2024-06-20/invoice.will_be_due.json";
-import t103 from "./templates/stripe/2024-06-20/invoice_payment.paid.json";
-import t104 from "./templates/stripe/2024-06-20/invoiceitem.created.json";
-import t105 from "./templates/stripe/2024-06-20/invoiceitem.deleted.json";
-import t106 from "./templates/stripe/2024-06-20/issuing_authorization.created.json";
-import t107 from "./templates/stripe/2024-06-20/issuing_authorization.request.json";
-import t108 from "./templates/stripe/2024-06-20/issuing_authorization.updated.json";
-import t109 from "./templates/stripe/2024-06-20/issuing_card.created.json";
-import t110 from "./templates/stripe/2024-06-20/issuing_card.updated.json";
-import t111 from "./templates/stripe/2024-06-20/issuing_cardholder.created.json";
-import t112 from "./templates/stripe/2024-06-20/issuing_cardholder.updated.json";
-import t113 from "./templates/stripe/2024-06-20/issuing_dispute.closed.json";
-import t114 from "./templates/stripe/2024-06-20/issuing_dispute.created.json";
-import t115 from "./templates/stripe/2024-06-20/issuing_dispute.funds_reinstated.json";
-import t116 from "./templates/stripe/2024-06-20/issuing_dispute.funds_rescinded.json";
-import t117 from "./templates/stripe/2024-06-20/issuing_dispute.submitted.json";
-import t118 from "./templates/stripe/2024-06-20/issuing_dispute.updated.json";
-import t119 from "./templates/stripe/2024-06-20/issuing_personalization_design.activated.json";
-import t120 from "./templates/stripe/2024-06-20/issuing_personalization_design.deactivated.json";
-import t121 from "./templates/stripe/2024-06-20/issuing_personalization_design.rejected.json";
-import t122 from "./templates/stripe/2024-06-20/issuing_personalization_design.updated.json";
-import t123 from "./templates/stripe/2024-06-20/issuing_token.created.json";
-import t124 from "./templates/stripe/2024-06-20/issuing_token.updated.json";
-import t125 from "./templates/stripe/2024-06-20/issuing_transaction.created.json";
-import t126 from "./templates/stripe/2024-06-20/issuing_transaction.purchase_details_receipt_updated.json";
-import t127 from "./templates/stripe/2024-06-20/issuing_transaction.updated.json";
-import t128 from "./templates/stripe/2024-06-20/mandate.updated.json";
-import t129 from "./templates/stripe/2024-06-20/payment_intent.amount_capturable_updated.json";
-import t130 from "./templates/stripe/2024-06-20/payment_intent.canceled.json";
-import t131 from "./templates/stripe/2024-06-20/payment_intent.created.json";
-import t132 from "./templates/stripe/2024-06-20/payment_intent.partially_funded.json";
-import t133 from "./templates/stripe/2024-06-20/payment_intent.payment_failed.json";
-import t134 from "./templates/stripe/2024-06-20/payment_intent.processing.json";
-import t135 from "./templates/stripe/2024-06-20/payment_intent.requires_action.json";
-import t136 from "./templates/stripe/2024-06-20/payment_intent.succeeded.json";
-import t137 from "./templates/stripe/2024-06-20/payment_link.created.json";
-import t138 from "./templates/stripe/2024-06-20/payment_link.updated.json";
-import t139 from "./templates/stripe/2024-06-20/payment_method.attached.json";
-import t140 from "./templates/stripe/2024-06-20/payment_method.automatically_updated.json";
-import t141 from "./templates/stripe/2024-06-20/payment_method.detached.json";
-import t142 from "./templates/stripe/2024-06-20/payment_method.updated.json";
-import t143 from "./templates/stripe/2024-06-20/payout.canceled.json";
-import t144 from "./templates/stripe/2024-06-20/payout.created.json";
-import t145 from "./templates/stripe/2024-06-20/payout.failed.json";
-import t146 from "./templates/stripe/2024-06-20/payout.paid.json";
-import t147 from "./templates/stripe/2024-06-20/payout.reconciliation_completed.json";
-import t148 from "./templates/stripe/2024-06-20/payout.updated.json";
-import t149 from "./templates/stripe/2024-06-20/person.created.json";
-import t150 from "./templates/stripe/2024-06-20/person.deleted.json";
-import t151 from "./templates/stripe/2024-06-20/person.updated.json";
-import t152 from "./templates/stripe/2024-06-20/plan.created.json";
-import t153 from "./templates/stripe/2024-06-20/plan.deleted.json";
-import t154 from "./templates/stripe/2024-06-20/plan.updated.json";
-import t155 from "./templates/stripe/2024-06-20/price.created.json";
-import t156 from "./templates/stripe/2024-06-20/price.deleted.json";
-import t157 from "./templates/stripe/2024-06-20/price.updated.json";
-import t158 from "./templates/stripe/2024-06-20/product.created.json";
-import t159 from "./templates/stripe/2024-06-20/product.deleted.json";
-import t160 from "./templates/stripe/2024-06-20/product.updated.json";
-import t161 from "./templates/stripe/2024-06-20/promotion_code.created.json";
-import t162 from "./templates/stripe/2024-06-20/promotion_code.updated.json";
-import t163 from "./templates/stripe/2024-06-20/quote.accepted.json";
-import t164 from "./templates/stripe/2024-06-20/quote.canceled.json";
-import t165 from "./templates/stripe/2024-06-20/quote.created.json";
-import t166 from "./templates/stripe/2024-06-20/quote.finalized.json";
-import t167 from "./templates/stripe/2024-06-20/radar.early_fraud_warning.created.json";
-import t168 from "./templates/stripe/2024-06-20/radar.early_fraud_warning.updated.json";
-import t169 from "./templates/stripe/2024-06-20/refund.created.json";
-import t170 from "./templates/stripe/2024-06-20/refund.failed.json";
-import t171 from "./templates/stripe/2024-06-20/refund.updated.json";
-import t172 from "./templates/stripe/2024-06-20/reporting.report_run.failed.json";
-import t173 from "./templates/stripe/2024-06-20/reporting.report_run.succeeded.json";
-import t174 from "./templates/stripe/2024-06-20/reporting.report_type.updated.json";
-import t175 from "./templates/stripe/2024-06-20/reserve.plan.created.json";
-import t176 from "./templates/stripe/2024-06-20/reserve.plan.disabled.json";
-import t177 from "./templates/stripe/2024-06-20/reserve.plan.expired.json";
-import t178 from "./templates/stripe/2024-06-20/reserve.plan.updated.json";
-import t179 from "./templates/stripe/2024-06-20/review.closed.json";
-import t180 from "./templates/stripe/2024-06-20/review.opened.json";
-import t181 from "./templates/stripe/2024-06-20/setup_intent.canceled.json";
-import t182 from "./templates/stripe/2024-06-20/setup_intent.created.json";
-import t183 from "./templates/stripe/2024-06-20/setup_intent.requires_action.json";
-import t184 from "./templates/stripe/2024-06-20/setup_intent.setup_failed.json";
-import t185 from "./templates/stripe/2024-06-20/setup_intent.succeeded.json";
-import t186 from "./templates/stripe/2024-06-20/sigma.scheduled_query_run.created.json";
-import t187 from "./templates/stripe/2024-06-20/source.canceled.json";
-import t188 from "./templates/stripe/2024-06-20/source.chargeable.json";
-import t189 from "./templates/stripe/2024-06-20/source.failed.json";
-import t190 from "./templates/stripe/2024-06-20/source.mandate_notification.json";
-import t191 from "./templates/stripe/2024-06-20/source.refund_attributes_required.json";
-import t192 from "./templates/stripe/2024-06-20/source.transaction.created.json";
-import t193 from "./templates/stripe/2024-06-20/source.transaction.updated.json";
-import t194 from "./templates/stripe/2024-06-20/subscription_schedule.aborted.json";
-import t195 from "./templates/stripe/2024-06-20/subscription_schedule.canceled.json";
-import t196 from "./templates/stripe/2024-06-20/subscription_schedule.completed.json";
-import t197 from "./templates/stripe/2024-06-20/subscription_schedule.created.json";
-import t198 from "./templates/stripe/2024-06-20/subscription_schedule.expiring.json";
-import t199 from "./templates/stripe/2024-06-20/subscription_schedule.released.json";
-import t200 from "./templates/stripe/2024-06-20/subscription_schedule.updated.json";
-import t201 from "./templates/stripe/2024-06-20/tax.settings.updated.json";
-import t202 from "./templates/stripe/2024-06-20/tax_rate.created.json";
-import t203 from "./templates/stripe/2024-06-20/tax_rate.updated.json";
-import t204 from "./templates/stripe/2024-06-20/terminal.reader.action_failed.json";
-import t205 from "./templates/stripe/2024-06-20/terminal.reader.action_succeeded.json";
-import t206 from "./templates/stripe/2024-06-20/terminal.reader.action_updated.json";
-import t207 from "./templates/stripe/2024-06-20/test_helpers.test_clock.advancing.json";
-import t208 from "./templates/stripe/2024-06-20/test_helpers.test_clock.created.json";
-import t209 from "./templates/stripe/2024-06-20/test_helpers.test_clock.deleted.json";
-import t210 from "./templates/stripe/2024-06-20/test_helpers.test_clock.internal_failure.json";
-import t211 from "./templates/stripe/2024-06-20/test_helpers.test_clock.ready.json";
-import t212 from "./templates/stripe/2024-06-20/topup.canceled.json";
-import t213 from "./templates/stripe/2024-06-20/topup.created.json";
-import t214 from "./templates/stripe/2024-06-20/topup.failed.json";
-import t215 from "./templates/stripe/2024-06-20/topup.reversed.json";
-import t216 from "./templates/stripe/2024-06-20/topup.succeeded.json";
-import t217 from "./templates/stripe/2024-06-20/transfer.created.json";
-import t218 from "./templates/stripe/2024-06-20/transfer.reversed.json";
-import t219 from "./templates/stripe/2024-06-20/transfer.updated.json";
-import t220 from "./templates/stripe/2024-06-20/treasury.credit_reversal.created.json";
-import t221 from "./templates/stripe/2024-06-20/treasury.credit_reversal.posted.json";
-import t222 from "./templates/stripe/2024-06-20/treasury.debit_reversal.completed.json";
-import t223 from "./templates/stripe/2024-06-20/treasury.debit_reversal.created.json";
-import t224 from "./templates/stripe/2024-06-20/treasury.debit_reversal.initial_credit_granted.json";
-import t225 from "./templates/stripe/2024-06-20/treasury.financial_account.closed.json";
-import t226 from "./templates/stripe/2024-06-20/treasury.financial_account.created.json";
-import t227 from "./templates/stripe/2024-06-20/treasury.financial_account.features_status_updated.json";
-import t228 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.canceled.json";
-import t229 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.created.json";
-import t230 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.failed.json";
-import t231 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.succeeded.json";
-import t232 from "./templates/stripe/2024-06-20/treasury.outbound_payment.canceled.json";
-import t233 from "./templates/stripe/2024-06-20/treasury.outbound_payment.created.json";
-import t234 from "./templates/stripe/2024-06-20/treasury.outbound_payment.expected_arrival_date_updated.json";
-import t235 from "./templates/stripe/2024-06-20/treasury.outbound_payment.failed.json";
-import t236 from "./templates/stripe/2024-06-20/treasury.outbound_payment.posted.json";
-import t237 from "./templates/stripe/2024-06-20/treasury.outbound_payment.returned.json";
-import t238 from "./templates/stripe/2024-06-20/treasury.outbound_payment.tracking_details_updated.json";
-import t239 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.canceled.json";
-import t240 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.created.json";
-import t241 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.expected_arrival_date_updated.json";
-import t242 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.failed.json";
-import t243 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.posted.json";
-import t244 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.returned.json";
-import t245 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.tracking_details_updated.json";
-import t246 from "./templates/stripe/2024-06-20/treasury.received_credit.created.json";
-import t247 from "./templates/stripe/2024-06-20/treasury.received_credit.failed.json";
-import t248 from "./templates/stripe/2024-06-20/treasury.received_credit.succeeded.json";
-import t249 from "./templates/stripe/2024-06-20/treasury.received_debit.created.json";
+import t9 from "./templates/stripe/2024-06-20/apps.install.created.json";
+import t10 from "./templates/stripe/2024-06-20/apps.install.deleted.json";
+import t11 from "./templates/stripe/2024-06-20/apps.install.updated.json";
+import t12 from "./templates/stripe/2024-06-20/balance.available.json";
+import t13 from "./templates/stripe/2024-06-20/balance_settings.updated.json";
+import t14 from "./templates/stripe/2024-06-20/billing.alert.triggered.json";
+import t15 from "./templates/stripe/2024-06-20/billing.credit_balance_transaction.created.json";
+import t16 from "./templates/stripe/2024-06-20/billing.credit_grant.created.json";
+import t17 from "./templates/stripe/2024-06-20/billing.credit_grant.updated.json";
+import t18 from "./templates/stripe/2024-06-20/billing.meter.created.json";
+import t19 from "./templates/stripe/2024-06-20/billing.meter.deactivated.json";
+import t20 from "./templates/stripe/2024-06-20/billing.meter.reactivated.json";
+import t21 from "./templates/stripe/2024-06-20/billing.meter.updated.json";
+import t22 from "./templates/stripe/2024-06-20/billing_portal.configuration.created.json";
+import t23 from "./templates/stripe/2024-06-20/billing_portal.configuration.updated.json";
+import t24 from "./templates/stripe/2024-06-20/billing_portal.session.created.json";
+import t25 from "./templates/stripe/2024-06-20/capability.updated.json";
+import t26 from "./templates/stripe/2024-06-20/cash_balance.funds_available.json";
+import t27 from "./templates/stripe/2024-06-20/charge.captured.json";
+import t28 from "./templates/stripe/2024-06-20/charge.dispute.closed.json";
+import t29 from "./templates/stripe/2024-06-20/charge.dispute.created.json";
+import t30 from "./templates/stripe/2024-06-20/charge.dispute.funds_reinstated.json";
+import t31 from "./templates/stripe/2024-06-20/charge.dispute.funds_withdrawn.json";
+import t32 from "./templates/stripe/2024-06-20/charge.dispute.updated.json";
+import t33 from "./templates/stripe/2024-06-20/charge.expired.json";
+import t34 from "./templates/stripe/2024-06-20/charge.failed.json";
+import t35 from "./templates/stripe/2024-06-20/charge.pending.json";
+import t36 from "./templates/stripe/2024-06-20/charge.refund.updated.json";
+import t37 from "./templates/stripe/2024-06-20/charge.refunded.json";
+import t38 from "./templates/stripe/2024-06-20/charge.succeeded.json";
+import t39 from "./templates/stripe/2024-06-20/charge.updated.json";
+import t40 from "./templates/stripe/2024-06-20/checkout.session.async_payment_failed.json";
+import t41 from "./templates/stripe/2024-06-20/checkout.session.async_payment_succeeded.json";
+import t42 from "./templates/stripe/2024-06-20/checkout.session.completed.json";
+import t43 from "./templates/stripe/2024-06-20/checkout.session.expired.json";
+import t44 from "./templates/stripe/2024-06-20/climate.order.canceled.json";
+import t45 from "./templates/stripe/2024-06-20/climate.order.created.json";
+import t46 from "./templates/stripe/2024-06-20/climate.order.delayed.json";
+import t47 from "./templates/stripe/2024-06-20/climate.order.delivered.json";
+import t48 from "./templates/stripe/2024-06-20/climate.order.product_substituted.json";
+import t49 from "./templates/stripe/2024-06-20/climate.product.created.json";
+import t50 from "./templates/stripe/2024-06-20/climate.product.pricing_updated.json";
+import t51 from "./templates/stripe/2024-06-20/coupon.created.json";
+import t52 from "./templates/stripe/2024-06-20/coupon.deleted.json";
+import t53 from "./templates/stripe/2024-06-20/coupon.updated.json";
+import t54 from "./templates/stripe/2024-06-20/credit_note.created.json";
+import t55 from "./templates/stripe/2024-06-20/credit_note.updated.json";
+import t56 from "./templates/stripe/2024-06-20/credit_note.voided.json";
+import t57 from "./templates/stripe/2024-06-20/customer.created.json";
+import t58 from "./templates/stripe/2024-06-20/customer.deleted.json";
+import t59 from "./templates/stripe/2024-06-20/customer.discount.created.json";
+import t60 from "./templates/stripe/2024-06-20/customer.discount.deleted.json";
+import t61 from "./templates/stripe/2024-06-20/customer.discount.updated.json";
+import t62 from "./templates/stripe/2024-06-20/customer.source.created.json";
+import t63 from "./templates/stripe/2024-06-20/customer.source.deleted.json";
+import t64 from "./templates/stripe/2024-06-20/customer.source.expiring.json";
+import t65 from "./templates/stripe/2024-06-20/customer.source.updated.json";
+import t66 from "./templates/stripe/2024-06-20/customer.subscription.created.json";
+import t67 from "./templates/stripe/2024-06-20/customer.subscription.deleted.json";
+import t68 from "./templates/stripe/2024-06-20/customer.subscription.paused.json";
+import t69 from "./templates/stripe/2024-06-20/customer.subscription.pending_update_applied.json";
+import t70 from "./templates/stripe/2024-06-20/customer.subscription.pending_update_expired.json";
+import t71 from "./templates/stripe/2024-06-20/customer.subscription.resumed.json";
+import t72 from "./templates/stripe/2024-06-20/customer.subscription.trial_will_end.json";
+import t73 from "./templates/stripe/2024-06-20/customer.subscription.updated.json";
+import t74 from "./templates/stripe/2024-06-20/customer.tax_id.created.json";
+import t75 from "./templates/stripe/2024-06-20/customer.tax_id.deleted.json";
+import t76 from "./templates/stripe/2024-06-20/customer.tax_id.updated.json";
+import t77 from "./templates/stripe/2024-06-20/customer.updated.json";
+import t78 from "./templates/stripe/2024-06-20/customer_cash_balance_transaction.created.json";
+import t79 from "./templates/stripe/2024-06-20/file.created.json";
+import t80 from "./templates/stripe/2024-06-20/financial_connections.account.account_numbers_updated.json";
+import t81 from "./templates/stripe/2024-06-20/financial_connections.account.created.json";
+import t82 from "./templates/stripe/2024-06-20/financial_connections.account.deactivated.json";
+import t83 from "./templates/stripe/2024-06-20/financial_connections.account.disconnected.json";
+import t84 from "./templates/stripe/2024-06-20/financial_connections.account.expected_deactivation_date_updated.json";
+import t85 from "./templates/stripe/2024-06-20/financial_connections.account.reactivated.json";
+import t86 from "./templates/stripe/2024-06-20/financial_connections.account.refreshed_balance.json";
+import t87 from "./templates/stripe/2024-06-20/financial_connections.account.refreshed_ownership.json";
+import t88 from "./templates/stripe/2024-06-20/financial_connections.account.refreshed_transactions.json";
+import t89 from "./templates/stripe/2024-06-20/financial_connections.account.supported_payment_method_types_updated.json";
+import t90 from "./templates/stripe/2024-06-20/financial_connections.account.upcoming_account_number_expiry.json";
+import t91 from "./templates/stripe/2024-06-20/financial_connections.account.upcoming_deactivation.json";
+import t92 from "./templates/stripe/2024-06-20/identity.verification_session.canceled.json";
+import t93 from "./templates/stripe/2024-06-20/identity.verification_session.created.json";
+import t94 from "./templates/stripe/2024-06-20/identity.verification_session.processing.json";
+import t95 from "./templates/stripe/2024-06-20/identity.verification_session.redacted.json";
+import t96 from "./templates/stripe/2024-06-20/identity.verification_session.requires_input.json";
+import t97 from "./templates/stripe/2024-06-20/identity.verification_session.verified.json";
+import t98 from "./templates/stripe/2024-06-20/invoice.created.json";
+import t99 from "./templates/stripe/2024-06-20/invoice.deleted.json";
+import t100 from "./templates/stripe/2024-06-20/invoice.finalization_failed.json";
+import t101 from "./templates/stripe/2024-06-20/invoice.finalized.json";
+import t102 from "./templates/stripe/2024-06-20/invoice.marked_uncollectible.json";
+import t103 from "./templates/stripe/2024-06-20/invoice.overdue.json";
+import t104 from "./templates/stripe/2024-06-20/invoice.overpaid.json";
+import t105 from "./templates/stripe/2024-06-20/invoice.paid.json";
+import t106 from "./templates/stripe/2024-06-20/invoice.payment_action_required.json";
+import t107 from "./templates/stripe/2024-06-20/invoice.payment_attempt_required.json";
+import t108 from "./templates/stripe/2024-06-20/invoice.payment_failed.json";
+import t109 from "./templates/stripe/2024-06-20/invoice.payment_succeeded.json";
+import t110 from "./templates/stripe/2024-06-20/invoice.sent.json";
+import t111 from "./templates/stripe/2024-06-20/invoice.upcoming.json";
+import t112 from "./templates/stripe/2024-06-20/invoice.updated.json";
+import t113 from "./templates/stripe/2024-06-20/invoice.voided.json";
+import t114 from "./templates/stripe/2024-06-20/invoice.will_be_due.json";
+import t115 from "./templates/stripe/2024-06-20/invoice_payment.paid.json";
+import t116 from "./templates/stripe/2024-06-20/invoiceitem.created.json";
+import t117 from "./templates/stripe/2024-06-20/invoiceitem.deleted.json";
+import t118 from "./templates/stripe/2024-06-20/issuing_authorization.created.json";
+import t119 from "./templates/stripe/2024-06-20/issuing_authorization.request.json";
+import t120 from "./templates/stripe/2024-06-20/issuing_authorization.updated.json";
+import t121 from "./templates/stripe/2024-06-20/issuing_card.created.json";
+import t122 from "./templates/stripe/2024-06-20/issuing_card.updated.json";
+import t123 from "./templates/stripe/2024-06-20/issuing_cardholder.created.json";
+import t124 from "./templates/stripe/2024-06-20/issuing_cardholder.updated.json";
+import t125 from "./templates/stripe/2024-06-20/issuing_dispute.closed.json";
+import t126 from "./templates/stripe/2024-06-20/issuing_dispute.created.json";
+import t127 from "./templates/stripe/2024-06-20/issuing_dispute.funds_reinstated.json";
+import t128 from "./templates/stripe/2024-06-20/issuing_dispute.funds_rescinded.json";
+import t129 from "./templates/stripe/2024-06-20/issuing_dispute.submitted.json";
+import t130 from "./templates/stripe/2024-06-20/issuing_dispute.updated.json";
+import t131 from "./templates/stripe/2024-06-20/issuing_personalization_design.activated.json";
+import t132 from "./templates/stripe/2024-06-20/issuing_personalization_design.deactivated.json";
+import t133 from "./templates/stripe/2024-06-20/issuing_personalization_design.rejected.json";
+import t134 from "./templates/stripe/2024-06-20/issuing_personalization_design.updated.json";
+import t135 from "./templates/stripe/2024-06-20/issuing_token.created.json";
+import t136 from "./templates/stripe/2024-06-20/issuing_token.updated.json";
+import t137 from "./templates/stripe/2024-06-20/issuing_transaction.created.json";
+import t138 from "./templates/stripe/2024-06-20/issuing_transaction.purchase_details_receipt_updated.json";
+import t139 from "./templates/stripe/2024-06-20/issuing_transaction.updated.json";
+import t140 from "./templates/stripe/2024-06-20/mandate.updated.json";
+import t141 from "./templates/stripe/2024-06-20/payment_intent.amount_capturable_updated.json";
+import t142 from "./templates/stripe/2024-06-20/payment_intent.canceled.json";
+import t143 from "./templates/stripe/2024-06-20/payment_intent.created.json";
+import t144 from "./templates/stripe/2024-06-20/payment_intent.partially_funded.json";
+import t145 from "./templates/stripe/2024-06-20/payment_intent.payment_failed.json";
+import t146 from "./templates/stripe/2024-06-20/payment_intent.processing.json";
+import t147 from "./templates/stripe/2024-06-20/payment_intent.requires_action.json";
+import t148 from "./templates/stripe/2024-06-20/payment_intent.succeeded.json";
+import t149 from "./templates/stripe/2024-06-20/payment_link.created.json";
+import t150 from "./templates/stripe/2024-06-20/payment_link.updated.json";
+import t151 from "./templates/stripe/2024-06-20/payment_method.attached.json";
+import t152 from "./templates/stripe/2024-06-20/payment_method.automatically_updated.json";
+import t153 from "./templates/stripe/2024-06-20/payment_method.detached.json";
+import t154 from "./templates/stripe/2024-06-20/payment_method.updated.json";
+import t155 from "./templates/stripe/2024-06-20/payout.canceled.json";
+import t156 from "./templates/stripe/2024-06-20/payout.created.json";
+import t157 from "./templates/stripe/2024-06-20/payout.failed.json";
+import t158 from "./templates/stripe/2024-06-20/payout.paid.json";
+import t159 from "./templates/stripe/2024-06-20/payout.reconciliation_completed.json";
+import t160 from "./templates/stripe/2024-06-20/payout.updated.json";
+import t161 from "./templates/stripe/2024-06-20/person.created.json";
+import t162 from "./templates/stripe/2024-06-20/person.deleted.json";
+import t163 from "./templates/stripe/2024-06-20/person.updated.json";
+import t164 from "./templates/stripe/2024-06-20/plan.created.json";
+import t165 from "./templates/stripe/2024-06-20/plan.deleted.json";
+import t166 from "./templates/stripe/2024-06-20/plan.updated.json";
+import t167 from "./templates/stripe/2024-06-20/price.created.json";
+import t168 from "./templates/stripe/2024-06-20/price.deleted.json";
+import t169 from "./templates/stripe/2024-06-20/price.updated.json";
+import t170 from "./templates/stripe/2024-06-20/product.created.json";
+import t171 from "./templates/stripe/2024-06-20/product.deleted.json";
+import t172 from "./templates/stripe/2024-06-20/product.updated.json";
+import t173 from "./templates/stripe/2024-06-20/promotion_code.created.json";
+import t174 from "./templates/stripe/2024-06-20/promotion_code.updated.json";
+import t175 from "./templates/stripe/2024-06-20/quote.accepted.json";
+import t176 from "./templates/stripe/2024-06-20/quote.canceled.json";
+import t177 from "./templates/stripe/2024-06-20/quote.created.json";
+import t178 from "./templates/stripe/2024-06-20/quote.finalized.json";
+import t179 from "./templates/stripe/2024-06-20/radar.early_fraud_warning.created.json";
+import t180 from "./templates/stripe/2024-06-20/radar.early_fraud_warning.updated.json";
+import t181 from "./templates/stripe/2024-06-20/refund.created.json";
+import t182 from "./templates/stripe/2024-06-20/refund.failed.json";
+import t183 from "./templates/stripe/2024-06-20/refund.updated.json";
+import t184 from "./templates/stripe/2024-06-20/reporting.report_run.failed.json";
+import t185 from "./templates/stripe/2024-06-20/reporting.report_run.succeeded.json";
+import t186 from "./templates/stripe/2024-06-20/reporting.report_type.updated.json";
+import t187 from "./templates/stripe/2024-06-20/reserve.plan.created.json";
+import t188 from "./templates/stripe/2024-06-20/reserve.plan.disabled.json";
+import t189 from "./templates/stripe/2024-06-20/reserve.plan.expired.json";
+import t190 from "./templates/stripe/2024-06-20/reserve.plan.updated.json";
+import t191 from "./templates/stripe/2024-06-20/review.closed.json";
+import t192 from "./templates/stripe/2024-06-20/review.opened.json";
+import t193 from "./templates/stripe/2024-06-20/setup_intent.canceled.json";
+import t194 from "./templates/stripe/2024-06-20/setup_intent.created.json";
+import t195 from "./templates/stripe/2024-06-20/setup_intent.requires_action.json";
+import t196 from "./templates/stripe/2024-06-20/setup_intent.setup_failed.json";
+import t197 from "./templates/stripe/2024-06-20/setup_intent.succeeded.json";
+import t198 from "./templates/stripe/2024-06-20/sigma.scheduled_query_run.created.json";
+import t199 from "./templates/stripe/2024-06-20/source.canceled.json";
+import t200 from "./templates/stripe/2024-06-20/source.chargeable.json";
+import t201 from "./templates/stripe/2024-06-20/source.failed.json";
+import t202 from "./templates/stripe/2024-06-20/source.mandate_notification.json";
+import t203 from "./templates/stripe/2024-06-20/source.refund_attributes_required.json";
+import t204 from "./templates/stripe/2024-06-20/source.transaction.created.json";
+import t205 from "./templates/stripe/2024-06-20/source.transaction.updated.json";
+import t206 from "./templates/stripe/2024-06-20/subscription_schedule.aborted.json";
+import t207 from "./templates/stripe/2024-06-20/subscription_schedule.canceled.json";
+import t208 from "./templates/stripe/2024-06-20/subscription_schedule.completed.json";
+import t209 from "./templates/stripe/2024-06-20/subscription_schedule.created.json";
+import t210 from "./templates/stripe/2024-06-20/subscription_schedule.expiring.json";
+import t211 from "./templates/stripe/2024-06-20/subscription_schedule.released.json";
+import t212 from "./templates/stripe/2024-06-20/subscription_schedule.updated.json";
+import t213 from "./templates/stripe/2024-06-20/tax.settings.updated.json";
+import t214 from "./templates/stripe/2024-06-20/tax_rate.created.json";
+import t215 from "./templates/stripe/2024-06-20/tax_rate.updated.json";
+import t216 from "./templates/stripe/2024-06-20/terminal.reader.action_failed.json";
+import t217 from "./templates/stripe/2024-06-20/terminal.reader.action_succeeded.json";
+import t218 from "./templates/stripe/2024-06-20/terminal.reader.action_updated.json";
+import t219 from "./templates/stripe/2024-06-20/test_helpers.test_clock.advancing.json";
+import t220 from "./templates/stripe/2024-06-20/test_helpers.test_clock.created.json";
+import t221 from "./templates/stripe/2024-06-20/test_helpers.test_clock.deleted.json";
+import t222 from "./templates/stripe/2024-06-20/test_helpers.test_clock.internal_failure.json";
+import t223 from "./templates/stripe/2024-06-20/test_helpers.test_clock.ready.json";
+import t224 from "./templates/stripe/2024-06-20/topup.canceled.json";
+import t225 from "./templates/stripe/2024-06-20/topup.created.json";
+import t226 from "./templates/stripe/2024-06-20/topup.failed.json";
+import t227 from "./templates/stripe/2024-06-20/topup.reversed.json";
+import t228 from "./templates/stripe/2024-06-20/topup.succeeded.json";
+import t229 from "./templates/stripe/2024-06-20/transfer.created.json";
+import t230 from "./templates/stripe/2024-06-20/transfer.reversed.json";
+import t231 from "./templates/stripe/2024-06-20/transfer.updated.json";
+import t232 from "./templates/stripe/2024-06-20/treasury.credit_reversal.created.json";
+import t233 from "./templates/stripe/2024-06-20/treasury.credit_reversal.posted.json";
+import t234 from "./templates/stripe/2024-06-20/treasury.debit_reversal.completed.json";
+import t235 from "./templates/stripe/2024-06-20/treasury.debit_reversal.created.json";
+import t236 from "./templates/stripe/2024-06-20/treasury.debit_reversal.initial_credit_granted.json";
+import t237 from "./templates/stripe/2024-06-20/treasury.financial_account.closed.json";
+import t238 from "./templates/stripe/2024-06-20/treasury.financial_account.created.json";
+import t239 from "./templates/stripe/2024-06-20/treasury.financial_account.features_status_updated.json";
+import t240 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.canceled.json";
+import t241 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.created.json";
+import t242 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.failed.json";
+import t243 from "./templates/stripe/2024-06-20/treasury.inbound_transfer.succeeded.json";
+import t244 from "./templates/stripe/2024-06-20/treasury.outbound_payment.canceled.json";
+import t245 from "./templates/stripe/2024-06-20/treasury.outbound_payment.created.json";
+import t246 from "./templates/stripe/2024-06-20/treasury.outbound_payment.expected_arrival_date_updated.json";
+import t247 from "./templates/stripe/2024-06-20/treasury.outbound_payment.failed.json";
+import t248 from "./templates/stripe/2024-06-20/treasury.outbound_payment.posted.json";
+import t249 from "./templates/stripe/2024-06-20/treasury.outbound_payment.returned.json";
+import t250 from "./templates/stripe/2024-06-20/treasury.outbound_payment.tracking_details_updated.json";
+import t251 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.canceled.json";
+import t252 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.created.json";
+import t253 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.expected_arrival_date_updated.json";
+import t254 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.failed.json";
+import t255 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.posted.json";
+import t256 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.returned.json";
+import t257 from "./templates/stripe/2024-06-20/treasury.outbound_transfer.tracking_details_updated.json";
+import t258 from "./templates/stripe/2024-06-20/treasury.received_credit.created.json";
+import t259 from "./templates/stripe/2024-06-20/treasury.received_credit.failed.json";
+import t260 from "./templates/stripe/2024-06-20/treasury.received_credit.succeeded.json";
+import t261 from "./templates/stripe/2024-06-20/treasury.received_debit.created.json";
 
 export const generated: Record<string, object> = {
   "stripe/2024-06-20/account.application.authorized": t0,
@@ -260,245 +272,257 @@ export const generated: Record<string, object> = {
   "stripe/2024-06-20/application_fee.created": t6,
   "stripe/2024-06-20/application_fee.refund.updated": t7,
   "stripe/2024-06-20/application_fee.refunded": t8,
-  "stripe/2024-06-20/balance.available": t9,
-  "stripe/2024-06-20/balance_settings.updated": t10,
-  "stripe/2024-06-20/billing.alert.triggered": t11,
-  "stripe/2024-06-20/billing.credit_grant.created": t12,
-  "stripe/2024-06-20/billing_portal.configuration.created": t13,
-  "stripe/2024-06-20/billing_portal.configuration.updated": t14,
-  "stripe/2024-06-20/billing_portal.session.created": t15,
-  "stripe/2024-06-20/capability.updated": t16,
-  "stripe/2024-06-20/cash_balance.funds_available": t17,
-  "stripe/2024-06-20/charge.captured": t18,
-  "stripe/2024-06-20/charge.dispute.closed": t19,
-  "stripe/2024-06-20/charge.dispute.created": t20,
-  "stripe/2024-06-20/charge.dispute.funds_reinstated": t21,
-  "stripe/2024-06-20/charge.dispute.funds_withdrawn": t22,
-  "stripe/2024-06-20/charge.dispute.updated": t23,
-  "stripe/2024-06-20/charge.expired": t24,
-  "stripe/2024-06-20/charge.failed": t25,
-  "stripe/2024-06-20/charge.pending": t26,
-  "stripe/2024-06-20/charge.refund.updated": t27,
-  "stripe/2024-06-20/charge.refunded": t28,
-  "stripe/2024-06-20/charge.succeeded": t29,
-  "stripe/2024-06-20/charge.updated": t30,
-  "stripe/2024-06-20/checkout.session.async_payment_failed": t31,
-  "stripe/2024-06-20/checkout.session.async_payment_succeeded": t32,
-  "stripe/2024-06-20/checkout.session.completed": t33,
-  "stripe/2024-06-20/checkout.session.expired": t34,
-  "stripe/2024-06-20/climate.order.canceled": t35,
-  "stripe/2024-06-20/climate.order.created": t36,
-  "stripe/2024-06-20/climate.order.delayed": t37,
-  "stripe/2024-06-20/climate.order.delivered": t38,
-  "stripe/2024-06-20/climate.order.product_substituted": t39,
-  "stripe/2024-06-20/climate.product.created": t40,
-  "stripe/2024-06-20/climate.product.pricing_updated": t41,
-  "stripe/2024-06-20/coupon.created": t42,
-  "stripe/2024-06-20/coupon.deleted": t43,
-  "stripe/2024-06-20/coupon.updated": t44,
-  "stripe/2024-06-20/credit_note.created": t45,
-  "stripe/2024-06-20/credit_note.updated": t46,
-  "stripe/2024-06-20/credit_note.voided": t47,
-  "stripe/2024-06-20/customer.created": t48,
-  "stripe/2024-06-20/customer.deleted": t49,
-  "stripe/2024-06-20/customer.discount.created": t50,
-  "stripe/2024-06-20/customer.discount.deleted": t51,
-  "stripe/2024-06-20/customer.discount.updated": t52,
-  "stripe/2024-06-20/customer.source.created": t53,
-  "stripe/2024-06-20/customer.source.deleted": t54,
-  "stripe/2024-06-20/customer.source.expiring": t55,
-  "stripe/2024-06-20/customer.source.updated": t56,
-  "stripe/2024-06-20/customer.subscription.created": t57,
-  "stripe/2024-06-20/customer.subscription.deleted": t58,
-  "stripe/2024-06-20/customer.subscription.paused": t59,
-  "stripe/2024-06-20/customer.subscription.pending_update_applied": t60,
-  "stripe/2024-06-20/customer.subscription.pending_update_expired": t61,
-  "stripe/2024-06-20/customer.subscription.resumed": t62,
-  "stripe/2024-06-20/customer.subscription.trial_will_end": t63,
-  "stripe/2024-06-20/customer.subscription.updated": t64,
-  "stripe/2024-06-20/customer.tax_id.created": t65,
-  "stripe/2024-06-20/customer.tax_id.deleted": t66,
-  "stripe/2024-06-20/customer.tax_id.updated": t67,
-  "stripe/2024-06-20/customer.updated": t68,
-  "stripe/2024-06-20/customer_cash_balance_transaction.created": t69,
-  "stripe/2024-06-20/file.created": t70,
-  "stripe/2024-06-20/financial_connections.account.account_numbers_updated": t71,
-  "stripe/2024-06-20/financial_connections.account.created": t72,
-  "stripe/2024-06-20/financial_connections.account.deactivated": t73,
-  "stripe/2024-06-20/financial_connections.account.disconnected": t74,
-  "stripe/2024-06-20/financial_connections.account.reactivated": t75,
-  "stripe/2024-06-20/financial_connections.account.refreshed_balance": t76,
-  "stripe/2024-06-20/financial_connections.account.refreshed_ownership": t77,
-  "stripe/2024-06-20/financial_connections.account.refreshed_transactions": t78,
-  "stripe/2024-06-20/financial_connections.account.upcoming_account_number_expiry": t79,
-  "stripe/2024-06-20/identity.verification_session.canceled": t80,
-  "stripe/2024-06-20/identity.verification_session.created": t81,
-  "stripe/2024-06-20/identity.verification_session.processing": t82,
-  "stripe/2024-06-20/identity.verification_session.redacted": t83,
-  "stripe/2024-06-20/identity.verification_session.requires_input": t84,
-  "stripe/2024-06-20/identity.verification_session.verified": t85,
-  "stripe/2024-06-20/invoice.created": t86,
-  "stripe/2024-06-20/invoice.deleted": t87,
-  "stripe/2024-06-20/invoice.finalization_failed": t88,
-  "stripe/2024-06-20/invoice.finalized": t89,
-  "stripe/2024-06-20/invoice.marked_uncollectible": t90,
-  "stripe/2024-06-20/invoice.overdue": t91,
-  "stripe/2024-06-20/invoice.overpaid": t92,
-  "stripe/2024-06-20/invoice.paid": t93,
-  "stripe/2024-06-20/invoice.payment_action_required": t94,
-  "stripe/2024-06-20/invoice.payment_attempt_required": t95,
-  "stripe/2024-06-20/invoice.payment_failed": t96,
-  "stripe/2024-06-20/invoice.payment_succeeded": t97,
-  "stripe/2024-06-20/invoice.sent": t98,
-  "stripe/2024-06-20/invoice.upcoming": t99,
-  "stripe/2024-06-20/invoice.updated": t100,
-  "stripe/2024-06-20/invoice.voided": t101,
-  "stripe/2024-06-20/invoice.will_be_due": t102,
-  "stripe/2024-06-20/invoice_payment.paid": t103,
-  "stripe/2024-06-20/invoiceitem.created": t104,
-  "stripe/2024-06-20/invoiceitem.deleted": t105,
-  "stripe/2024-06-20/issuing_authorization.created": t106,
-  "stripe/2024-06-20/issuing_authorization.request": t107,
-  "stripe/2024-06-20/issuing_authorization.updated": t108,
-  "stripe/2024-06-20/issuing_card.created": t109,
-  "stripe/2024-06-20/issuing_card.updated": t110,
-  "stripe/2024-06-20/issuing_cardholder.created": t111,
-  "stripe/2024-06-20/issuing_cardholder.updated": t112,
-  "stripe/2024-06-20/issuing_dispute.closed": t113,
-  "stripe/2024-06-20/issuing_dispute.created": t114,
-  "stripe/2024-06-20/issuing_dispute.funds_reinstated": t115,
-  "stripe/2024-06-20/issuing_dispute.funds_rescinded": t116,
-  "stripe/2024-06-20/issuing_dispute.submitted": t117,
-  "stripe/2024-06-20/issuing_dispute.updated": t118,
-  "stripe/2024-06-20/issuing_personalization_design.activated": t119,
-  "stripe/2024-06-20/issuing_personalization_design.deactivated": t120,
-  "stripe/2024-06-20/issuing_personalization_design.rejected": t121,
-  "stripe/2024-06-20/issuing_personalization_design.updated": t122,
-  "stripe/2024-06-20/issuing_token.created": t123,
-  "stripe/2024-06-20/issuing_token.updated": t124,
-  "stripe/2024-06-20/issuing_transaction.created": t125,
-  "stripe/2024-06-20/issuing_transaction.purchase_details_receipt_updated": t126,
-  "stripe/2024-06-20/issuing_transaction.updated": t127,
-  "stripe/2024-06-20/mandate.updated": t128,
-  "stripe/2024-06-20/payment_intent.amount_capturable_updated": t129,
-  "stripe/2024-06-20/payment_intent.canceled": t130,
-  "stripe/2024-06-20/payment_intent.created": t131,
-  "stripe/2024-06-20/payment_intent.partially_funded": t132,
-  "stripe/2024-06-20/payment_intent.payment_failed": t133,
-  "stripe/2024-06-20/payment_intent.processing": t134,
-  "stripe/2024-06-20/payment_intent.requires_action": t135,
-  "stripe/2024-06-20/payment_intent.succeeded": t136,
-  "stripe/2024-06-20/payment_link.created": t137,
-  "stripe/2024-06-20/payment_link.updated": t138,
-  "stripe/2024-06-20/payment_method.attached": t139,
-  "stripe/2024-06-20/payment_method.automatically_updated": t140,
-  "stripe/2024-06-20/payment_method.detached": t141,
-  "stripe/2024-06-20/payment_method.updated": t142,
-  "stripe/2024-06-20/payout.canceled": t143,
-  "stripe/2024-06-20/payout.created": t144,
-  "stripe/2024-06-20/payout.failed": t145,
-  "stripe/2024-06-20/payout.paid": t146,
-  "stripe/2024-06-20/payout.reconciliation_completed": t147,
-  "stripe/2024-06-20/payout.updated": t148,
-  "stripe/2024-06-20/person.created": t149,
-  "stripe/2024-06-20/person.deleted": t150,
-  "stripe/2024-06-20/person.updated": t151,
-  "stripe/2024-06-20/plan.created": t152,
-  "stripe/2024-06-20/plan.deleted": t153,
-  "stripe/2024-06-20/plan.updated": t154,
-  "stripe/2024-06-20/price.created": t155,
-  "stripe/2024-06-20/price.deleted": t156,
-  "stripe/2024-06-20/price.updated": t157,
-  "stripe/2024-06-20/product.created": t158,
-  "stripe/2024-06-20/product.deleted": t159,
-  "stripe/2024-06-20/product.updated": t160,
-  "stripe/2024-06-20/promotion_code.created": t161,
-  "stripe/2024-06-20/promotion_code.updated": t162,
-  "stripe/2024-06-20/quote.accepted": t163,
-  "stripe/2024-06-20/quote.canceled": t164,
-  "stripe/2024-06-20/quote.created": t165,
-  "stripe/2024-06-20/quote.finalized": t166,
-  "stripe/2024-06-20/radar.early_fraud_warning.created": t167,
-  "stripe/2024-06-20/radar.early_fraud_warning.updated": t168,
-  "stripe/2024-06-20/refund.created": t169,
-  "stripe/2024-06-20/refund.failed": t170,
-  "stripe/2024-06-20/refund.updated": t171,
-  "stripe/2024-06-20/reporting.report_run.failed": t172,
-  "stripe/2024-06-20/reporting.report_run.succeeded": t173,
-  "stripe/2024-06-20/reporting.report_type.updated": t174,
-  "stripe/2024-06-20/reserve.plan.created": t175,
-  "stripe/2024-06-20/reserve.plan.disabled": t176,
-  "stripe/2024-06-20/reserve.plan.expired": t177,
-  "stripe/2024-06-20/reserve.plan.updated": t178,
-  "stripe/2024-06-20/review.closed": t179,
-  "stripe/2024-06-20/review.opened": t180,
-  "stripe/2024-06-20/setup_intent.canceled": t181,
-  "stripe/2024-06-20/setup_intent.created": t182,
-  "stripe/2024-06-20/setup_intent.requires_action": t183,
-  "stripe/2024-06-20/setup_intent.setup_failed": t184,
-  "stripe/2024-06-20/setup_intent.succeeded": t185,
-  "stripe/2024-06-20/sigma.scheduled_query_run.created": t186,
-  "stripe/2024-06-20/source.canceled": t187,
-  "stripe/2024-06-20/source.chargeable": t188,
-  "stripe/2024-06-20/source.failed": t189,
-  "stripe/2024-06-20/source.mandate_notification": t190,
-  "stripe/2024-06-20/source.refund_attributes_required": t191,
-  "stripe/2024-06-20/source.transaction.created": t192,
-  "stripe/2024-06-20/source.transaction.updated": t193,
-  "stripe/2024-06-20/subscription_schedule.aborted": t194,
-  "stripe/2024-06-20/subscription_schedule.canceled": t195,
-  "stripe/2024-06-20/subscription_schedule.completed": t196,
-  "stripe/2024-06-20/subscription_schedule.created": t197,
-  "stripe/2024-06-20/subscription_schedule.expiring": t198,
-  "stripe/2024-06-20/subscription_schedule.released": t199,
-  "stripe/2024-06-20/subscription_schedule.updated": t200,
-  "stripe/2024-06-20/tax.settings.updated": t201,
-  "stripe/2024-06-20/tax_rate.created": t202,
-  "stripe/2024-06-20/tax_rate.updated": t203,
-  "stripe/2024-06-20/terminal.reader.action_failed": t204,
-  "stripe/2024-06-20/terminal.reader.action_succeeded": t205,
-  "stripe/2024-06-20/terminal.reader.action_updated": t206,
-  "stripe/2024-06-20/test_helpers.test_clock.advancing": t207,
-  "stripe/2024-06-20/test_helpers.test_clock.created": t208,
-  "stripe/2024-06-20/test_helpers.test_clock.deleted": t209,
-  "stripe/2024-06-20/test_helpers.test_clock.internal_failure": t210,
-  "stripe/2024-06-20/test_helpers.test_clock.ready": t211,
-  "stripe/2024-06-20/topup.canceled": t212,
-  "stripe/2024-06-20/topup.created": t213,
-  "stripe/2024-06-20/topup.failed": t214,
-  "stripe/2024-06-20/topup.reversed": t215,
-  "stripe/2024-06-20/topup.succeeded": t216,
-  "stripe/2024-06-20/transfer.created": t217,
-  "stripe/2024-06-20/transfer.reversed": t218,
-  "stripe/2024-06-20/transfer.updated": t219,
-  "stripe/2024-06-20/treasury.credit_reversal.created": t220,
-  "stripe/2024-06-20/treasury.credit_reversal.posted": t221,
-  "stripe/2024-06-20/treasury.debit_reversal.completed": t222,
-  "stripe/2024-06-20/treasury.debit_reversal.created": t223,
-  "stripe/2024-06-20/treasury.debit_reversal.initial_credit_granted": t224,
-  "stripe/2024-06-20/treasury.financial_account.closed": t225,
-  "stripe/2024-06-20/treasury.financial_account.created": t226,
-  "stripe/2024-06-20/treasury.financial_account.features_status_updated": t227,
-  "stripe/2024-06-20/treasury.inbound_transfer.canceled": t228,
-  "stripe/2024-06-20/treasury.inbound_transfer.created": t229,
-  "stripe/2024-06-20/treasury.inbound_transfer.failed": t230,
-  "stripe/2024-06-20/treasury.inbound_transfer.succeeded": t231,
-  "stripe/2024-06-20/treasury.outbound_payment.canceled": t232,
-  "stripe/2024-06-20/treasury.outbound_payment.created": t233,
-  "stripe/2024-06-20/treasury.outbound_payment.expected_arrival_date_updated": t234,
-  "stripe/2024-06-20/treasury.outbound_payment.failed": t235,
-  "stripe/2024-06-20/treasury.outbound_payment.posted": t236,
-  "stripe/2024-06-20/treasury.outbound_payment.returned": t237,
-  "stripe/2024-06-20/treasury.outbound_payment.tracking_details_updated": t238,
-  "stripe/2024-06-20/treasury.outbound_transfer.canceled": t239,
-  "stripe/2024-06-20/treasury.outbound_transfer.created": t240,
-  "stripe/2024-06-20/treasury.outbound_transfer.expected_arrival_date_updated": t241,
-  "stripe/2024-06-20/treasury.outbound_transfer.failed": t242,
-  "stripe/2024-06-20/treasury.outbound_transfer.posted": t243,
-  "stripe/2024-06-20/treasury.outbound_transfer.returned": t244,
-  "stripe/2024-06-20/treasury.outbound_transfer.tracking_details_updated": t245,
-  "stripe/2024-06-20/treasury.received_credit.created": t246,
-  "stripe/2024-06-20/treasury.received_credit.failed": t247,
-  "stripe/2024-06-20/treasury.received_credit.succeeded": t248,
-  "stripe/2024-06-20/treasury.received_debit.created": t249,
+  "stripe/2024-06-20/apps.install.created": t9,
+  "stripe/2024-06-20/apps.install.deleted": t10,
+  "stripe/2024-06-20/apps.install.updated": t11,
+  "stripe/2024-06-20/balance.available": t12,
+  "stripe/2024-06-20/balance_settings.updated": t13,
+  "stripe/2024-06-20/billing.alert.triggered": t14,
+  "stripe/2024-06-20/billing.credit_balance_transaction.created": t15,
+  "stripe/2024-06-20/billing.credit_grant.created": t16,
+  "stripe/2024-06-20/billing.credit_grant.updated": t17,
+  "stripe/2024-06-20/billing.meter.created": t18,
+  "stripe/2024-06-20/billing.meter.deactivated": t19,
+  "stripe/2024-06-20/billing.meter.reactivated": t20,
+  "stripe/2024-06-20/billing.meter.updated": t21,
+  "stripe/2024-06-20/billing_portal.configuration.created": t22,
+  "stripe/2024-06-20/billing_portal.configuration.updated": t23,
+  "stripe/2024-06-20/billing_portal.session.created": t24,
+  "stripe/2024-06-20/capability.updated": t25,
+  "stripe/2024-06-20/cash_balance.funds_available": t26,
+  "stripe/2024-06-20/charge.captured": t27,
+  "stripe/2024-06-20/charge.dispute.closed": t28,
+  "stripe/2024-06-20/charge.dispute.created": t29,
+  "stripe/2024-06-20/charge.dispute.funds_reinstated": t30,
+  "stripe/2024-06-20/charge.dispute.funds_withdrawn": t31,
+  "stripe/2024-06-20/charge.dispute.updated": t32,
+  "stripe/2024-06-20/charge.expired": t33,
+  "stripe/2024-06-20/charge.failed": t34,
+  "stripe/2024-06-20/charge.pending": t35,
+  "stripe/2024-06-20/charge.refund.updated": t36,
+  "stripe/2024-06-20/charge.refunded": t37,
+  "stripe/2024-06-20/charge.succeeded": t38,
+  "stripe/2024-06-20/charge.updated": t39,
+  "stripe/2024-06-20/checkout.session.async_payment_failed": t40,
+  "stripe/2024-06-20/checkout.session.async_payment_succeeded": t41,
+  "stripe/2024-06-20/checkout.session.completed": t42,
+  "stripe/2024-06-20/checkout.session.expired": t43,
+  "stripe/2024-06-20/climate.order.canceled": t44,
+  "stripe/2024-06-20/climate.order.created": t45,
+  "stripe/2024-06-20/climate.order.delayed": t46,
+  "stripe/2024-06-20/climate.order.delivered": t47,
+  "stripe/2024-06-20/climate.order.product_substituted": t48,
+  "stripe/2024-06-20/climate.product.created": t49,
+  "stripe/2024-06-20/climate.product.pricing_updated": t50,
+  "stripe/2024-06-20/coupon.created": t51,
+  "stripe/2024-06-20/coupon.deleted": t52,
+  "stripe/2024-06-20/coupon.updated": t53,
+  "stripe/2024-06-20/credit_note.created": t54,
+  "stripe/2024-06-20/credit_note.updated": t55,
+  "stripe/2024-06-20/credit_note.voided": t56,
+  "stripe/2024-06-20/customer.created": t57,
+  "stripe/2024-06-20/customer.deleted": t58,
+  "stripe/2024-06-20/customer.discount.created": t59,
+  "stripe/2024-06-20/customer.discount.deleted": t60,
+  "stripe/2024-06-20/customer.discount.updated": t61,
+  "stripe/2024-06-20/customer.source.created": t62,
+  "stripe/2024-06-20/customer.source.deleted": t63,
+  "stripe/2024-06-20/customer.source.expiring": t64,
+  "stripe/2024-06-20/customer.source.updated": t65,
+  "stripe/2024-06-20/customer.subscription.created": t66,
+  "stripe/2024-06-20/customer.subscription.deleted": t67,
+  "stripe/2024-06-20/customer.subscription.paused": t68,
+  "stripe/2024-06-20/customer.subscription.pending_update_applied": t69,
+  "stripe/2024-06-20/customer.subscription.pending_update_expired": t70,
+  "stripe/2024-06-20/customer.subscription.resumed": t71,
+  "stripe/2024-06-20/customer.subscription.trial_will_end": t72,
+  "stripe/2024-06-20/customer.subscription.updated": t73,
+  "stripe/2024-06-20/customer.tax_id.created": t74,
+  "stripe/2024-06-20/customer.tax_id.deleted": t75,
+  "stripe/2024-06-20/customer.tax_id.updated": t76,
+  "stripe/2024-06-20/customer.updated": t77,
+  "stripe/2024-06-20/customer_cash_balance_transaction.created": t78,
+  "stripe/2024-06-20/file.created": t79,
+  "stripe/2024-06-20/financial_connections.account.account_numbers_updated": t80,
+  "stripe/2024-06-20/financial_connections.account.created": t81,
+  "stripe/2024-06-20/financial_connections.account.deactivated": t82,
+  "stripe/2024-06-20/financial_connections.account.disconnected": t83,
+  "stripe/2024-06-20/financial_connections.account.expected_deactivation_date_updated": t84,
+  "stripe/2024-06-20/financial_connections.account.reactivated": t85,
+  "stripe/2024-06-20/financial_connections.account.refreshed_balance": t86,
+  "stripe/2024-06-20/financial_connections.account.refreshed_ownership": t87,
+  "stripe/2024-06-20/financial_connections.account.refreshed_transactions": t88,
+  "stripe/2024-06-20/financial_connections.account.supported_payment_method_types_updated": t89,
+  "stripe/2024-06-20/financial_connections.account.upcoming_account_number_expiry": t90,
+  "stripe/2024-06-20/financial_connections.account.upcoming_deactivation": t91,
+  "stripe/2024-06-20/identity.verification_session.canceled": t92,
+  "stripe/2024-06-20/identity.verification_session.created": t93,
+  "stripe/2024-06-20/identity.verification_session.processing": t94,
+  "stripe/2024-06-20/identity.verification_session.redacted": t95,
+  "stripe/2024-06-20/identity.verification_session.requires_input": t96,
+  "stripe/2024-06-20/identity.verification_session.verified": t97,
+  "stripe/2024-06-20/invoice.created": t98,
+  "stripe/2024-06-20/invoice.deleted": t99,
+  "stripe/2024-06-20/invoice.finalization_failed": t100,
+  "stripe/2024-06-20/invoice.finalized": t101,
+  "stripe/2024-06-20/invoice.marked_uncollectible": t102,
+  "stripe/2024-06-20/invoice.overdue": t103,
+  "stripe/2024-06-20/invoice.overpaid": t104,
+  "stripe/2024-06-20/invoice.paid": t105,
+  "stripe/2024-06-20/invoice.payment_action_required": t106,
+  "stripe/2024-06-20/invoice.payment_attempt_required": t107,
+  "stripe/2024-06-20/invoice.payment_failed": t108,
+  "stripe/2024-06-20/invoice.payment_succeeded": t109,
+  "stripe/2024-06-20/invoice.sent": t110,
+  "stripe/2024-06-20/invoice.upcoming": t111,
+  "stripe/2024-06-20/invoice.updated": t112,
+  "stripe/2024-06-20/invoice.voided": t113,
+  "stripe/2024-06-20/invoice.will_be_due": t114,
+  "stripe/2024-06-20/invoice_payment.paid": t115,
+  "stripe/2024-06-20/invoiceitem.created": t116,
+  "stripe/2024-06-20/invoiceitem.deleted": t117,
+  "stripe/2024-06-20/issuing_authorization.created": t118,
+  "stripe/2024-06-20/issuing_authorization.request": t119,
+  "stripe/2024-06-20/issuing_authorization.updated": t120,
+  "stripe/2024-06-20/issuing_card.created": t121,
+  "stripe/2024-06-20/issuing_card.updated": t122,
+  "stripe/2024-06-20/issuing_cardholder.created": t123,
+  "stripe/2024-06-20/issuing_cardholder.updated": t124,
+  "stripe/2024-06-20/issuing_dispute.closed": t125,
+  "stripe/2024-06-20/issuing_dispute.created": t126,
+  "stripe/2024-06-20/issuing_dispute.funds_reinstated": t127,
+  "stripe/2024-06-20/issuing_dispute.funds_rescinded": t128,
+  "stripe/2024-06-20/issuing_dispute.submitted": t129,
+  "stripe/2024-06-20/issuing_dispute.updated": t130,
+  "stripe/2024-06-20/issuing_personalization_design.activated": t131,
+  "stripe/2024-06-20/issuing_personalization_design.deactivated": t132,
+  "stripe/2024-06-20/issuing_personalization_design.rejected": t133,
+  "stripe/2024-06-20/issuing_personalization_design.updated": t134,
+  "stripe/2024-06-20/issuing_token.created": t135,
+  "stripe/2024-06-20/issuing_token.updated": t136,
+  "stripe/2024-06-20/issuing_transaction.created": t137,
+  "stripe/2024-06-20/issuing_transaction.purchase_details_receipt_updated": t138,
+  "stripe/2024-06-20/issuing_transaction.updated": t139,
+  "stripe/2024-06-20/mandate.updated": t140,
+  "stripe/2024-06-20/payment_intent.amount_capturable_updated": t141,
+  "stripe/2024-06-20/payment_intent.canceled": t142,
+  "stripe/2024-06-20/payment_intent.created": t143,
+  "stripe/2024-06-20/payment_intent.partially_funded": t144,
+  "stripe/2024-06-20/payment_intent.payment_failed": t145,
+  "stripe/2024-06-20/payment_intent.processing": t146,
+  "stripe/2024-06-20/payment_intent.requires_action": t147,
+  "stripe/2024-06-20/payment_intent.succeeded": t148,
+  "stripe/2024-06-20/payment_link.created": t149,
+  "stripe/2024-06-20/payment_link.updated": t150,
+  "stripe/2024-06-20/payment_method.attached": t151,
+  "stripe/2024-06-20/payment_method.automatically_updated": t152,
+  "stripe/2024-06-20/payment_method.detached": t153,
+  "stripe/2024-06-20/payment_method.updated": t154,
+  "stripe/2024-06-20/payout.canceled": t155,
+  "stripe/2024-06-20/payout.created": t156,
+  "stripe/2024-06-20/payout.failed": t157,
+  "stripe/2024-06-20/payout.paid": t158,
+  "stripe/2024-06-20/payout.reconciliation_completed": t159,
+  "stripe/2024-06-20/payout.updated": t160,
+  "stripe/2024-06-20/person.created": t161,
+  "stripe/2024-06-20/person.deleted": t162,
+  "stripe/2024-06-20/person.updated": t163,
+  "stripe/2024-06-20/plan.created": t164,
+  "stripe/2024-06-20/plan.deleted": t165,
+  "stripe/2024-06-20/plan.updated": t166,
+  "stripe/2024-06-20/price.created": t167,
+  "stripe/2024-06-20/price.deleted": t168,
+  "stripe/2024-06-20/price.updated": t169,
+  "stripe/2024-06-20/product.created": t170,
+  "stripe/2024-06-20/product.deleted": t171,
+  "stripe/2024-06-20/product.updated": t172,
+  "stripe/2024-06-20/promotion_code.created": t173,
+  "stripe/2024-06-20/promotion_code.updated": t174,
+  "stripe/2024-06-20/quote.accepted": t175,
+  "stripe/2024-06-20/quote.canceled": t176,
+  "stripe/2024-06-20/quote.created": t177,
+  "stripe/2024-06-20/quote.finalized": t178,
+  "stripe/2024-06-20/radar.early_fraud_warning.created": t179,
+  "stripe/2024-06-20/radar.early_fraud_warning.updated": t180,
+  "stripe/2024-06-20/refund.created": t181,
+  "stripe/2024-06-20/refund.failed": t182,
+  "stripe/2024-06-20/refund.updated": t183,
+  "stripe/2024-06-20/reporting.report_run.failed": t184,
+  "stripe/2024-06-20/reporting.report_run.succeeded": t185,
+  "stripe/2024-06-20/reporting.report_type.updated": t186,
+  "stripe/2024-06-20/reserve.plan.created": t187,
+  "stripe/2024-06-20/reserve.plan.disabled": t188,
+  "stripe/2024-06-20/reserve.plan.expired": t189,
+  "stripe/2024-06-20/reserve.plan.updated": t190,
+  "stripe/2024-06-20/review.closed": t191,
+  "stripe/2024-06-20/review.opened": t192,
+  "stripe/2024-06-20/setup_intent.canceled": t193,
+  "stripe/2024-06-20/setup_intent.created": t194,
+  "stripe/2024-06-20/setup_intent.requires_action": t195,
+  "stripe/2024-06-20/setup_intent.setup_failed": t196,
+  "stripe/2024-06-20/setup_intent.succeeded": t197,
+  "stripe/2024-06-20/sigma.scheduled_query_run.created": t198,
+  "stripe/2024-06-20/source.canceled": t199,
+  "stripe/2024-06-20/source.chargeable": t200,
+  "stripe/2024-06-20/source.failed": t201,
+  "stripe/2024-06-20/source.mandate_notification": t202,
+  "stripe/2024-06-20/source.refund_attributes_required": t203,
+  "stripe/2024-06-20/source.transaction.created": t204,
+  "stripe/2024-06-20/source.transaction.updated": t205,
+  "stripe/2024-06-20/subscription_schedule.aborted": t206,
+  "stripe/2024-06-20/subscription_schedule.canceled": t207,
+  "stripe/2024-06-20/subscription_schedule.completed": t208,
+  "stripe/2024-06-20/subscription_schedule.created": t209,
+  "stripe/2024-06-20/subscription_schedule.expiring": t210,
+  "stripe/2024-06-20/subscription_schedule.released": t211,
+  "stripe/2024-06-20/subscription_schedule.updated": t212,
+  "stripe/2024-06-20/tax.settings.updated": t213,
+  "stripe/2024-06-20/tax_rate.created": t214,
+  "stripe/2024-06-20/tax_rate.updated": t215,
+  "stripe/2024-06-20/terminal.reader.action_failed": t216,
+  "stripe/2024-06-20/terminal.reader.action_succeeded": t217,
+  "stripe/2024-06-20/terminal.reader.action_updated": t218,
+  "stripe/2024-06-20/test_helpers.test_clock.advancing": t219,
+  "stripe/2024-06-20/test_helpers.test_clock.created": t220,
+  "stripe/2024-06-20/test_helpers.test_clock.deleted": t221,
+  "stripe/2024-06-20/test_helpers.test_clock.internal_failure": t222,
+  "stripe/2024-06-20/test_helpers.test_clock.ready": t223,
+  "stripe/2024-06-20/topup.canceled": t224,
+  "stripe/2024-06-20/topup.created": t225,
+  "stripe/2024-06-20/topup.failed": t226,
+  "stripe/2024-06-20/topup.reversed": t227,
+  "stripe/2024-06-20/topup.succeeded": t228,
+  "stripe/2024-06-20/transfer.created": t229,
+  "stripe/2024-06-20/transfer.reversed": t230,
+  "stripe/2024-06-20/transfer.updated": t231,
+  "stripe/2024-06-20/treasury.credit_reversal.created": t232,
+  "stripe/2024-06-20/treasury.credit_reversal.posted": t233,
+  "stripe/2024-06-20/treasury.debit_reversal.completed": t234,
+  "stripe/2024-06-20/treasury.debit_reversal.created": t235,
+  "stripe/2024-06-20/treasury.debit_reversal.initial_credit_granted": t236,
+  "stripe/2024-06-20/treasury.financial_account.closed": t237,
+  "stripe/2024-06-20/treasury.financial_account.created": t238,
+  "stripe/2024-06-20/treasury.financial_account.features_status_updated": t239,
+  "stripe/2024-06-20/treasury.inbound_transfer.canceled": t240,
+  "stripe/2024-06-20/treasury.inbound_transfer.created": t241,
+  "stripe/2024-06-20/treasury.inbound_transfer.failed": t242,
+  "stripe/2024-06-20/treasury.inbound_transfer.succeeded": t243,
+  "stripe/2024-06-20/treasury.outbound_payment.canceled": t244,
+  "stripe/2024-06-20/treasury.outbound_payment.created": t245,
+  "stripe/2024-06-20/treasury.outbound_payment.expected_arrival_date_updated": t246,
+  "stripe/2024-06-20/treasury.outbound_payment.failed": t247,
+  "stripe/2024-06-20/treasury.outbound_payment.posted": t248,
+  "stripe/2024-06-20/treasury.outbound_payment.returned": t249,
+  "stripe/2024-06-20/treasury.outbound_payment.tracking_details_updated": t250,
+  "stripe/2024-06-20/treasury.outbound_transfer.canceled": t251,
+  "stripe/2024-06-20/treasury.outbound_transfer.created": t252,
+  "stripe/2024-06-20/treasury.outbound_transfer.expected_arrival_date_updated": t253,
+  "stripe/2024-06-20/treasury.outbound_transfer.failed": t254,
+  "stripe/2024-06-20/treasury.outbound_transfer.posted": t255,
+  "stripe/2024-06-20/treasury.outbound_transfer.returned": t256,
+  "stripe/2024-06-20/treasury.outbound_transfer.tracking_details_updated": t257,
+  "stripe/2024-06-20/treasury.received_credit.created": t258,
+  "stripe/2024-06-20/treasury.received_credit.failed": t259,
+  "stripe/2024-06-20/treasury.received_credit.succeeded": t260,
+  "stripe/2024-06-20/treasury.received_debit.created": t261,
 };

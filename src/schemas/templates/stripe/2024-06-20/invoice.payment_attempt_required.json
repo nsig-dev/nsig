@@ -133,6 +133,7 @@
         "network_decline_code": "string",
         "param": "string",
         "payment_intent": {
+          "allowed_payment_method_types": [],
           "amount": 0,
           "amount_capturable": 0,
           "amount_details": null,
@@ -166,6 +167,7 @@
           "payment_method_configuration_details": null,
           "payment_method_options": null,
           "payment_method_types": [],
+          "payment_record": "string",
           "presentment_details": null,
           "processing": null,
           "receipt_email": "string",
@@ -229,6 +231,7 @@
           "payco": null,
           "paynow": null,
           "paypal": null,
+          "paypay": null,
           "payto": null,
           "pix": null,
           "promptpay": null,
@@ -238,6 +241,7 @@
           "satispay": null,
           "scalapay": null,
           "sepa_debit": null,
+          "sequra": null,
           "sofort": null,
           "sunbit": null,
           "swish": null,
@@ -251,6 +255,7 @@
         "payment_method_type": "string",
         "request_log_url": "string",
         "setup_intent": {
+          "allowed_payment_method_types": [],
           "application": "string",
           "attach_to_self": false,
           "automatic_payment_methods": null,
@@ -355,6 +360,8 @@
         "payment_method_options": {
           "acss_debit": null,
           "bancontact": null,
+          "billie": null,
+          "blik": null,
           "card": null,
           "customer_balance": null,
           "konbini": null,
@@ -428,6 +435,11 @@
       "starting_balance": 0,
       "statement_descriptor": "string",
       "status": "draft",
+      "status_details": {
+        "uncollectible": {
+          "reason": "max_payment_attempts"
+        }
+      },
       "status_transitions": {
         "finalized_at": 1700000000,
         "marked_uncollectible_at": 1700000000,

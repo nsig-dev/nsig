@@ -15,6 +15,7 @@
           "redirect": null,
           "type": "hosted_confirmation"
         },
+        "customer_update": {},
         "subscription_cancel": {
           "retention": null,
           "subscription": "string"
@@ -27,7 +28,7 @@
           "items": [],
           "subscription": "string"
         },
-        "type": "payment_method_update"
+        "type": "customer_update"
       },
       "id": "string",
       "livemode": false,

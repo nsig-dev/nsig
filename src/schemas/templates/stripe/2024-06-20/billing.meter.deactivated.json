@@ -1,0 +1,32 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "billing.meter.deactivated",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "customer_mapping": {
+        "event_payload_key": "string",
+        "type": "by_id"
+      },
+      "default_aggregation": {
+        "formula": "count"
+      },
+      "display_name": "string",
+      "event_name": "string",
+      "event_time_window": "day",
+      "id": "string",
+      "livemode": false,
+      "object": "billing.meter",
+      "status": "active",
+      "status_transitions": {
+        "deactivated_at": 1700000000
+      },
+      "updated": 1700000000,
+      "value_settings": {
+        "event_payload_key": "string"
+      }
+    }
+  }
+}

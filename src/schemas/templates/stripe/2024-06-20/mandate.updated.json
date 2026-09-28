@@ -42,7 +42,13 @@
           "service_user_number": "string",
           "url": "string"
         },
-        "card": {},
+        "blik": {
+          "expires_at": 1700000000,
+          "type": "off_session"
+        },
+        "card": {
+          "india": null
+        },
         "cashapp": {},
         "kakao_pay": {},
         "klarna": {},

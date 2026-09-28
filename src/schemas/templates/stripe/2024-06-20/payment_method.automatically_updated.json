@@ -44,8 +44,12 @@
         "phone": "string",
         "tax_id": "string"
       },
-      "bizum": {},
-      "blik": {},
+      "bizum": {
+        "buyer_id": "string"
+      },
+      "blik": {
+        "buyer_id": "string"
+      },
       "boleto": {
         "tax_id": "string"
       },
@@ -212,12 +216,15 @@
         "payer_email": "string",
         "payer_id": "string"
       },
+      "paypay": {},
       "payto": {
         "bsb_number": "string",
         "last4": "string",
         "pay_id": "string"
       },
-      "pix": {},
+      "pix": {
+        "fingerprint": "string"
+      },
       "promptpay": {},
       "radar_options": {
         "session": "string"
@@ -237,6 +244,7 @@
         },
         "last4": "string"
       },
+      "sequra": {},
       "sofort": {
         "country": "string"
       },

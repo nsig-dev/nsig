@@ -1,0 +1,40 @@
+{
+  "id": "evt_{{seed}}",
+  "object": "event",
+  "api_version": "2024-06-20",
+  "type": "billing.credit_balance_transaction.created",
+  "data": {
+    "object": {
+      "created": 1700000000,
+      "credit": {
+        "amount": {
+          "monetary": null,
+          "type": "monetary"
+        },
+        "credits_application_invoice_voided": {
+          "invoice": "string",
+          "invoice_line_item": "string"
+        },
+        "type": "credits_application_invoice_voided"
+      },
+      "credit_grant": "string",
+      "debit": {
+        "amount": {
+          "monetary": null,
+          "type": "monetary"
+        },
+        "credits_applied": {
+          "invoice": "string",
+          "invoice_line_item": "string"
+        },
+        "type": "credits_applied"
+      },
+      "effective_at": 1700000000,
+      "id": "string",
+      "livemode": false,
+      "object": "billing.credit_balance_transaction",
+      "test_clock": "string",
+      "type": "credit"
+    }
+  }
+}

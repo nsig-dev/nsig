@@ -134,6 +134,7 @@
           "transaction_id": "string"
         },
         "bizum": {
+          "buyer_id": "string",
           "transaction_id": "string"
         },
         "blik": {
@@ -149,6 +150,7 @@
           "capture_before": 1700000000,
           "checks": null,
           "country": "string",
+          "electronic_commerce_indicator": "string",
           "exp_month": 0,
           "exp_year": 0,
           "extended_authorization": null,
@@ -165,6 +167,7 @@
           "overcapture": null,
           "regulated_status": "regulated",
           "three_d_secure": null,
+          "transaction_link_id": "string",
           "wallet": null
         },
         "card_present": {
@@ -275,7 +278,8 @@
           "transaction_id": "string"
         },
         "link": {
-          "country": "string"
+          "country": "string",
+          "funding_source_group": "string"
         },
         "mb_way": {},
         "mobilepay": {
@@ -324,6 +328,7 @@
           "seller_protection": null,
           "transaction_id": "string"
         },
+        "paypay": {},
         "payto": {
           "bsb_number": "string",
           "last4": "string",
@@ -332,6 +337,7 @@
         },
         "pix": {
           "bank_transaction_id": "string",
+          "fingerprint": "string",
           "mandate": "string"
         },
         "promptpay": {
@@ -359,6 +365,9 @@
           "fingerprint": "string",
           "last4": "string",
           "mandate": "string"
+        },
+        "sequra": {
+          "transaction_id": "string"
         },
         "sofort": {
           "bank_code": "string",
@@ -426,6 +435,8 @@
             "charge": "string",
             "created": 1700000000,
             "currency": "string",
+            "customer": "string",
+            "customer_account": "string",
             "description": "string",
             "destination_details": null,
             "failure_balance_transaction": "string",
@@ -436,6 +447,7 @@
             "next_action": null,
             "object": "refund",
             "payment_intent": "string",
+            "payment_method": "string",
             "pending_reason": "charge_pending",
             "presentment_details": null,
             "reason": "duplicate",

@@ -10,6 +10,8 @@
       "charge": "string",
       "created": 1700000000,
       "currency": "string",
+      "customer": "string",
+      "customer_account": "string",
       "description": "string",
       "destination_details": {
         "affirm": {},
@@ -111,6 +113,7 @@
       },
       "object": "refund",
       "payment_intent": "string",
+      "payment_method": "string",
       "pending_reason": "charge_pending",
       "presentment_details": {
         "presentment_amount": 0,
